@@ -1,57 +1,64 @@
-# Sonido Play — Prototipo v3
+# Sonido Play — Prototipo v16 Dist Deploy
 
-Prototipo funcional estático de un curso online interactivo tipo Duolingo sobre **sonido en espectáculos**.
+Prototipo estático de **Sonido Play / Blacksmith Academy** para validar flujo, GUI, documento fuente, tema claro/oscuro, cuestionarios y recorrido UX.
 
-## Qué incluye esta versión
+## Qué incluye
 
-- Contenido curado del Módulo 1: **Fundamentos del sonido**.
-- No muestra texto crudo de la bitácora original.
-- Flujo por lección:
-  1. portada de lección;
-  2. teoría dividida en bloques;
-  3. scroll obligatorio hasta el final;
-  4. cuestionario;
-  5. aprobación con 70% o más;
-  6. XP, vidas, racha y desbloqueo progresivo.
-- Desafío final del módulo.
-- Módulos futuros visibles pero bloqueados.
-- Progreso guardado con `localStorage`.
-- Sin backend, sin instalación, sin npm.
+- App estática sin backend.
+- Unidad 01 y Unidad 02.
+- Documento Fuente en Formato C Digital Premium.
+- Tema claro / oscuro.
+- Botón de recorrido UX para avanzar sin responder cuestionarios.
+- Carpeta `dist/` lista para deploy.
+- Workflow opcional para GitHub Pages.
 
-## Cómo probarlo
+## Estructura principal
 
-Opción rápida:
+```text
+index.html
+app.js
+styles.css
+assets/
+docs/
+dist/
+scripts/
+.github/workflows/deploy-pages.yml
+RUNBOOK.md
+```
 
-1. Descomprimir el ZIP.
-2. Abrir `index.html` en el navegador.
+## Probar localmente
 
-Opción con servidor local:
+Desde la raíz del proyecto:
 
-```bash
-cd sonido-play-prototipo-v2
+```powershell
 python -m http.server 8080
 ```
 
-Luego abrir:
+Abrir:
 
 ```text
 http://localhost:8080
 ```
 
-## Archivos principales
+## Probar la versión deployable
 
-- `index.html`: entrada principal.
-- `styles.css`: estilos responsive.
-- `app.js`: lógica del prototipo y contenido del curso.
+```powershell
+cd dist
+python -m http.server 8080
+```
 
-## Nota editorial
+Abrir:
 
-Este prototipo usa la bitácora original solo como guía temática. El contenido visible fue reescrito para formato de curso y debe ser validado técnicamente antes de una versión comercial.
+```text
+http://localhost:8080
+```
 
+## Rebuild de dist
 
-## Cambios v3
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/build-dist.ps1
+```
 
-- Respuestas mezcladas aleatoriamente en cada intento.
-- Preguntas de verdadero/falso con respuestas correctas variadas y opciones mezcladas.
-- Distractores más plausibles y menos obvios.
-- Corrección de textos de teoría para evitar repetición de “Idea clave”.
+## Nota
+
+No ejecutar `npm init`. Este prototipo no requiere npm mientras siga siendo HTML/CSS/JS estático.
