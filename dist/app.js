@@ -1,4 +1,4 @@
-const STORAGE_KEY = "sonido-play-v17-progress";
+const STORAGE_KEY = "sonido-play-v17-2-progress";
 
 const course = {
   "id": "sonido-play",
@@ -1663,10 +1663,10 @@ function getDefaultState() {
     hearts: 5,
     streak: 1,
     completed: [],
-    unlocked: ["lesson-01"],
+    unlocked: ["u01"],
     bestScores: {},
     readingDone: {},
-    lastVisited: "lesson-01",
+    lastVisited: "u01",
     uiTheme: "dark",
     demoAdvances: 0
   };
@@ -1675,9 +1675,10 @@ function getDefaultState() {
 function loadState() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    return raw ? { ...getDefaultState(), ...JSON.parse(raw) } : getDefaultState();
+    const loadedState = raw ? { ...getDefaultState(), ...JSON.parse(raw) } : getDefaultState();
+    return normalizeStateIds(loadedState);
   } catch {
-    return getDefaultState();
+    return normalizeStateIds(getDefaultState());
   }
 }
 
@@ -1687,7 +1688,7 @@ function saveState() {
 
 let state = loadState();
 let view = "home";
-let activeLessonId = state.lastVisited || "lesson-01";
+let activeLessonId = getLesson(state.lastVisited) ? state.lastVisited : "u01";
 let quizRuntime = null;
 let toastTimer = null;
 
@@ -1707,6 +1708,34 @@ function getThemeIcon() {
 
 function getAllLessons() {
   return course.modules.flatMap((module) => module.lessons || []);
+}
+
+function getFirstLessonId() {
+  return getAllLessons()[0]?.id || "u01";
+}
+
+function normalizeStateIds(rawState) {
+  const validIds = getAllLessons().map((lesson) => lesson.id);
+  const firstId = getFirstLessonId();
+  const normalized = { ...rawState };
+
+  normalized.unlocked = Array.isArray(normalized.unlocked)
+    ? normalized.unlocked.filter((id) => validIds.includes(id))
+    : [];
+
+  if (!normalized.unlocked.length) {
+    normalized.unlocked = [firstId];
+  }
+
+  normalized.completed = Array.isArray(normalized.completed)
+    ? normalized.completed.filter((id) => validIds.includes(id))
+    : [];
+
+  normalized.lastVisited = validIds.includes(normalized.lastVisited)
+    ? normalized.lastVisited
+    : firstId;
+
+  return normalized;
 }
 
 function getLesson(id) {
@@ -2173,12 +2202,12 @@ function bindCommonEvents() {
   document.querySelectorAll("[data-action='continue']").forEach((el) => {
     el.addEventListener("click", () => {
       const next = getAllLessons().find((lesson) => isUnlocked(lesson.id) && !isCompleted(lesson.id));
-      openLesson(next?.id || activeLessonId || "lesson-01");
+      openLesson(next?.id || (getLesson(activeLessonId) ? activeLessonId : "u01"));
     });
   });
 
   document.querySelectorAll("[data-action='open-first']").forEach((el) => {
-    el.addEventListener("click", () => openLesson("lesson-01"));
+    el.addEventListener("click", () => openLesson("u01"));
   });
 
   document.querySelectorAll("[data-action='open-lesson']").forEach((el) => {
@@ -2214,7 +2243,7 @@ function bindCommonEvents() {
       state = getDefaultState();
       saveState();
       view = "home";
-      activeLessonId = "lesson-01";
+      activeLessonId = "u01";
       quizRuntime = null;
       render();
       showToast("Progreso reiniciado.");

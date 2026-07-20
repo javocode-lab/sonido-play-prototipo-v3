@@ -71,3 +71,8 @@ Esta versión aplica los Documentos Fuente Formato C v0.2 a todas las unidades d
 Unidades activas: U01 a U10.
 
 Criterio de aprobación: lectura del Documento Fuente + guía curada + 70% en cuestionario.
+
+
+## v17.2 — Navigation Fix
+
+Corrección de navegación: las unidades activas usan IDs `u01` a `u10`; se normalizó el estado inicial y el progreso local para que `Continuar curso` y `Revisar desde el inicio` abran correctamente la Unidad 01.
