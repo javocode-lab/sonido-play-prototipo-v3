@@ -1,8 +1,8 @@
-# RUNNING — Sonido Play v18
+# RUNNING — Sonido Play v18.1
 
 ## Tipo de proyecto
 
-Sonido Play v18 es una app estática:
+Sonido Play v18.1 es una app estática:
 
 ```text
 HTML + CSS + JavaScript

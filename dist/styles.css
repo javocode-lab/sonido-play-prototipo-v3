@@ -724,7 +724,7 @@ h1 {
 /* v4 — Documento Fuente antes del cuestionario */
 .learning-flow {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 10px;
   margin: 18px 0;
 }
@@ -1977,4 +1977,98 @@ p,
   .dev-toolbar-actions {
     justify-content: flex-start;
   }
+}
+
+/* v18.1 — Secciones completas por unidad */
+.completion-section,
+.activity-section,
+.final-blueprint-section {
+  margin-top: 18px;
+}
+
+.compact-divider {
+  margin-top: 18px;
+}
+
+.readiness-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.readiness-card,
+.activity-card,
+.final-blueprint-card {
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.045);
+  line-height: 1.65;
+}
+
+.activity-card {
+  border-color: rgba(46, 229, 157, 0.22);
+  background: linear-gradient(180deg, rgba(46, 229, 157, 0.08), rgba(255,255,255,0.035));
+}
+
+.final-blueprint-card {
+  border-color: rgba(255, 204, 102, 0.28);
+  background: linear-gradient(180deg, rgba(255, 204, 102, 0.10), rgba(255,255,255,0.035));
+}
+
+.readiness-card h3,
+.activity-card h3,
+.final-blueprint-card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.readiness-card ul,
+.activity-card ol,
+.final-blueprint-card ul {
+  margin: 8px 0 0;
+  padding-left: 22px;
+  color: var(--muted);
+}
+
+.activity-status-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.activity-evidence,
+.teacher-note {
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.16);
+  color: var(--text);
+}
+
+.teacher-note {
+  border-color: rgba(121, 169, 255, 0.28);
+  background: rgba(121, 169, 255, 0.08);
+}
+
+@media (max-width: 780px) {
+  .readiness-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+:root[data-theme="light"] .readiness-card,
+:root[data-theme="light"] .activity-card,
+:root[data-theme="light"] .final-blueprint-card {
+  background: rgba(255,255,255,0.76);
+}
+
+:root[data-theme="light"] .activity-evidence,
+:root[data-theme="light"] .teacher-note {
+  background: rgba(14, 34, 63, 0.04);
 }

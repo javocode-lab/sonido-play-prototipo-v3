@@ -1,15 +1,15 @@
-const APP_VERSION = "v18";
-const MODE_KEY = "sonido-play-v18-mode";
+const APP_VERSION = "v18.1";
+const MODE_KEY = "sonido-play-v18-1-mode";
 const STORAGE_KEYS = {
-  student: "sonido-play-v18-student-progress",
-  dev: "sonido-play-v18-dev-progress"
+  student: "sonido-play-v18-1-student-progress",
+  dev: "sonido-play-v18-1-dev-progress"
 };
 
 const course = {
   "id": "sonido-play",
   "title": "Sonido Play",
   "subtitle": "Curso interactivo de sonido en espectáculos",
-  "editorialNote": "Versión v18: todas las unidades del curso usan Documento Madre + Formato C v0.2. El acceso inicial separa Modo Alumno, para cursado real con desbloqueo progresivo, y Modo Dev/Revisión, para probar unidades, cuestionarios y evaluación integradora sin bloquear la navegación.",
+  "editorialNote": "Versión v18.1: todas las unidades del curso usan Documento Madre + Formato C v0.2. El acceso inicial separa Modo Alumno, para cursado real con desbloqueo progresivo, y Modo Dev/Revisión, para probar unidades, actividades, cuestionarios y el borrador metodológico de evaluación integradora sin bloquear la navegación.",
   "modules": [
     {
       "id": "module-01",
@@ -1629,7 +1629,278 @@ const course = {
 };
 
 function applyEditorialCuration() {
-  // v17: las preguntas ya vienen curadas por unidad con dificultad progresiva.
+  const additions = {
+  "u01": {
+    "sectionStatus": "Completa para revisión de Matías",
+    "flowOutcome": "El alumno debe poder seguir una cadena de audio completa y diagnosticar una falla por etapas antes de tocar controles al azar.",
+    "readingChecklist": [
+      "Diferenciar sonido acústico, señal eléctrica y escucha.",
+      "Ordenar fuente, captación, consola, amplificación, parlante, sala y oyente.",
+      "Ubicar una falla usando el recorrido de la cadena."
+    ],
+    "activity": {
+      "title": "Microdesafío: seguir la cadena antes de corregir",
+      "scenario": "Una banda prueba sonido. La voz llega a la consola, pero no se escucha por el sistema principal. El operador tiene poco tiempo y producción pide resolver rápido.",
+      "tasks": [
+        "Dibujar la cadena desde el micrófono hasta el público.",
+        "Marcar qué etapas ya están verificadas y cuáles faltan revisar.",
+        "Proponer tres chequeos en orden antes de subir el volumen general."
+      ],
+      "evidence": "Mapa simple de cadena + lista de chequeos ordenados.",
+      "teacherNote": "Evaluar si el alumno evita respuestas impulsivas y razona por etapas."
+    },
+    "preQuizFocus": [
+      "Cadena de audio como mapa.",
+      "Diferencia entre fenómeno acústico y señal eléctrica.",
+      "Acústica como parte del sistema."
+    ]
+  },
+  "u02": {
+    "sectionStatus": "Completa para revisión de Matías",
+    "flowOutcome": "El alumno debe diferenciar nivel físico, percepción y exposición, usando medición como apoyo y no como reemplazo del criterio auditivo.",
+    "readingChecklist": [
+      "Distinguir presión sonora, intensidad y sonoridad percibida.",
+      "Reconocer que el decibel es una escala logarítmica.",
+      "Relacionar nivel, tiempo de exposición y seguridad auditiva."
+    ],
+    "activity": {
+      "title": "Microdesafío: nivel alto no siempre significa mejor sonido",
+      "scenario": "En una charla con música de entrada, adelante se quejan de volumen excesivo y atrás dicen que la voz no llega clara.",
+      "tasks": [
+        "Indicar qué zonas medirías y por qué.",
+        "Separar problema de nivel, problema de cobertura y problema de inteligibilidad.",
+        "Proponer una acción inicial que no sea simplemente subir el master."
+      ],
+      "evidence": "Mini informe con zonas de medición y decisión técnica justificada.",
+      "teacherNote": "Buscar que el alumno combine escucha, medición y cuidado auditivo."
+    },
+    "preQuizFocus": [
+      "dB SPL, dBA y referencia de medición.",
+      "Intensidad física versus percepción.",
+      "Cobertura y exposición."
+    ]
+  },
+  "u03": {
+    "sectionStatus": "Completa para revisión de Matías",
+    "flowOutcome": "El alumno debe reconocer cuándo el problema no es falta de volumen sino comportamiento acústico del espacio.",
+    "readingChecklist": [
+      "Diferenciar eco, reverberación, reflexión y absorción.",
+      "Relacionar superficies duras con pérdida de claridad.",
+      "Proponer acciones antes de ecualizar de forma extrema."
+    ],
+    "activity": {
+      "title": "Microdesafío: sala dura y voz poco clara",
+      "scenario": "Un salón con vidrio, piso cerámico y paredes lisas hace que la voz del orador se entienda mal aunque el nivel sea alto.",
+      "tasks": [
+        "Identificar qué fenómeno acústico puede estar afectando la inteligibilidad.",
+        "Elegir tres acciones prácticas antes de tocar ecualización extrema.",
+        "Explicar por qué subir volumen podría empeorar el problema."
+      ],
+      "evidence": "Diagnóstico breve + tres acciones preventivas.",
+      "teacherNote": "Evaluar criterio acústico: ubicación, orientación, cobertura y materialidad."
+    },
+    "preQuizFocus": [
+      "Eco versus reverberación.",
+      "Absorción parcial y dependiente de frecuencia.",
+      "Inteligibilidad como objetivo."
+    ]
+  },
+  "u04": {
+    "sectionStatus": "Completa para revisión de Matías",
+    "flowOutcome": "El alumno debe conectar propiedades físicas de la onda con decisiones audibles: graves, agudos, timbre, duración y longitud de onda.",
+    "readingChecklist": [
+      "Distinguir frecuencia, amplitud, duración y longitud de onda.",
+      "Entender por qué los graves tienen longitudes de onda mayores.",
+      "Reconocer que timbre no es lo mismo que altura ni volumen."
+    ],
+    "activity": {
+      "title": "Microdesafío: mismo tono, distinto instrumento",
+      "scenario": "Una guitarra y un teclado tocan la misma nota a nivel parecido, pero se distinguen claramente.",
+      "tasks": [
+        "Explicar qué variable permite distinguirlos.",
+        "Relacionar armónicos y envolvente con timbre.",
+        "Indicar por qué cambiar volumen no cambia necesariamente la identidad sonora."
+      ],
+      "evidence": "Explicación corta con al menos tres conceptos: frecuencia, armónicos y duración/envolvente.",
+      "teacherNote": "Evitar que el alumno confunda frecuencia, volumen y timbre."
+    },
+    "preQuizFocus": [
+      "Frecuencia y altura.",
+      "Longitud de onda como distancia.",
+      "Timbre, armónicos y envolvente."
+    ]
+  },
+  "u05": {
+    "sectionStatus": "Completa para revisión de Matías",
+    "flowOutcome": "El alumno debe sospechar problemas de fase cuando dos señales parecidas pierden cuerpo al combinarse.",
+    "readingChecklist": [
+      "Entender fase como relación temporal entre señales.",
+      "Reconocer interferencias por micrófonos o reflexiones.",
+      "Distinguir inversión de polaridad, retardo y ubicación física."
+    ],
+    "activity": {
+      "title": "Microdesafío: dos micrófonos, una guitarra y menos graves",
+      "scenario": "Una guitarra acústica suena bien con cada micrófono por separado, pero al abrir ambos canales pierde cuerpo y graves.",
+      "tasks": [
+        "Explicar por qué puede ocurrir sin culpar al ecualizador primero.",
+        "Proponer tres acciones antes de aplicar EQ.",
+        "Indicar qué escucharías al activar/desactivar cada canal."
+      ],
+      "evidence": "Hipótesis de fase + acciones de prueba ordenadas.",
+      "teacherNote": "Buscar que el alumno piense en distancia, retardo, polaridad y regla 3:1."
+    },
+    "preQuizFocus": [
+      "Fase y retardo.",
+      "Comb filter.",
+      "Prevención desde ubicación de micrófonos."
+    ]
+  },
+  "u06": {
+    "sectionStatus": "Completa para revisión de Matías",
+    "flowOutcome": "El alumno debe elegir y ubicar micrófonos con intención según fuente, patrón polar, sensibilidad, SPL máximo y contexto acústico.",
+    "readingChecklist": [
+      "Distinguir dinámico, condensador y ribbon a nivel introductorio.",
+      "Relacionar patrón polar con captación y rechazo.",
+      "Reconocer phantom power, sensibilidad y SPL máximo como variables de uso."
+    ],
+    "activity": {
+      "title": "Microdesafío: elegir micrófono para voz en vivo",
+      "scenario": "Una cantante actuará en una sala chica con monitores cerca, batería al fondo y mucho ruido de escenario.",
+      "tasks": [
+        "Elegir un tipo de micrófono razonable y justificarlo.",
+        "Definir patrón polar conveniente.",
+        "Indicar dos cuidados de ubicación para reducir acoples o filtración."
+      ],
+      "evidence": "Ficha técnica simplificada de elección de micrófono.",
+      "teacherNote": "No evaluar marca; evaluar criterio de selección y ubicación."
+    },
+    "preQuizFocus": [
+      "Transducción.",
+      "Patrones polares.",
+      "Phantom, sensibilidad y SPL máximo."
+    ]
+  },
+  "u07": {
+    "sectionStatus": "Completa para revisión de Matías",
+    "flowOutcome": "El alumno debe evitar conexiones peligrosas y distinguir niveles de micrófono, línea, instrumento y potencia.",
+    "readingChecklist": [
+      "Diferenciar nivel de mic, línea, instrumento y parlante.",
+      "Reconocer conexiones balanceadas y desbalanceadas.",
+      "Identificar errores críticos de conexión antes de dañar equipos."
+    ],
+    "activity": {
+      "title": "Microdesafío: la conexión que no se debe hacer",
+      "scenario": "Alguien propone conectar la salida de un amplificador directamente a una entrada de línea de la consola para grabar.",
+      "tasks": [
+        "Explicar por qué puede ser peligroso.",
+        "Identificar qué nivel de señal está involucrado.",
+        "Proponer una alternativa segura o pedir el dispositivo correcto."
+      ],
+      "evidence": "Advertencia técnica + alternativa segura.",
+      "teacherNote": "Unidad crítica: priorizar seguridad de equipos y personas."
+    },
+    "preQuizFocus": [
+      "Niveles de señal.",
+      "Balanceado/desbalanceado.",
+      "Conectores y compatibilidad."
+    ]
+  },
+  "u08": {
+    "sectionStatus": "Completa para revisión de Matías",
+    "flowOutcome": "El alumno debe entender la consola como sistema de entrada, ganancia, mezcla, procesamiento y ruteo, no solo como faders.",
+    "readingChecklist": [
+      "Distinguir gain, fader, EQ, aux y buses.",
+      "Entender pre/post fader en monitoreo.",
+      "Seguir una ruta desde entrada hasta salida."
+    ],
+    "activity": {
+      "title": "Microdesafío: monitor sin voz, PA con voz",
+      "scenario": "La voz sale por el sistema principal, pero el cantante no se escucha en su monitor.",
+      "tasks": [
+        "Indicar qué ruta revisarías.",
+        "Nombrar al menos cuatro puntos posibles de falla.",
+        "Explicar por qué el master L/R no necesariamente resuelve el problema."
+      ],
+      "evidence": "Ruta auxiliar dibujada + chequeos por orden.",
+      "teacherNote": "Buscar comprensión de aux, pre/post, salida de monitor y nivel de envío."
+    },
+    "preQuizFocus": [
+      "Gain staging.",
+      "Auxiliares y pre/post.",
+      "Ruteo y buses."
+    ]
+  },
+  "u09": {
+    "sectionStatus": "Completa para revisión de Matías",
+    "flowOutcome": "El alumno debe comprender la relación entre señal, potencia, amplificación, impedancia y parlantes activos/pasivos.",
+    "readingChecklist": [
+      "Diferenciar señal de línea y señal de potencia.",
+      "Distinguir parlante activo y pasivo.",
+      "Relacionar impedancia y compatibilidad de amplificador/parlante."
+    ],
+    "activity": {
+      "title": "Microdesafío: parlante pasivo sin amplificador",
+      "scenario": "En un evento chico quieren conectar un parlante pasivo directamente a la salida de la consola porque “el conector entra”.",
+      "tasks": [
+        "Explicar por qué no funcionará correctamente.",
+        "Identificar qué etapa falta en la cadena.",
+        "Proponer una conexión correcta para parlante pasivo o una alternativa con parlante activo."
+      ],
+      "evidence": "Diagrama de conexión correcta + justificación.",
+      "teacherNote": "Evaluar si el alumno diferencia línea, potencia, activo y pasivo."
+    },
+    "preQuizFocus": [
+      "Amplificación de potencia.",
+      "Impedancia.",
+      "Parlantes activos y pasivos."
+    ]
+  },
+  "u10": {
+    "sectionStatus": "Borrador listo para revisión metodológica final",
+    "flowOutcome": "El alumno debe integrar todo el curso diagnosticando casos reales con evidencia, acción segura y justificación técnica.",
+    "readingChecklist": [
+      "Seguir la cadena completa de audio.",
+      "Distinguir falla de conexión, acústica, fase, ruteo o potencia.",
+      "Proponer acciones seguras y justificadas."
+    ],
+    "activity": {
+      "title": "Microdesafío integrador: mesa de diagnóstico",
+      "scenario": "Durante una prueba de sonido aparecen tres problemas: voz poco clara en sala reverberante, guitarra que pierde cuerpo al abrir dos micrófonos y monitor sin voz aunque el PA sí funciona.",
+      "tasks": [
+        "Separar los tres problemas por categoría técnica.",
+        "Proponer el primer chequeo para cada problema.",
+        "Justificar qué NO harías primero y por qué."
+      ],
+      "evidence": "Tabla de diagnóstico: síntoma, causa probable, primer chequeo, acción segura.",
+      "teacherNote": "Esta actividad prepara el examen final, pero todavía no reemplaza la evaluación validada por Matías."
+    },
+    "preQuizFocus": [
+      "Diagnóstico por cadena.",
+      "Criterio seguro.",
+      "Justificación técnica."
+    ],
+    "finalBlueprint": {
+      "status": "Preparado como borrador interno, pendiente de cierre con Matías.",
+      "learningLabUse": "Conviene usar Learning Lab para la evaluación final porque permite medir evidencia, criterio, simulación y transferencia. No es obligatorio para cada unidad, pero sí es ideal para el cierre integrador.",
+      "method": [
+        "Caso 1: diagnóstico de cadena y ruteo.",
+        "Caso 2: acústica, fase o micrófonos.",
+        "Caso 3: niveles, seguridad, cables, amplificación o parlantes."
+      ],
+      "rubric": [
+        "Detecta la causa probable.",
+        "Propone una acción inicial segura.",
+        "Justifica con conceptos del curso.",
+        "Evita decisiones peligrosas o impulsivas."
+      ]
+    }
+  }
+};
+  getAllLessonsFromCourse().forEach((lesson) => {
+    const extra = additions[lesson.id];
+    if (!extra) return;
+    Object.assign(lesson, extra);
+  });
 }
 
 function getAllLessonsFromCourse() {
@@ -2027,13 +2298,14 @@ function renderLesson(lesson) {
       <div class="learning-flow" aria-label="Flujo de aprendizaje">
         <div class="flow-item active"><strong>1</strong><span>Documento Fuente</span></div>
         <div class="flow-item"><strong>2</strong><span>Guía curada</span></div>
-        <div class="flow-item"><strong>3</strong><span>Cuestionario</span></div>
+        <div class="flow-item"><strong>3</strong><span>Actividad</span></div>
+        <div class="flow-item"><strong>4</strong><span>Cuestionario</span></div>
         ${isDevMode() ? `<div class="flow-item demo"><strong>DEV</strong><span>Recorrido libre</span></div>` : ""}
       </div>
 
       <div class="source-policy">
         <strong>📌 Nueva regla:</strong> primero se muestra la documentación fuente completa o segmentada.
-        Este bloque conserva texto original, referencias visuales y estado de validación experta antes de pasar al cuestionario.
+        Este bloque conserva texto fuente, referencias visuales y estado de validación experta antes de pasar a guía, actividad y cuestionario.
       </div>
 
       <div class="theory-shell">
@@ -2050,14 +2322,17 @@ function renderLesson(lesson) {
           <div class="study-divider">
             <span>📘 Después del Documento Fuente</span>
             <h2>Ideas principales / guía curada</h2>
-            <p>Esta segunda parte muestra las ideas principales que ya venían en la app, ordenadas para estudiar mejor. No reemplaza al Documento Fuente: deriva de él.</p>
+            <p>Esta segunda parte muestra las ideas principales de la unidad, ordenadas para estudiar mejor. No reemplaza al Documento Fuente: deriva de él y prepara la actividad.</p>
           </div>
           ${lesson.theoryBlocks.map(renderTheoryBlock).join("")}
+          ${renderUnitReadiness(lesson)}
+          ${renderActivitySection(lesson)}
+          ${renderFinalEvaluationBlueprint(lesson)}
         </section>
 
         <div class="footer-actions">
           <button id="startQuizBtn" class="primary-btn" data-action="start-quiz" ${canStartQuiz ? "" : "disabled"}>
-            ${canStartQuiz ? "Ir al cuestionario" : "Leé el Documento Fuente y la guía hasta el final"}
+            ${canStartQuiz ? "Ir al cuestionario" : "Leé el Documento Fuente, guía y actividad hasta el final"}
           </button>
           ${isDevMode() ? `<button class="flow-forward-btn" data-action="advance-flow" title="Modo dev: avanza sin contestar cuestionario">Seguir flujo →</button>` : ""}
           <button class="secondary-btn" data-action="go-home">Guardar y volver</button>
@@ -2181,6 +2456,94 @@ function renderTheoryBlock(block) {
       <p>${block.body}</p>
       ${block.note ? `<div class="theory-note"><strong>Idea clave:</strong> ${block.note}</div>` : ""}
     </article>
+  `;
+}
+
+
+function renderUnitReadiness(lesson) {
+  const checklist = lesson.readingChecklist || [];
+  const focus = lesson.preQuizFocus || [];
+  if (!checklist.length && !focus.length && !lesson.flowOutcome) return "";
+  return `
+    <section class="completion-section">
+      <div class="study-divider compact-divider">
+        <span>🧭 Control de comprensión</span>
+        <h2>Antes de hacer la actividad</h2>
+        ${lesson.flowOutcome ? `<p>${lesson.flowOutcome}</p>` : ""}
+      </div>
+      <div class="readiness-grid">
+        ${checklist.length ? `
+          <article class="readiness-card">
+            <h3>El alumno debería poder</h3>
+            <ul>${checklist.map((item) => `<li>${item}</li>`).join("")}</ul>
+          </article>
+        ` : ""}
+        ${focus.length ? `
+          <article class="readiness-card">
+            <h3>Foco del cuestionario</h3>
+            <ul>${focus.map((item) => `<li>${item}</li>`).join("")}</ul>
+          </article>
+        ` : ""}
+      </div>
+    </section>
+  `;
+}
+
+function renderActivitySection(lesson) {
+  const activity = lesson.activity;
+  if (!activity) return "";
+  return `
+    <section class="activity-section">
+      <div class="study-divider compact-divider">
+        <span>⚒️ Actividad aplicada</span>
+        <h2>${activity.title}</h2>
+        <p>Esta parte convierte la lectura en una decisión técnica observable. No es un examen final: es práctica guiada antes del cuestionario.</p>
+      </div>
+      <article class="activity-card">
+        <div class="activity-status-row">
+          <span class="review-pill">${lesson.sectionStatus || "Sección lista para revisión"}</span>
+          <span class="small-pill">Evidencia práctica</span>
+        </div>
+        <h3>Situación</h3>
+        <p>${activity.scenario}</p>
+        <h3>Consigna</h3>
+        <ol>${(activity.tasks || []).map((task) => `<li>${task}</li>`).join("")}</ol>
+        ${activity.evidence ? `<div class="activity-evidence"><strong>Entrega esperada:</strong> ${activity.evidence}</div>` : ""}
+        ${activity.teacherNote ? `<div class="teacher-note"><strong>Nota para Matías / revisión:</strong> ${activity.teacherNote}</div>` : ""}
+      </article>
+    </section>
+  `;
+}
+
+function renderFinalEvaluationBlueprint(lesson) {
+  const blueprint = lesson.finalBlueprint;
+  if (!blueprint) return "";
+  return `
+    <section class="final-blueprint-section">
+      <div class="study-divider compact-divider">
+        <span>🏁 Evaluación final</span>
+        <h2>Borrador metodológico preparado</h2>
+        <p>La evaluación final queda preparada como estructura, pero la cerramos después de que Matías revise todas las unidades. Así evitamos rehacer el examen antes de ajustar el contenido.</p>
+      </div>
+      <article class="final-blueprint-card">
+        <div class="activity-status-row">
+          <span class="review-pill">${blueprint.status}</span>
+          <span class="small-pill">Learning Lab recomendado</span>
+        </div>
+        <p>${blueprint.learningLabUse}</p>
+        <div class="readiness-grid">
+          <div>
+            <h3>Metodología propuesta</h3>
+            <ul>${(blueprint.method || []).map((item) => `<li>${item}</li>`).join("")}</ul>
+          </div>
+          <div>
+            <h3>Rúbrica base</h3>
+            <ul>${(blueprint.rubric || []).map((item) => `<li>${item}</li>`).join("")}</ul>
+          </div>
+        </div>
+        ${isDevMode() ? `<div class="demo-note">Modo Dev: este bloque permite evaluar la metodología del examen final sin publicarlo como cierre definitivo.</div>` : `<div class="demo-note">Modo Alumno: examen final pendiente de habilitación cuando Matías cierre la revisión técnica.</div>`}
+      </article>
+    </section>
   `;
 }
 
@@ -2416,7 +2779,7 @@ function bindLessonEvents() {
   document.querySelectorAll("[data-action='start-quiz']").forEach((el) => {
     el.addEventListener("click", () => {
       if (!isDevMode() && !state.readingDone[activeLessonId]) {
-        showToast("Primero leé el Documento Fuente y la guía hasta el final.");
+        showToast("Primero leé el Documento Fuente, la guía y la actividad hasta el final.");
         return;
       }
       startQuiz(activeLessonId);

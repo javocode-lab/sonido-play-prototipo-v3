@@ -1,4 +1,4 @@
-# DEPLOY — Sonido Play v18
+# DEPLOY — Sonido Play v18.1
 
 ## Tipo de deploy
 
@@ -52,3 +52,8 @@ Build command: vacío / none
 [ ] Tema claro/oscuro funciona.
 [ ] No hay rutas rotas ni 404 internos.
 ```
+
+
+## Nota de publicación
+
+No publicar v18.1 en la web pública todavía. Esta versión es de validación interna para Matías y desarrollo. Publicar recién cuando se cierre la revisión de unidades y navegación.

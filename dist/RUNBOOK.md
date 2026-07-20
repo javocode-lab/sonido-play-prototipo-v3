@@ -1,4 +1,4 @@
-# RUNBOOK — Sonido Play v18
+# RUNBOOK — Sonido Play v18.1
 
 ## 1. Tipo de proyecto
 
@@ -61,7 +61,7 @@ Abrir:
 http://localhost:8080
 ```
 
-## 5. Verificación v18
+## 5. Verificación v18.1
 
 ### Selector inicial
 
@@ -98,12 +98,12 @@ http://localhost:8080
 
 ### La app parece no avanzar
 
-Borrar `localStorage` o usar el botón “Volver al selector” y elegir modo nuevamente. v18 usa claves nuevas:
+Borrar `localStorage` o usar el botón “Volver al selector” y elegir modo nuevamente. v18.1 usa claves nuevas:
 
 ```text
-sonido-play-v18-student-progress
-sonido-play-v18-dev-progress
-sonido-play-v18-mode
+sonido-play-v18.1-student-progress
+sonido-play-v18.1-dev-progress
+sonido-play-v18.1-mode
 ```
 
 ### GitHub Pages muestra versión vieja
@@ -116,3 +116,11 @@ git add .
 git commit -m "feat: add student and dev course modes"
 git push
 ```
+
+
+## Verificación v18.1
+
+- Entrar en Modo Alumno y confirmar que U01 exige lectura hasta el final antes del cuestionario.
+- Entrar en Modo Dev y recorrer U01-U10 con la barra rápida.
+- Confirmar que cada unidad muestra Documento Fuente, Guía curada, Control de comprensión, Actividad aplicada y Cuestionario.
+- Revisar U10: la evaluación final debe figurar como borrador metodológico pendiente de cierre con Matías.

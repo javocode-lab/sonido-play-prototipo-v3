@@ -1,5 +1,14 @@
 # CHANGELOG — Sonido Play
 
+## v18.1
+
+- Se completan secciones internas para U01 a U10.
+- Se agrega actividad aplicada por unidad.
+- Se agrega control de comprensión previo al cuestionario.
+- Se incorpora borrador metodológico de evaluación final en U10.
+- Se actualizan claves de `localStorage` a v18.1 para evitar mezcla con progresos anteriores.
+- Se mantiene dist como build interno de prueba, no recomendado para publicación pública todavía.
+
 ## v18
 
 - Se agrega selector inicial de modo.
