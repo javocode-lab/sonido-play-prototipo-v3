@@ -1,0 +1,6 @@
+source_id,title,organization,url_or_origin,license_or_status,usage,notes
+U02-SRC-001,Documento Madre - Sonido del Espectaculo 2020,Universidad Provincial de Cordoba / material compartido por usuario,Archivo interno aportado por usuario,Uso interno / requiere validacion,Base de clase,Se conserva trazabilidad en anexo
+U02-SRC-002,Guia estudio teorico Sonido del Espectaculo Blacksmith Academy,Blacksmith Academy,Archivo interno,Interno,Resumen y mapa conceptual,Version depurada previa
+U02-SRC-003,Fisica Universitaria Volumen 1 - 17.3 Intensidad del sonido,OpenStax,https://openstax.org/books/f%C3%ADsica-universitaria-volumen-1/pages/17-3-intensidad-del-sonido,CC BY / atribucion requerida,Refuerzo teorico,No copiar extensamente
+U02-SRC-004,Protocolo para medicion del nivel de ruido en el ambiente laboral,SRT Argentina / Argentina.gob.ar,https://www.argentina.gob.ar/srt/prevencion/publicaciones/protocolos/medicion-del-nivel-de-ruido-en-el-ambiente-laboral,Referencia normativa oficial,Seguridad auditiva y medicion,"Aplicar como referencia, no asesoramiento legal"
+U02-SRC-005,Guia Practica sobre el ruido en el ambiente laboral,SRT Argentina,https://www.argentina.gob.ar/sites/default/files/res_srt_85_12_protocolo_ruido_guia-practiva.pdf,Referencia normativa oficial,"Dosis, dBA, medicion, efectos",Requiere actualizacion si cambia normativa

@@ -1,606 +1,159 @@
-const STORAGE_KEY = "sonido-play-v16-progress";
+const STORAGE_KEY = "sonido-play-v17-progress";
 
 const course = {
-  id: "sonido-play",
-  title: "Sonido Play",
-  subtitle: "Curso interactivo de sonido en espectáculos",
-  editorialNote:
-    "Nueva estructura: cada lección muestra primero el Documento Fuente con Formato C Digital Premium. Esta versión integra tema claro/oscuro y un modo de recorrido UX para avanzar por las unidades sin responder cuestionarios durante la revisión de flujos.",
-  modules: [
+  "id": "sonido-play",
+  "title": "Sonido Play",
+  "subtitle": "Curso interactivo de sonido en espectáculos",
+  "editorialNote": "Versión v17: todas las unidades del curso usan Documento Madre + Formato C v0.2 como fuente de conocimiento. Los cuestionarios fueron rehechos con dificultad progresiva: reconocimiento, comprensión, aplicación y criterio. La unidad integradora usa además Learning Lab para evaluar diagnóstico y evidencia.",
+  "modules": [
     {
-      id: "module-01",
-      title: "Fundamentos del sonido",
-      status: "available",
-      description:
-        "Qué es el sonido, cómo se propaga, qué energía transporta y cómo aparece en una cadena de audio real.",
-      lessons: [
+      "id": "module-01",
+      "title": "Cadena de audio y acústica",
+      "status": "available",
+      "description": "Recorrido del sonido, Documento Fuente, acústica y diagnóstico por cadena.",
+      "lessons": [
         {
-          id: "lesson-01",
-          type: "lesson",
-          title: "¿Qué es el sonido?",
-          xp: 80,
-          objective:
-            "Entender que el sonido se produce cuando una fuente vibra y esa vibración se propaga a través de un medio, normalmente el aire.",
-          sourceSegments: [
+          "id": "u01",
+          "type": "lesson",
+          "title": "Cadena de Audio y Acústica",
+          "xp": 110,
+          "objective": "Comprender el recorrido completo del sonido desde la fuente hasta la escucha, diferenciando fenómeno acústico, señal eléctrica y acústica del espacio.",
+          "sourceSegments": [
             {
-              title: "1.1 - Clase 1 - Cadena de Audio",
-              sourceRef: "Documento Fuente · Unidad 01 · Formato C Digital Premium",
-              body: `Cadena de Audio.
-Este esquema está presente en todo evento de sonido, por lo que es indispensable conocerlo:
-
-Concepto de “Acústica”: “De la música al sonido”
-Introducción:
-Comprendemos que la música es una forma de arte que vive en el tiempo. En otras palabras, la música no es una partitura, no es un disco musical, ni tampoco lo es una banda ni un instrumento, sino que la música existe y vive cada vez que se reproduce.
-
-Para poder oír una música y que ella viva, es necesario el sonido; y para que exista sonido, descubrimos que es necesario el aire. En otras palabras, la música es un conjunto de sonidos que vive en el aire.
-
-Una canción vive y muere cada vez que le damos play a nuestro reproductor, o cada vez que la ejecutamos con un instrumento o con nuestra propia voz.
-
-Por otra parte, estuvimos estudiando el sonido que se transmite por los distintos materiales. Hablamos de que el sonido más comúnmente se transmite por medio del aire y llamamos a este fenómeno energía sonora.
-
-Dato curioso: en el espacio exterior, fuera de la atmósfera, no es posible oírnos ni oír una explosión típica de las películas, ya que en ausencia de aire o de otro medio de propagación de las ondas es imposible el fenómeno sonoro.
-
-Otro aspecto estudiado en clase es que el sonido es una forma de energía llamada energía sonora. La energía sonora no es infinita y puede ser mayor o menor dependiendo del impulso que le demos, ya sea con nuestra voz, un parlante o un instrumento musical.
-
-Tenemos sonidos fuertes o débiles de acuerdo con cómo los nombramos musicalmente, y podemos medirlos de manera científica mediante una escala que llamaremos “escala de presión sonora en decibeles”, usando un dispositivo llamado decibelímetro o sonómetro.
-
-Otro aspecto a repasar es que la energía del sonido no se pierde, sino que se va transformando en energía de calor.
-
-Comentamos en clase que distintos materiales son capaces de absorber la energía sonora transformando el sonido en calor, aunque también nombramos que este tipo de energía es tan pequeño que medir el aumento de calor de un panel absorbente instalado en una pared es muy difícil, dadas las pequeñas magnitudes que se manejan.
-
-En palabras científicas, llamamos a la capacidad de absorber la energía sonora “coeficiente de absorción”, mientras que al sonido que se refleja lo llamamos sonido reflejado.
-
-Por último, recordamos que la velocidad del sonido es de 340 metros por segundo. Esto quiere decir que, en el tiempo comprendido en un segundo, el sonido que sale de la voz humana, un aplauso, un instrumento o un parlante recorre 3 cuadras y 40 metros.`,
-              documentPages: [
-                {
-                  src: "assets/source/1-1-clase-1-cadena-de-audio-formato-c-continuo.png",
-                  alt: "Documento Fuente Formato C Digital Premium para Unidad 01: Cadena de Audio y Acústica",
-                  caption: "Formato C Digital Premium: documento fuente modernizado, preparado para lectura en app."
-                }
+              "title": "Cadena de Audio y Acústica",
+              "sourceRef": "Documento Fuente · Unidad 01 · Formato C v0.2 · Documento Madre + fuentes verdes/controladas",
+              "body": "Esta unidad toma como base la Clase 1 del Documento Madre y la amplía con una explicación más precisa del fenómeno sonoro.\n\nEl sonido no es solamente “aire” ni solamente “señal eléctrica”. En una situación real de espectáculo conviven dos mundos: el sonido acústico, que viaja por un medio material como el aire, y la señal de audio, que circula por cables, consola, procesadores y amplificadores. La cadena de audio permite ordenar ese recorrido para diagnosticar problemas sin adivinar.\n\nUna cadena típica puede pensarse así: fuente sonora → acústica inicial → micrófono o entrada → cableado → consola → procesamiento → amplificación → parlante → acústica final → oyente. La acústica aparece al principio y al final: afecta cómo se genera, capta, reproduce y percibe el sonido.\n\nEl documento conserva la idea del Documento Madre sobre música como experiencia que ocurre en el tiempo, pero corrige la formulación “el sonido necesita aire”: técnicamente, el sonido necesita un medio material. En eventos, normalmente ese medio es el aire.",
+              "documentPages": [],
+              "visualLabel": "Documento Fuente · Formato C v0.2",
+              "expertStatus": "Documento ampliado · Pendiente de validación técnica por Matías",
+              "tags": [
+                "Documento Madre",
+                "Formato C",
+                "Unidad 01",
+                "Fuente ampliada",
+                "Cuestionario progresivo"
               ],
-              visualLabel: "Documento Fuente · Formato C",
-              expertStatus: "Formato C integrado · Pendiente de validacion final por Matias",
-              tags: ["Fuente de conocimiento", "Unidad 1", "Formato C", "Digital Premium", "Texto + imagen", "Glosario", "Antes del cuestionario"],
-              preserveLineBreaks: true
+              "preserveLineBreaks": true
             }
           ],
-
-          theoryBlocks: [
+          "theoryBlocks": [
             {
-              title: "El sonido empieza con una vibración",
-              body:
-                "El sonido aparece cuando un objeto o una fuente vibra. Puede ser una cuerda de guitarra, una voz humana, un tambor, un parlante o cualquier elemento capaz de mover el aire que lo rodea. Cuando algo vibra, genera pequeñas variaciones de presión en el medio. Esas variaciones viajan hasta nuestro oído y son interpretadas como sonido.",
-              note: "Idea clave: sin vibración no hay fenómeno sonoro."
+              "title": "Cadena como mapa de diagnóstico",
+              "body": "La cadena de audio no es una lista decorativa de equipos. Es una herramienta para ubicar dónde puede fallar el sistema: fuente, captación, cableado, consola, amplificación, parlantes o sala.",
+              "note": "Si no se entiende el recorrido, se corrige a ciegas."
             },
             {
-              title: "El sonido necesita un medio",
-              body:
-                "Para que el sonido se propague, necesita un medio físico. En la mayoría de las situaciones cotidianas, ese medio es el aire. También puede transmitirse a través de otros medios, como el agua, la madera, el metal o una pared. Sin un medio de propagación, no hay sonido audible.",
-              note:
-                "En el vacío, como el espacio exterior, no hay aire que transporte la vibración."
+              "title": "Sonido acústico y señal eléctrica",
+              "body": "Antes del micrófono y después del parlante trabajamos con sonido acústico. Entre esos puntos trabajamos con señales eléctricas de audio. Confundir ambos planos lleva a errores de conexión, medición y diagnóstico.",
+              "note": "El micrófono transforma energía acústica en señal eléctrica; el parlante hace el camino inverso."
             },
             {
-              title: "Fuente, medio y receptor",
-              body:
-                "Todo fenómeno sonoro tiene tres elementos básicos: una fuente sonora, un medio de propagación y un receptor. En un espectáculo, una cantante puede ser la fuente sonora, el aire transporta la vibración y el público recibe ese sonido con sus oídos. Un micrófono también puede funcionar como receptor cuando captura una fuente sonora.",
-              note: "Pensar en estos tres elementos ayuda a entender cualquier situación de audio."
+              "title": "La acústica afecta todo",
+              "body": "La sala modifica lo que la fuente produce, lo que el micrófono capta y lo que el público escucha. Paredes, piso, techo, materiales y distancia forman parte del resultado final.",
+              "note": "La acústica no es un accesorio: es parte del sistema."
             },
             {
-              title: "Aplicación en espectáculos",
-              body:
-                "En sonido para espectáculos no trabajamos solo con equipos. Trabajamos con fenómenos físicos. Antes de tocar una consola, conectar un micrófono o subir el volumen de un parlante, es necesario entender qué estamos manipulando: vibraciones, aire, energía y percepción auditiva.",
-              note: "La técnica empieza por comprender el fenómeno, no por memorizar botones."
+              "title": "Música, reproducción y escucha",
+              "body": "La música como experiencia sonora ocurre cuando se ejecuta, reproduce o escucha. Una partitura o archivo contiene información, pero la experiencia audible aparece cuando hay vibración, medio y receptor.",
+              "note": "El curso separa soporte musical, fenómeno sonoro y sistema de audio."
             }
           ],
-          questions: [
+          "questions": [
             {
-              prompt: "¿Qué necesita el sonido para propagarse?",
-              options: [
-                "Un medio físico, como el aire.",
-                "Una pantalla encendida.",
-                "Una consola digital.",
-                "Un cable conectado a internet."
+              "prompt": "¿Qué describe mejor una cadena de audio en un espectáculo?",
+              "difficulty": "recognition",
+              "options": [
+                "El recorrido de la señal y del sonido desde la fuente hasta el oyente.",
+                "Una lista de canciones para el show.",
+                "La suma de todos los cables sin importar su función.",
+                "El volumen final del parlante medido en watts."
               ],
-              correctIndex: 0,
-              explanation:
-                "Correcto. El sonido necesita un medio físico para propagarse, por ejemplo aire, agua o materiales sólidos."
+              "correctIndex": 0,
+              "explanation": "La cadena permite seguir el recorrido fuente → captación → control → amplificación → reproducción → escucha."
             },
             {
-              prompt: "¿Cuál de estos elementos puede ser una fuente sonora?",
-              options: [
-                "Una cuerda de guitarra vibrando.",
-                "Una silla quieta.",
-                "Una luz apagada.",
-                "Una entrada de ticket."
+              "prompt": "¿Cuál es una diferencia correcta entre sonido acústico y señal eléctrica?",
+              "difficulty": "comprehension",
+              "options": [
+                "El sonido acústico viaja por un medio; la señal eléctrica viaja por circuitos o cables.",
+                "Son exactamente lo mismo en cualquier punto del sistema.",
+                "La señal eléctrica solo existe después del parlante.",
+                "El sonido acústico no necesita fuente vibrante."
               ],
-              correctIndex: 0,
-              explanation:
-                "Una fuente sonora es el elemento que vibra y genera variaciones de presión en el medio."
+              "correctIndex": 0,
+              "explanation": "El micrófono y el parlante son puntos de transformación entre ambos mundos."
             },
             {
-              prompt: "El sonido se produce cuando:",
-              options: [
-                "Una fuente vibra.",
-                "Una luz cambia de color.",
-                "Un cable se enrolla.",
-                "Una persona mira un escenario."
+              "prompt": "¿Por qué es impreciso decir que el sonido solo necesita aire?",
+              "difficulty": "comprehension",
+              "options": [
+                "Porque necesita un medio material, y el aire es solo uno de los medios posibles.",
+                "Porque el sonido no necesita ningún medio.",
+                "Porque solo viaja por cables balanceados.",
+                "Porque se genera únicamente dentro de la consola."
               ],
-              correctIndex: 0,
-              explanation:
-                "El sonido comienza con una vibración capaz de generar variaciones de presión."
+              "correctIndex": 0,
+              "explanation": "El aire es el medio habitual en eventos, pero el sonido también puede propagarse por agua, sólidos u otros medios materiales."
             },
             {
-              prompt: "Verdadero o falso: el sonido puede propagarse en el vacío igual que en el aire.",
-              options: ["Verdadero", "Falso"],
-              correctIndex: 1,
-              explanation:
-                "Falso. El sonido necesita un medio físico; en el vacío no hay partículas que transporten la vibración."
-            },
-            {
-              prompt: "Orden correcto del recorrido básico del sonido:",
-              options: [
-                "Fuente sonora → aire / medio → oído",
-                "Oído → fuente sonora → aire",
-                "Aire → oído → fuente sonora",
-                "Consola → luz → oído"
+              "prompt": "Un micrófono recibe una voz y entrega señal a la consola. ¿Qué proceso realiza?",
+              "difficulty": "application",
+              "options": [
+                "Transducción acústico-eléctrica.",
+                "Amplificación de potencia para parlantes.",
+                "Absorción acústica del recinto.",
+                "Conversión de luz en frecuencia."
               ],
-              correctIndex: 0,
-              explanation:
-                "Primero vibra la fuente, luego la perturbación viaja por un medio y finalmente llega al receptor."
+              "correctIndex": 0,
+              "explanation": "El micrófono convierte variaciones de presión sonora en señal eléctrica."
             },
             {
-              prompt: "En un escenario, una cantante habla frente al público. ¿Cuál es la fuente sonora principal?",
-              options: ["La cantante.", "La pared del fondo.", "El público.", "La consola apagada."],
-              correctIndex: 0,
-              explanation:
-                "La cantante es la fuente sonora porque su voz genera la vibración inicial."
-            },
-            {
-              prompt: "Completá la idea: el sonido se propaga generalmente a través del...",
-              options: ["Aire", "Color", "Software", "Cable HDMI"],
-              correctIndex: 0,
-              explanation:
-                "En la mayoría de los eventos, el aire es el medio principal por el que se propaga el sonido."
-            }
-          ]
-        },
-        {
-          id: "lesson-02",
-          type: "lesson",
-          title: "El sonido como energía",
-          xp: 90,
-          objective:
-            "Comprender que el sonido transporta energía y que esa energía puede percibirse como un sonido más fuerte o más débil.",
-          sourceSegments: [
-            {
-              title: "Sonido como energía sonora",
-              sourceRef: "Bitácora original · Clase 1 · Energía sonora",
-              body:
-                "El sonido es una forma de energía llamada energía sonora. Esa energía no es infinita: puede ser mayor o menor dependiendo del impulso que le demos con la voz, un parlante o un instrumento musical. Por eso podemos hablar de sonidos fuertes o débiles.",
-              visualLabel: "Gráfico o esquema de energía sonora / presión sonora",
-              expertStatus: "Pendiente de revisión por Matías",
-              tags: ["Energía", "Intensidad", "dB"]
-            },
-            {
-              title: "Medición de presión sonora",
-              sourceRef: "Bitácora original · Clase 2 · Presión sonora",
-              body:
-                "La presión sonora puede medirse para cuidar los oídos y para asegurarse de que el sonido se escuche correctamente. En el material original aparecen ejemplos como el mosquito, el motor de un auto, una bomba y niveles que pueden resultar dolorosos o peligrosos.",
-              visualLabel: "Imagen original: dB meter / decibelímetro",
-              expertStatus: "Validar valores antes de publicar",
-              tags: ["Presión sonora", "Decibelímetro", "Seguridad auditiva"]
-            }
-          ],
-          theoryBlocks: [
-            {
-              title: "El sonido transporta energía",
-              body:
-                "Cuando una fuente vibra, no envía materia desde un lugar hasta otro. Lo que se transmite es energía. Esa energía se propaga a través del medio en forma de ondas sonoras. Por ejemplo, cuando un parlante reproduce música, no envía aire desde el escenario hasta el fondo de la sala; genera variaciones de presión que se transmiten por el aire.",
-              note: "El sonido no es un objeto que viaja: es una perturbación que transporta energía."
-            },
-            {
-              title: "Sonidos fuertes y sonidos débiles",
-              body:
-                "Un sonido puede percibirse como fuerte o débil. Esa diferencia está relacionada con la cantidad de energía transmitida y con la amplitud de la onda sonora. En sonido profesional, esta diferencia se analiza mediante el nivel de presión sonora, expresado habitualmente en decibeles SPL.",
-              note: "Más nivel no siempre significa mejor sonido."
-            },
-            {
-              title: "Por qué importa en espectáculos",
-              body:
-                "En un evento, el sonido debe ser suficiente para que el público escuche con claridad, pero no tan alto como para resultar molesto o peligroso. Un buen operador no solo sube el volumen: evalúa el espacio, la distancia, el tipo de evento, el público, la fuente sonora y el sistema de audio.",
-              note: "El objetivo técnico es claridad, cobertura y seguridad auditiva."
-            },
-            {
-              title: "Escuchar no es lo mismo que medir",
-              body:
-                "Nuestro oído percibe el sonido, pero la medición técnica se realiza con instrumentos como un sonómetro o decibelímetro. Esto permite trabajar con referencias más objetivas, especialmente cuando se necesita controlar niveles sonoros en un espectáculo.",
-              note: "Medir ayuda a tomar decisiones menos subjetivas."
-            }
-          ],
-          questions: [
-            {
-              prompt: "Un sonido fuerte suele estar relacionado con:",
-              options: ["Mayor energía sonora.", "Menor vibración.", "Menor presión sonora.", "Ausencia de medio."],
-              correctIndex: 0,
-              explanation:
-                "Un sonido percibido como más fuerte suele estar asociado a mayor energía y mayor nivel de presión sonora."
-            },
-            {
-              prompt: "¿Qué instrumento puede usarse para medir niveles sonoros?",
-              options: ["Decibelímetro o sonómetro.", "Afinador de luces.", "Cable Speakon.", "Reproductor de video."],
-              correctIndex: 0,
-              explanation:
-                "El decibelímetro o sonómetro permite medir niveles sonoros de manera más objetiva."
-            },
-            {
-              prompt: "En sonido profesional, el nivel de presión sonora se expresa habitualmente en:",
-              options: ["Decibeles SPL.", "Kilogramos.", "Metros cuadrados.", "Voltios de iluminación."],
-              correctIndex: 0,
-              explanation:
-                "El dB SPL expresa nivel de presión sonora."
-            },
-            {
-              prompt: "Verdadero o falso: un sonido más fuerte siempre es mejor para un espectáculo.",
-              options: ["Verdadero", "Falso"],
-              correctIndex: 1,
-              explanation:
-                "Falso. El nivel debe ser adecuado al tipo de evento, al espacio y a la seguridad auditiva."
-            },
-            {
-              prompt:
-                "Estás en una charla dentro de una sala chica. El sonido está demasiado fuerte y molesta al público. ¿Qué decisión sería más razonable?",
-              options: [
-                "Ajustar el nivel sonoro a la situación.",
-                "Subir todos los canales al máximo.",
-                "Agregar más parlantes sin medir nada.",
-                "Apagar todos los micrófonos."
-              ],
-              correctIndex: 0,
-              explanation:
-                "El nivel debe adaptarse al contexto. En una charla, claridad y comodidad son más importantes que potencia excesiva."
-            },
-            {
-              prompt: "¿Cuál relación es correcta?",
-              options: [
-                "Decibelímetro → instrumento de medición.",
-                "Sonido débil → mayor energía percibida.",
-                "dB SPL → color de iluminación.",
-                "Sonómetro → tipo de cable."
-              ],
-              correctIndex: 0,
-              explanation:
-                "Un decibelímetro o sonómetro sirve para medir niveles sonoros."
-            },
-            {
-              prompt: "El sonido transporta ______ desde la fuente hasta el receptor.",
-              options: ["Energía", "Butacas", "Luz", "Escenografía"],
-              correctIndex: 0,
-              explanation: "La propagación sonora transporta energía a través del medio."
-            }
-          ]
-        },
-        {
-          id: "lesson-03",
-          type: "lesson",
-          title: "Propagación del sonido",
-          xp: 90,
-          objective:
-            "Entender que el sonido se propaga a través de un medio mediante variaciones de presión.",
-          sourceSegments: [
-            {
-              title: "Análisis de la onda sonora",
-              sourceRef: "Bitácora original · Clase 2 · Análisis de la onda",
-              body:
-                "La onda se usa como forma de explicar un fenómeno real. En el material original se representa la presión y la rarefacción: una zona donde hay mayor presión y otra donde las partículas están más separadas. Entre una presión y otra aparece un ciclo.",
-              visualLabel: "Gráfico original: compresión, rarefacción y ciclo",
-              expertStatus: "Pendiente de revisión por Matías",
-              tags: ["Onda", "Compresión", "Rarefacción"]
-            },
-            {
-              title: "El sonido cambia con el entorno",
-              sourceRef: "Bitácora original · Clase 2 · Propagación",
-              body:
-                "La configuración de sonido puede cambiar si cambia la temperatura y la humedad del aire. El viento también puede afectar la propagación. Por eso, un mismo sistema puede comportarse distinto según el espacio y las condiciones ambientales.",
-              visualLabel: "Referencia visual: propagación en sala vs exterior",
-              expertStatus: "Contenido base para ampliar",
-              tags: ["Propagación", "Ambiente", "Condiciones"]
-            }
-          ],
-          theoryBlocks: [
-            {
-              title: "El sonido viaja por el medio",
-              body:
-                "Cuando una fuente sonora vibra, produce variaciones de presión en el aire. Estas variaciones no son visibles, pero se propagan desde la fuente hacia el entorno. Por eso podemos escuchar una voz, un instrumento o un parlante aunque no estemos tocando directamente la fuente sonora.",
-              note: "El fenómeno es físico aunque no podamos verlo."
-            },
-            {
-              title: "Compresión y rarefacción",
-              body:
-                "El sonido puede entenderse como una sucesión de zonas de compresión y rarefacción. La compresión ocurre cuando las partículas del medio están más juntas. La rarefacción ocurre cuando están más separadas. Esta alternancia se propaga como una onda sonora.",
-              note: "Compresión y rarefacción son dos partes del mismo movimiento ondulatorio."
-            },
-            {
-              title: "El aire no viaja completo",
-              body:
-                "Es importante entender algo: el aire no se desplaza completo desde el parlante hasta el oído. Lo que avanza es la perturbación, es decir, la variación de presión. Una forma simple de pensarlo es como una transmisión de energía entre partículas del medio.",
-              note: "No se traslada todo el aire; se transmite la perturbación."
-            },
-            {
-              title: "Factores del entorno",
-              body:
-                "La propagación del sonido puede verse afectada por el espacio, la distancia, la temperatura, la humedad, el viento y los materiales presentes. Por eso, un mismo sistema de sonido puede comportarse diferente en una sala cerrada, en una plaza, en un teatro o en un galpón.",
-              note: "El sistema de audio no suena aislado: suena dentro de un contexto."
-            }
-          ],
-          questions: [
-            {
-              prompt: "¿Qué se propaga cuando escuchamos un sonido?",
-              options: ["Una perturbación o variación de presión.", "El parlante entero.", "La consola.", "El cable de audio."],
-              correctIndex: 0,
-              explanation:
-                "Lo que se propaga es una perturbación del medio, no el objeto completo que generó el sonido."
-            },
-            {
-              prompt: "La compresión ocurre cuando las partículas del medio están:",
-              options: ["Más juntas.", "Más iluminadas.", "Más lejos del escenario.", "Apagadas."],
-              correctIndex: 0,
-              explanation:
-                "En una zona de compresión, las partículas del medio están más próximas entre sí."
-            },
-            {
-              prompt: "La propagación del sonido en el aire ocurre mediante:",
-              options: ["Variaciones de presión.", "Señales de video.", "Cambios de color.", "Movimiento de luces."],
-              correctIndex: 0,
-              explanation:
-                "El sonido en el aire se propaga como variaciones de presión."
-            },
-            {
-              prompt: "Verdadero o falso: el sonido puede comportarse distinto según el espacio donde se reproduce.",
-              options: ["Verdadero", "Falso"],
-              correctIndex: 0,
-              explanation:
-                "Verdadero. El entorno modifica la propagación y la percepción del sonido."
-            },
-            {
-              prompt: "La alternancia entre compresión y rarefacción forma una:",
-              options: ["Onda sonora", "Planilla", "Consola", "Lámpara"],
-              correctIndex: 0,
-              explanation:
-                "La onda sonora puede representarse como alternancia de compresiones y rarefacciones."
-            },
-            {
-              prompt:
-                "Un evento al aire libre tiene viento fuerte. El público ubicado al fondo escucha de forma irregular. ¿Qué factor puede estar afectando la propagación?",
-              options: ["El viento.", "El color de la consola.", "La marca del micrófono solamente.", "El diseño del flyer."],
-              correctIndex: 0,
-              explanation:
-                "El viento puede afectar cómo se propaga el sonido en un evento al aire libre."
-            },
-            {
-              prompt: "Orden correcto del proceso:",
-              options: [
-                "Fuente vibra → variaciones de presión → propagación por el aire → oído",
-                "Oído → consola → flyer → fuente",
-                "Parlante → color → presión → entrada",
-                "Aire → butaca → luz → cable"
-              ],
-              correctIndex: 0,
-              explanation:
-                "La secuencia parte de la fuente que vibra y termina en el receptor."
-            }
-          ]
-        },
-        {
-          id: "lesson-04",
-          type: "lesson",
-          title: "Cadena de audio en un espectáculo",
-          xp: 100,
-          objective:
-            "Reconocer los elementos básicos que forman la cadena de audio en un espectáculo.",
-          sourceSegments: [
-            {
-              title: "Cadena electroacústica aplicada a espectáculos",
-              sourceRef: "Bitácora original · Clase 1 y material de consola",
-              body:
-                "La cadena de audio está presente en todo evento de sonido. En un caso simple puede pensarse como fuente sonora, captura, control, amplificación y reproducción. Esta fuente completa permite ver el recorrido antes de convertirlo en una actividad o cuestionario.",
-              visualLabel: "Esquema original o reconstruido de voz → micrófono → consola → parlante",
-              expertStatus: "Revisar orden y términos con Matías",
-              tags: ["Cadena de audio", "Sistema completo", "Diagnóstico"]
-            },
-            {
-              title: "Acústica del lugar como parte del resultado",
-              sourceRef: "Bitácora original · Clase 2 · Eco, reverberación y absorción",
-              body:
-                "En una habitación cerrada, el sonido rebota en paredes, techo y piso hasta agotar su energía. Las salas con materiales duros tienen más reflexiones, mientras que teatros o estudios suelen usar materiales absorbentes para controlar la duración del sonido en el espacio.",
-              visualLabel: "Gráfico original o esquema de reflexión, absorción y reverberación",
-              expertStatus: "Pendiente de validación técnica",
-              tags: ["Acústica", "Reflexión", "Reverberación"]
-            }
-          ],
-          theoryBlocks: [
-            {
-              title: "Qué es una cadena de audio",
-              body:
-                "La cadena de audio es el recorrido que realiza una señal sonora o eléctrica desde su origen hasta que llega al público. En un espectáculo, esta cadena puede incluir fuentes sonoras, micrófonos, cables, consola, procesadores, amplificadores, parlantes y el espacio acústico.",
-              note: "Pensar en cadena ayuda a encontrar problemas cuando algo no suena."
-            },
-            {
-              title: "Fuente sonora",
-              body:
-                "La fuente sonora es el punto donde comienza el sonido. Puede ser una voz, una guitarra, un teclado, una batería, una pista reproducida desde una computadora o cualquier elemento que genere sonido.",
-              note: "Sin fuente no hay señal que capturar, procesar ni amplificar."
-            },
-            {
-              title: "Captura, control y reproducción",
-              body:
-                "En muchos espectáculos, el sonido de una fuente se captura con un micrófono. Luego esa señal puede pasar por una consola, donde se ajusta su nivel, ecualización, ruteo y mezcla. Después, la señal se envía al sistema de reproducción, que puede incluir amplificadores y parlantes.",
-              note: "Cada etapa cumple una función diferente dentro del sistema."
-            },
-            {
-              title: "La acústica también forma parte del resultado",
-              body:
-                "El sonido que escucha el público no depende solamente de los equipos. También depende del espacio: paredes, techo, piso, materiales, distancia, cantidad de personas y reflexiones. Por eso, la acústica del lugar modifica el resultado final.",
-              note: "Un buen sistema puede sonar mal en un espacio acústicamente problemático."
-            }
-          ],
-          questions: [
-            {
-              prompt: "¿Qué es la cadena de audio?",
-              options: [
-                "El recorrido del sonido o de la señal desde su origen hasta el público.",
-                "Una lista de canciones.",
-                "Un cable enrollado.",
-                "Un tipo de iluminación."
-              ],
-              correctIndex: 0,
-              explanation:
-                "La cadena de audio describe el recorrido desde la fuente hasta la reproducción final."
-            },
-            {
-              prompt: "¿Cuál puede ser una fuente sonora?",
-              options: ["Una voz.", "Una butaca vacía.", "Un telón quieto.", "Un trípode sin equipo."],
-              correctIndex: 0,
-              explanation:
-                "La voz puede iniciar la cadena como fuente sonora."
-            },
-            {
-              prompt: "Ordená una cadena básica:",
-              options: [
-                "Voz → micrófono → consola → parlante",
-                "Parlante → voz → consola → micrófono",
-                "Consola → pared → público → cable",
-                "Micrófono → luz → butaca → voz"
-              ],
-              correctIndex: 0,
-              explanation:
-                "La voz se captura con micrófono, se controla en consola y se reproduce por parlantes."
-            },
-            {
-              prompt: "¿Qué equipo se usa comúnmente para capturar una voz en vivo?",
-              options: ["Micrófono.", "Parlante.", "Butaca.", "Pantalla."],
-              correctIndex: 0,
-              explanation:
-                "El micrófono transforma la energía acústica en señal eléctrica."
-            },
-            {
-              prompt: "¿Qué equipo permite controlar niveles, mezclar señales y enviarlas a una salida?",
-              options: ["Consola.", "Cable enrollado.", "Silla del operador.", "Soporte de micrófono."],
-              correctIndex: 0,
-              explanation:
-                "La consola permite controlar y mezclar señales."
-            },
-            {
-              prompt: "Verdadero o falso: la acústica del lugar puede modificar lo que escucha el público.",
-              options: ["Verdadero", "Falso"],
-              correctIndex: 0,
-              explanation:
-                "Verdadero. La acústica del espacio forma parte del resultado final."
-            },
-            {
-              prompt:
-                "Hay señal en el micrófono y en la consola, pero el público no escucha por los parlantes. ¿Qué parte de la cadena conviene revisar?",
-              options: [
-                "Salida de consola, amplificación, cableado o parlantes.",
+              "prompt": "Hay señal clara en consola, pero no sale sonido por el sistema principal. ¿Dónde conviene revisar primero?",
+              "difficulty": "application",
+              "options": [
+                "Etapas posteriores: salidas, procesadores, amplificación, cables o parlantes.",
+                "Solo la técnica vocal del cantante.",
                 "El color del escenario.",
-                "El afiche del evento.",
-                "La ropa del cantante."
+                "La letra de la canción."
               ],
-              correctIndex: 0,
-              explanation:
-                "Si la señal llega a la consola, el problema puede estar después: salidas, amplificación, cables o parlantes."
-            }
-          ]
-        },
-        {
-          id: "challenge-01",
-          type: "challenge",
-          title: "Desafío: primer día como asistente de sonido",
-          xp: 150,
-          objective:
-            "Aplicar lo aprendido para identificar elementos básicos del fenómeno sonoro y de la cadena de audio en una situación real.",
-          sourceSegments: [
-            {
-              title: "Caso integrador desde la fuente",
-              sourceRef: "Síntesis de Documento Fuente · Unidad 1",
-              body:
-                "El desafío toma elementos del documento fuente: fenómeno sonoro, aire como medio, energía sonora, cadena de audio, reflexión del espacio y función básica de micrófono, consola y parlantes. Antes de responder, el alumno debe reconocer de dónde sale cada concepto.",
-              visualLabel: "Escena integradora: cantante, micrófono, consola, parlantes y sala",
-              expertStatus: "Validar escenario con Matías",
-              tags: ["Caso integrador", "Cadena de audio", "Acústica"]
-            }
-          ],
-          theoryBlocks: [
-            {
-              title: "Escenario del desafío",
-              body:
-                "Llegás a un evento pequeño en un salón. Hay una cantante, un micrófono, una consola, dos parlantes y público ubicado al fondo. El salón tiene paredes duras y el sonido rebota bastante. Tu tarea es identificar qué está pasando y qué elementos intervienen en la cadena de audio.",
-              note: "Este desafío no introduce teoría nueva: integra todo el módulo."
+              "correctIndex": 0,
+              "explanation": "Si la consola recibe señal, la falla probablemente está después de esa etapa."
             },
             {
-              title: "Qué deberías poder reconocer",
-              body:
-                "Al resolver el desafío, deberías distinguir fuente sonora, medio de propagación, captura, control, reproducción y problemas básicos del espacio acústico. No hace falta memorizar marcas ni modelos de equipos; importa entender la función de cada elemento.",
-              note: "Pensá en funciones: producir, transportar, capturar, controlar y reproducir."
-            }
-          ],
-          questions: [
-            {
-              prompt: "¿Cuál es la fuente sonora principal?",
-              options: ["La cantante.", "La pared.", "El público.", "El soporte del micrófono."],
-              correctIndex: 0,
-              explanation: "La voz de la cantante inicia el fenómeno sonoro."
-            },
-            {
-              prompt: "¿Qué elemento captura la voz?",
-              options: ["El micrófono.", "El parlante.", "El piso.", "El cable de corriente."],
-              correctIndex: 0,
-              explanation: "El micrófono captura la fuente sonora y la convierte en señal eléctrica."
-            },
-            {
-              prompt: "¿Qué equipo permite controlar y mezclar la señal?",
-              options: ["La consola.", "El atril.", "La pared.", "La entrada del salón."],
-              correctIndex: 0,
-              explanation: "La consola permite controlar niveles, mezcla y ruteo."
-            },
-            {
-              prompt: "¿Qué elemento reproduce el sonido hacia el público?",
-              options: ["Los parlantes.", "El micrófono.", "El oído del técnico.", "La mesa de entrada."],
-              correctIndex: 0,
-              explanation: "Los parlantes reproducen el sonido para el público."
-            },
-            {
-              prompt: "¿Por qué el sonido llega al público?",
-              options: [
-                "Porque se propaga a través del aire.",
-                "Porque la luz lo empuja.",
-                "Porque el cable lo lleva hasta cada persona.",
-                "Porque el escenario vibra completo."
+              "prompt": "Una sala con muchas superficies duras genera rebotes que afectan claridad. ¿Qué parte de la cadena está influyendo?",
+              "difficulty": "application",
+              "options": [
+                "La acústica del espacio.",
+                "La partitura original.",
+                "El nombre del micrófono.",
+                "La longitud del cable únicamente."
               ],
-              correctIndex: 0,
-              explanation: "En este caso, el aire es el medio que propaga el sonido hasta el público."
+              "correctIndex": 0,
+              "explanation": "La acústica final afecta la percepción aunque el sistema esté conectado correctamente."
             },
             {
-              prompt: "Si el salón tiene paredes duras y el sonido rebota mucho, ¿qué problema puede aparecer?",
-              options: [
-                "Exceso de reflexiones o reverberación.",
-                "Falta de electricidad únicamente.",
-                "Cambio de color en los parlantes.",
-                "Pérdida del micrófono."
+              "prompt": "¿Cuál sería una actitud profesional ante un problema de audio no identificado?",
+              "difficulty": "criterion",
+              "options": [
+                "Seguir la cadena por etapas y aislar el punto de falla.",
+                "Subir todo al máximo inmediatamente.",
+                "Cambiar cables al azar hasta que algo pase.",
+                "Culpar a la sala sin revisar señal."
               ],
-              correctIndex: 0,
-              explanation: "Las superficies duras pueden aumentar reflexiones y reverberación."
+              "correctIndex": 0,
+              "explanation": "El diagnóstico por cadena reduce incertidumbre y evita acciones impulsivas."
             },
             {
-              prompt: "¿Por qué no conviene resolver todo simplemente subiendo el volumen?",
-              options: [
-                "Porque puede aumentar la molestia, empeorar la claridad o generar niveles inseguros.",
-                "Porque la consola se vuelve más chica.",
-                "Porque los cables cambian de forma.",
-                "Porque el sonido deja de necesitar aire."
+              "prompt": "¿Qué afirmación muestra mejor criterio técnico?",
+              "difficulty": "criterion",
+              "options": [
+                "La acústica puede afectar la captación y la escucha, no solo la reproducción final.",
+                "La acústica desaparece si la consola es digital.",
+                "El parlante elimina cualquier problema de sala.",
+                "Un micrófono siempre capta solo la fuente deseada."
               ],
-              correctIndex: 0,
-              explanation:
-                "Subir volumen no corrige necesariamente un problema acústico y puede empeorar la experiencia."
+              "correctIndex": 0,
+              "explanation": "La acústica condiciona el sonido antes y después del sistema electroacústico."
             }
           ]
         }
@@ -608,1129 +161,1470 @@ Por último, recordamos que la velocidad del sonido es de 340 metros por segundo
     },
     {
       "id": "module-02",
-      "title": "Intensidad, dB y seguridad auditiva",
+      "title": "Presión sonora, dB y seguridad",
       "status": "available",
-      "description": "Niveles sonoros, decibeles, distancia, riesgos auditivos y criterios de operación segura.",
+      "description": "Nivel, medición, distancia, cobertura y cuidado auditivo.",
       "lessons": [
+        {
+          "id": "u02",
+          "type": "lesson",
+          "title": "Presión Sonora, dB y Seguridad Auditiva",
+          "xp": 115,
+          "objective": "Diferenciar presión sonora, intensidad, sonoridad percibida, decibeles y criterios básicos de exposición segura.",
+          "sourceSegments": [
             {
-                  "id": "lesson-05",
-                  "type": "lesson",
-                  "title": "Presión sonora e intensidad",
-                  "xp": 95,
-                  "objective": "Comprender que la presión sonora describe variaciones de presión y que la intensidad percibida no equivale automáticamente a mejor calidad sonora.",
-                  "sourceSegments": [
-                        {
-                              "title": "2.1 - Unidad 02 - Intensidad, dB y Seguridad Auditiva",
-                              "sourceRef": "Documento Fuente · Unidad 02 · Formato C Digital Premium",
-                              "body": "Unidad 02 - Intensidad, dB y Seguridad Auditiva\n\nEl sonido se propaga como una sucesión de compresiones y rarefacciones del aire. Las partículas no viajan grandes distancias: transmiten energía a las partículas vecinas, de forma similar a una cadena de empujones.\n\nLa presión sonora es la variación de presión que produce una onda sonora respecto de la presión atmosférica. En una explicación inicial, puede pensarse como cuánto se modifica la presión del aire cuando pasa la onda sonora.\n\nLa intensidad se relaciona con la amplitud de la onda y con la percepción de volumen. Sonidos de mayor amplitud suelen percibirse como más fuertes; sonidos de menor amplitud, como más débiles.\n\nEl nivel de presión sonora se expresa habitualmente en decibeles SPL o NPS. Esta escala permite comparar niveles sonoros de manera práctica, pero no debe interpretarse como una regla lineal simple.\n\nEn la práctica, el técnico no usa los decibeles solo como un número aislado. Los interpreta junto con el contexto: tipo de evento, distancia al público, tamaño del espacio, tiempo de exposición, fatiga auditiva y calidad de la mezcla.\n\nLa medición ayuda a salir de la subjetividad. Dos personas pueden percibir el mismo evento de manera distinta, pero un sonómetro o decibelímetro permite tener una referencia objetiva para tomar mejores decisiones.\n\nEl nivel sonoro baja con la distancia. Por eso, escuchar o medir solo cerca del parlante no representa necesariamente lo que escucha el público ubicado más lejos.\n\nComo regla práctica, en campo libre y con una fuente puntual, duplicar la distancia puede reducir el nivel aproximadamente 6 dB. En salas reales esta regla puede variar por reflexiones, absorción, reverberación, cantidad de público y geometría del lugar.\n\nEn un espectáculo, el operador debe buscar un equilibrio: suficiente nivel para lograr claridad y cobertura, pero sin excederse ni generar una experiencia incómoda o riesgosa.\n\nLa seguridad auditiva forma parte del trabajo técnico. En eventos, ensayos y montajes puede haber exposición prolongada a niveles altos, tanto para el público como para músicos, técnicos y personal de producción.\n\nComo referencia institucional, NIOSH recomienda un límite de exposición ocupacional de 85 dBA para una jornada de 8 horas. OSHA también usa 85 dBA como nivel de acción para programas de conservación auditiva en exposición ocupacional de 8 horas. En Argentina, la SRT dispone el protocolo oficial para medición del nivel de ruido en ambiente laboral mediante la Resolución SRT 85/12.\n\nEstos valores se incorporan como referencia educativa y deben validarse con el experto técnico y el marco normativo aplicable antes de usarse en una certificación o recomendación profesional formal.",
-                              "documentPages": [
-                                    {
-                                          "src": "assets/source/2-1-unidad-02-intensidad-db-seguridad-formato-c-continuo.png",
-                                          "alt": "Documento Fuente Formato C Digital Premium para Unidad 02: Intensidad, dB y Seguridad Auditiva",
-                                          "caption": "Formato C Digital Premium: documento fuente completo de Unidad 02, preparado para lectura en app."
-                                    }
-                              ],
-                              "visualLabel": "Documento Fuente · Formato C",
-                              "expertStatus": "Formato C integrado · Pendiente de validacion final por Matias",
-                              "tags": [
-                                    "Fuente de conocimiento",
-                                    "Unidad 2",
-                                    "Formato C",
-                                    "dB",
-                                    "Presion sonora",
-                                    "Seguridad auditiva",
-                                    "Antes del cuestionario"
-                              ],
-                              "preserveLineBreaks": true
-                        }
-                  ],
-                  "theoryBlocks": [
-                        {
-                              "title": "Presión sonora",
-                              "body": "La presión sonora es la variación de presión que produce una onda sonora respecto de la presión atmosférica. Cuando una fuente vibra, genera compresiones y rarefacciones en el aire. Esas variaciones llegan al oído y pueden ser percibidas como sonido.",
-                              "note": "No se mide el sonido como objeto; se mide una variación física de presión."
-                        },
-                        {
-                              "title": "Intensidad percibida",
-                              "body": "La intensidad percibida se relaciona con la amplitud de la onda sonora y con la energía transmitida. Un sonido con mayor amplitud suele percibirse como más fuerte, pero eso no significa que sea más claro, más agradable o más profesional.",
-                              "note": "Más fuerte no siempre significa mejor."
-                        },
-                        {
-                              "title": "Relación con eventos",
-                              "body": "En un espectáculo, el nivel tiene que alcanzar al público con claridad. Pero si se excede, puede cansar, molestar o volver menos inteligible la mezcla. Por eso el operador debe pensar en equilibrio: nivel, cobertura, claridad y seguridad.",
-                              "note": "El objetivo técnico no es impresionar con volumen, sino lograr escucha útil y segura."
-                        },
-                        {
-                              "title": "Error frecuente",
-                              "body": "Un error común es intentar resolver cualquier problema subiendo el volumen. Si el problema es acústico, de cobertura, de ecualización, de ubicación de parlantes o de mezcla, subir nivel puede empeorar el resultado.",
-                              "note": "Antes de subir, diagnosticar."
-                        }
-                  ],
-                  "questions": [
-                        {
-                              "prompt": "¿Qué describe mejor la presión sonora?",
-                              "difficulty": "recognition",
-                              "options": [
-                                    "La variación de presión producida por una onda sonora respecto de la presión atmosférica.",
-                                    "La cantidad de cables conectados a la consola.",
-                                    "La potencia visual del escenario.",
-                                    "La velocidad con la que se mueve todo el aire de la sala."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "La presión sonora se refiere a variaciones de presión producidas por la onda sonora."
-                        },
-                        {
-                              "prompt": "Cuando aumenta la amplitud de una onda sonora, normalmente percibimos:",
-                              "difficulty": "comprehension",
-                              "options": [
-                                    "Un sonido más fuerte.",
-                                    "Un sonido necesariamente más afinado.",
-                                    "Una señal sin necesidad de medio físico.",
-                                    "Una reverberación eliminada automáticamente."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "La amplitud se relaciona con la intensidad percibida, aunque no garantiza calidad."
-                        },
-                        {
-                              "prompt": "¿Cuál afirmación es más correcta para operación de sonido?",
-                              "difficulty": "comprehension",
-                              "options": [
-                                    "Más nivel no siempre implica mejor sonido.",
-                                    "Más nivel siempre mejora la claridad.",
-                                    "Si algo suena mal, la única solución es subir todo.",
-                                    "La presión sonora no tiene relación con la percepción."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "El nivel debe evaluarse con criterio: claridad, cobertura, contexto y seguridad."
-                        },
-                        {
-                              "prompt": "En una sala chica, el público se queja de molestia aunque todo se escucha. ¿Qué conviene revisar primero?",
-                              "difficulty": "application",
-                              "options": [
-                                    "Si el nivel es adecuado para el espacio y el tipo de evento.",
-                                    "Si se puede subir el master para tapar la molestia.",
-                                    "Si el micrófono cambia de color al conectarlo.",
-                                    "Si el flyer del evento tiene suficiente contraste."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "El nivel debe adaptarse al contexto; no todo evento requiere el mismo volumen."
-                        },
-                        {
-                              "prompt": "¿Cuál es un error frecuente al interpretar intensidad sonora?",
-                              "difficulty": "application",
-                              "options": [
-                                    "Confundir más volumen con mejor calidad.",
-                                    "Medir en más de un punto del espacio.",
-                                    "Considerar al público y la distancia.",
-                                    "Ajustar el nivel según el tipo de evento."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "Más volumen puede empeorar claridad, cansancio auditivo o riesgo."
-                        },
-                        {
-                              "prompt": "Si una mezcla no se entiende, pero ya está muy fuerte, una decisión razonable sería:",
-                              "difficulty": "criterion",
-                              "options": [
-                                    "Revisar mezcla, ecualización, acústica o cobertura antes de seguir subiendo nivel.",
-                                    "Subir todos los canales y el master al máximo.",
-                                    "Ignorar el problema si el sonómetro marca un número alto.",
-                                    "Acercar todos los parlantes al micrófono principal."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "El diagnóstico debe considerar la causa; el volumen no corrige todos los problemas."
-                        },
-                        {
-                              "prompt": "¿Qué idea debería quedar clara en esta lección?",
-                              "difficulty": "criterion",
-                              "options": [
-                                    "El nivel se decide con criterio técnico, no solo por sensación de potencia.",
-                                    "El nivel alto reemplaza a la acústica.",
-                                    "La presión sonora no puede medirse.",
-                                    "Una consola elimina los problemas de sala."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "La operación profesional combina percepción, medición, contexto y seguridad."
-                        }
-                  ]
-            },
-            {
-                  "id": "lesson-06",
-                  "type": "lesson",
-                  "title": "Decibeles y medición",
-                  "xp": 100,
-                  "objective": "Interpretar los decibeles como una referencia técnica útil, evitando tratarlos como una escala lineal o como una competencia de volumen.",
-                  "sourceSegments": [
-                        {
-                              "title": "2.1 - Unidad 02 - Intensidad, dB y Seguridad Auditiva",
-                              "sourceRef": "Documento Fuente · Unidad 02 · Formato C Digital Premium",
-                              "body": "Unidad 02 - Intensidad, dB y Seguridad Auditiva\n\nEl sonido se propaga como una sucesión de compresiones y rarefacciones del aire. Las partículas no viajan grandes distancias: transmiten energía a las partículas vecinas, de forma similar a una cadena de empujones.\n\nLa presión sonora es la variación de presión que produce una onda sonora respecto de la presión atmosférica. En una explicación inicial, puede pensarse como cuánto se modifica la presión del aire cuando pasa la onda sonora.\n\nLa intensidad se relaciona con la amplitud de la onda y con la percepción de volumen. Sonidos de mayor amplitud suelen percibirse como más fuertes; sonidos de menor amplitud, como más débiles.\n\nEl nivel de presión sonora se expresa habitualmente en decibeles SPL o NPS. Esta escala permite comparar niveles sonoros de manera práctica, pero no debe interpretarse como una regla lineal simple.\n\nEn la práctica, el técnico no usa los decibeles solo como un número aislado. Los interpreta junto con el contexto: tipo de evento, distancia al público, tamaño del espacio, tiempo de exposición, fatiga auditiva y calidad de la mezcla.\n\nLa medición ayuda a salir de la subjetividad. Dos personas pueden percibir el mismo evento de manera distinta, pero un sonómetro o decibelímetro permite tener una referencia objetiva para tomar mejores decisiones.\n\nEl nivel sonoro baja con la distancia. Por eso, escuchar o medir solo cerca del parlante no representa necesariamente lo que escucha el público ubicado más lejos.\n\nComo regla práctica, en campo libre y con una fuente puntual, duplicar la distancia puede reducir el nivel aproximadamente 6 dB. En salas reales esta regla puede variar por reflexiones, absorción, reverberación, cantidad de público y geometría del lugar.\n\nEn un espectáculo, el operador debe buscar un equilibrio: suficiente nivel para lograr claridad y cobertura, pero sin excederse ni generar una experiencia incómoda o riesgosa.\n\nLa seguridad auditiva forma parte del trabajo técnico. En eventos, ensayos y montajes puede haber exposición prolongada a niveles altos, tanto para el público como para músicos, técnicos y personal de producción.\n\nComo referencia institucional, NIOSH recomienda un límite de exposición ocupacional de 85 dBA para una jornada de 8 horas. OSHA también usa 85 dBA como nivel de acción para programas de conservación auditiva en exposición ocupacional de 8 horas. En Argentina, la SRT dispone el protocolo oficial para medición del nivel de ruido en ambiente laboral mediante la Resolución SRT 85/12.\n\nEstos valores se incorporan como referencia educativa y deben validarse con el experto técnico y el marco normativo aplicable antes de usarse en una certificación o recomendación profesional formal.",
-                              "documentPages": [
-                                    {
-                                          "src": "assets/source/2-1-unidad-02-intensidad-db-seguridad-formato-c-continuo.png",
-                                          "alt": "Documento Fuente Formato C Digital Premium para Unidad 02: Intensidad, dB y Seguridad Auditiva",
-                                          "caption": "Formato C Digital Premium: documento fuente completo de Unidad 02, preparado para lectura en app."
-                                    }
-                              ],
-                              "visualLabel": "Documento Fuente · Formato C",
-                              "expertStatus": "Formato C integrado · Pendiente de validacion final por Matias",
-                              "tags": [
-                                    "Fuente de conocimiento",
-                                    "Unidad 2",
-                                    "Formato C",
-                                    "dB",
-                                    "Presion sonora",
-                                    "Seguridad auditiva",
-                                    "Antes del cuestionario"
-                              ],
-                              "preserveLineBreaks": true
-                        }
-                  ],
-                  "theoryBlocks": [
-                        {
-                              "title": "Qué expresa el dB SPL / NPS",
-                              "body": "El nivel de presión sonora se expresa habitualmente en decibeles SPL o NPS. La escala permite comparar niveles, pero no debe interpretarse como si fuera una regla lineal simple. Pequeños cambios numéricos pueden representar cambios importantes en energía o percepción.",
-                              "note": "El dB exige interpretación, no lectura automática."
-                        },
-                        {
-                              "title": "Medición objetiva",
-                              "body": "Un sonómetro o decibelímetro permite obtener una referencia objetiva del nivel sonoro. Esa medición no reemplaza el oído ni el criterio, pero ayuda a tomar decisiones menos subjetivas y más defendibles técnicamente.",
-                              "note": "Medir ayuda a salir del “me parece”."
-                        },
-                        {
-                              "title": "Contexto de medición",
-                              "body": "Un valor de dB no dice todo por sí solo. Hay que saber dónde se midió, durante cuánto tiempo, con qué ponderación, en qué tipo de evento y con qué objetivo. Medir al lado del parlante no representa necesariamente la experiencia de todo el público.",
-                              "note": "El número sin contexto puede engañar."
-                        },
-                        {
-                              "title": "Uso responsable",
-                              "body": "La medición se usa para ajustar, comparar y prevenir. Si el nivel es alto pero el sonido no es claro, el dato de medición debe abrir un diagnóstico: cobertura, ubicación de parlantes, ecualización, mezcla, acústica o exceso de nivel.",
-                              "note": "El sonómetro informa; el técnico decide."
-                        }
-                  ],
-                  "questions": [
-                        {
-                              "prompt": "¿Para qué sirve expresar el nivel en dB SPL / NPS?",
-                              "difficulty": "recognition",
-                              "options": [
-                                    "Para comparar niveles de presión sonora de manera técnica.",
-                                    "Para medir la longitud del cable del micrófono.",
-                                    "Para definir el color de la consola.",
-                                    "Para reemplazar por completo la escucha humana."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "El dB SPL/NPS permite expresar nivel de presión sonora."
-                        },
-                        {
-                              "prompt": "¿Cuál es una interpretación correcta de los decibeles?",
-                              "difficulty": "comprehension",
-                              "options": [
-                                    "Son una escala que requiere contexto técnico para interpretarse.",
-                                    "Son una escala lineal idéntica a medir centímetros.",
-                                    "Solo sirven si el evento es al aire libre.",
-                                    "Indican automáticamente que una mezcla es buena."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "El dB es una escala logarítmica y necesita contexto."
-                        },
-                        {
-                              "prompt": "¿Qué aporta un sonómetro o decibelímetro?",
-                              "difficulty": "comprehension",
-                              "options": [
-                                    "Una referencia objetiva del nivel sonoro.",
-                                    "Una corrección automática de la mezcla.",
-                                    "Una eliminación total de la reverberación.",
-                                    "Una conversión de sonido a iluminación."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "El instrumento mide nivel; no resuelve por sí mismo la operación."
-                        },
-                        {
-                              "prompt": "Si dos técnicos discuten si el sistema está demasiado fuerte, una buena práctica es:",
-                              "difficulty": "application",
-                              "options": [
-                                    "Medir el nivel en puntos relevantes y evaluar el contexto.",
-                                    "Decidir por quién grita más fuerte.",
-                                    "Subir el master hasta que nadie discuta.",
-                                    "Medir solo pegado al parlante y cerrar el caso."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "La medición debe hacerse con criterio y en ubicaciones representativas."
-                        },
-                        {
-                              "prompt": "¿Qué dato falta si alguien solo dice “está a 90 dB” sin más información?",
-                              "difficulty": "application",
-                              "options": [
-                                    "Dónde, cómo y durante cuánto se midió.",
-                                    "El color exacto del gabinete del parlante.",
-                                    "El nombre de la canción anterior.",
-                                    "La cantidad de sillas del camarín."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "Un número de dB necesita contexto de medición."
-                        },
-                        {
-                              "prompt": "Un valor alto de dB con baja inteligibilidad indica que conviene:",
-                              "difficulty": "criterion",
-                              "options": [
-                                    "Diagnosticar mezcla, acústica, cobertura o ubicación antes de subir más.",
-                                    "Subir más porque el número alto siempre mejora la voz.",
-                                    "Apagar el sonómetro porque contradice al oído.",
-                                    "Cambiar todos los cables sin revisar la cadena."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "El nivel alto no garantiza claridad. Hay que buscar la causa."
-                        },
-                        {
-                              "prompt": "¿Qué afirmación usarías para explicar el rol de la medición?",
-                              "difficulty": "criterion",
-                              "options": [
-                                    "La medición informa decisiones, pero no reemplaza el criterio técnico.",
-                                    "La medición decide sola cómo mezclar.",
-                                    "Si hay sonómetro, no hace falta escuchar.",
-                                    "El dB solo importa en estudios, nunca en vivo."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "El operador combina medición, escucha, contexto y experiencia."
-                        }
-                  ]
-            },
-            {
-                  "id": "lesson-07",
-                  "type": "lesson",
-                  "title": "Distancia y cobertura",
-                  "xp": 105,
-                  "objective": "Aplicar la relación entre distancia y nivel sonoro para pensar cobertura de público y decisiones básicas de operación.",
-                  "sourceSegments": [
-                        {
-                              "title": "2.1 - Unidad 02 - Intensidad, dB y Seguridad Auditiva",
-                              "sourceRef": "Documento Fuente · Unidad 02 · Formato C Digital Premium",
-                              "body": "Unidad 02 - Intensidad, dB y Seguridad Auditiva\n\nEl sonido se propaga como una sucesión de compresiones y rarefacciones del aire. Las partículas no viajan grandes distancias: transmiten energía a las partículas vecinas, de forma similar a una cadena de empujones.\n\nLa presión sonora es la variación de presión que produce una onda sonora respecto de la presión atmosférica. En una explicación inicial, puede pensarse como cuánto se modifica la presión del aire cuando pasa la onda sonora.\n\nLa intensidad se relaciona con la amplitud de la onda y con la percepción de volumen. Sonidos de mayor amplitud suelen percibirse como más fuertes; sonidos de menor amplitud, como más débiles.\n\nEl nivel de presión sonora se expresa habitualmente en decibeles SPL o NPS. Esta escala permite comparar niveles sonoros de manera práctica, pero no debe interpretarse como una regla lineal simple.\n\nEn la práctica, el técnico no usa los decibeles solo como un número aislado. Los interpreta junto con el contexto: tipo de evento, distancia al público, tamaño del espacio, tiempo de exposición, fatiga auditiva y calidad de la mezcla.\n\nLa medición ayuda a salir de la subjetividad. Dos personas pueden percibir el mismo evento de manera distinta, pero un sonómetro o decibelímetro permite tener una referencia objetiva para tomar mejores decisiones.\n\nEl nivel sonoro baja con la distancia. Por eso, escuchar o medir solo cerca del parlante no representa necesariamente lo que escucha el público ubicado más lejos.\n\nComo regla práctica, en campo libre y con una fuente puntual, duplicar la distancia puede reducir el nivel aproximadamente 6 dB. En salas reales esta regla puede variar por reflexiones, absorción, reverberación, cantidad de público y geometría del lugar.\n\nEn un espectáculo, el operador debe buscar un equilibrio: suficiente nivel para lograr claridad y cobertura, pero sin excederse ni generar una experiencia incómoda o riesgosa.\n\nLa seguridad auditiva forma parte del trabajo técnico. En eventos, ensayos y montajes puede haber exposición prolongada a niveles altos, tanto para el público como para músicos, técnicos y personal de producción.\n\nComo referencia institucional, NIOSH recomienda un límite de exposición ocupacional de 85 dBA para una jornada de 8 horas. OSHA también usa 85 dBA como nivel de acción para programas de conservación auditiva en exposición ocupacional de 8 horas. En Argentina, la SRT dispone el protocolo oficial para medición del nivel de ruido en ambiente laboral mediante la Resolución SRT 85/12.\n\nEstos valores se incorporan como referencia educativa y deben validarse con el experto técnico y el marco normativo aplicable antes de usarse en una certificación o recomendación profesional formal.",
-                              "documentPages": [
-                                    {
-                                          "src": "assets/source/2-1-unidad-02-intensidad-db-seguridad-formato-c-continuo.png",
-                                          "alt": "Documento Fuente Formato C Digital Premium para Unidad 02: Intensidad, dB y Seguridad Auditiva",
-                                          "caption": "Formato C Digital Premium: documento fuente completo de Unidad 02, preparado para lectura en app."
-                                    }
-                              ],
-                              "visualLabel": "Documento Fuente · Formato C",
-                              "expertStatus": "Formato C integrado · Pendiente de validacion final por Matias",
-                              "tags": [
-                                    "Fuente de conocimiento",
-                                    "Unidad 2",
-                                    "Formato C",
-                                    "dB",
-                                    "Presion sonora",
-                                    "Seguridad auditiva",
-                                    "Antes del cuestionario"
-                              ],
-                              "preserveLineBreaks": true
-                        }
-                  ],
-                  "theoryBlocks": [
-                        {
-                              "title": "El nivel baja con la distancia",
-                              "body": "El nivel sonoro no se mantiene igual en todo el espacio. A medida que nos alejamos de una fuente, normalmente recibimos menos nivel directo. Por eso el público cercano al sistema puede escuchar muy distinto al público ubicado al fondo.",
-                              "note": "La distancia cambia la experiencia de escucha."
-                        },
-                        {
-                              "title": "Regla práctica de -6 dB",
-                              "body": "Como aproximación, al duplicar la distancia a una fuente puntual en campo libre, el nivel puede reducirse alrededor de 6 dB. En una sala real esto puede cambiar por reflexiones, absorción, reverberación y geometría del lugar.",
-                              "note": "Es una guía, no una ley mágica para cualquier sala."
-                        },
-                        {
-                              "title": "Cobertura",
-                              "body": "La cobertura describe cómo se distribuye el sonido sobre el área del público. Una cobertura pobre puede producir zonas demasiado fuertes, zonas débiles o áreas donde la voz pierde claridad.",
-                              "note": "La cobertura se escucha y se mide en el espacio, no en un solo punto."
-                        },
-                        {
-                              "title": "Decisiones posibles",
-                              "body": "Si el frente escucha demasiado fuerte y el fondo escucha poco, subir todo puede empeorar la experiencia del frente. Puede convenir revisar orientación de parlantes, distribución, delays, ecualización, ganancia o acústica antes de aumentar nivel global.",
-                              "note": "El problema puede ser distribución, no potencia."
-                        }
-                  ],
-                  "questions": [
-                        {
-                              "prompt": "¿Qué suele ocurrir con el nivel sonoro al aumentar la distancia a una fuente?",
-                              "difficulty": "recognition",
-                              "options": [
-                                    "Tiende a disminuir.",
-                                    "Siempre aumenta.",
-                                    "Se vuelve independiente del medio.",
-                                    "Se transforma automáticamente en luz."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "El nivel directo suele bajar al alejarnos de la fuente."
-                        },
-                        {
-                              "prompt": "La regla práctica de duplicar distancia ≈ -6 dB se usa como:",
-                              "difficulty": "comprehension",
-                              "options": [
-                                    "Una aproximación para pensar caída de nivel en condiciones ideales.",
-                                    "Una garantía exacta en cualquier sala y situación.",
-                                    "Un método para afinar instrumentos.",
-                                    "Una forma de calcular el color del sonido."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "Es una aproximación útil, no una regla absoluta en todos los espacios."
-                        },
-                        {
-                              "prompt": "¿Por qué medir solo al lado del parlante puede ser insuficiente?",
-                              "difficulty": "comprehension",
-                              "options": [
-                                    "Porque no representa necesariamente lo que escucha todo el público.",
-                                    "Porque el parlante no genera presión sonora cerca suyo.",
-                                    "Porque la medición solo sirve en estudios de grabación.",
-                                    "Porque el sonido no cambia con la distancia."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "La experiencia del público varía según distancia y ubicación."
-                        },
-                        {
-                              "prompt": "El frente del público escucha muy fuerte y el fondo escucha poco. ¿Qué problema puede estar apareciendo?",
-                              "difficulty": "application",
-                              "options": [
-                                    "Cobertura desigual.",
-                                    "Ausencia total de fuente sonora.",
-                                    "Imposibilidad de medir dB.",
-                                    "Falla obligatoria del cable de corriente."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "La diferencia entre zonas puede indicar un problema de cobertura."
-                        },
-                        {
-                              "prompt": "¿Qué decisión es más razonable ante cobertura desigual?",
-                              "difficulty": "application",
-                              "options": [
-                                    "Revisar orientación, distribución y mediciones en varios puntos.",
-                                    "Subir el master sin revisar nada.",
-                                    "Medir solo donde está más fuerte.",
-                                    "Asumir que el público del fondo escucha igual."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "La cobertura se analiza comparando puntos y revisando el sistema."
-                        },
-                        {
-                              "prompt": "En una sala con mucha reverberación, la regla de -6 dB puede no cumplirse exactamente porque:",
-                              "difficulty": "criterion",
-                              "options": [
-                                    "Las reflexiones y materiales modifican el campo sonoro.",
-                                    "El sonido deja de propagarse por el aire.",
-                                    "Los decibeles dejan de existir.",
-                                    "La consola bloquea la presión sonora."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "Las condiciones reales de sala afectan el comportamiento del nivel."
-                        },
-                        {
-                              "prompt": "Si subir volumen mejora el fondo pero vuelve insoportable el frente, ¿qué criterio conviene aplicar?",
-                              "difficulty": "criterion",
-                              "options": [
-                                    "Pensar en distribución/cobertura antes que solo nivel global.",
-                                    "Priorizar siempre al fondo aunque el frente se lastime.",
-                                    "Usar el master como única herramienta.",
-                                    "Ignorar la distancia porque no afecta el sonido."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "El problema puede requerir una solución de cobertura, no solo volumen."
-                        }
-                  ]
-            },
-            {
-                  "id": "lesson-08",
-                  "type": "lesson",
-                  "title": "Seguridad auditiva y operación responsable",
-                  "xp": 110,
-                  "objective": "Incorporar criterios básicos de seguridad auditiva para tomar decisiones responsables en ensayos, montajes y eventos.",
-                  "sourceSegments": [
-                        {
-                              "title": "2.1 - Unidad 02 - Intensidad, dB y Seguridad Auditiva",
-                              "sourceRef": "Documento Fuente · Unidad 02 · Formato C Digital Premium",
-                              "body": "Unidad 02 - Intensidad, dB y Seguridad Auditiva\n\nEl sonido se propaga como una sucesión de compresiones y rarefacciones del aire. Las partículas no viajan grandes distancias: transmiten energía a las partículas vecinas, de forma similar a una cadena de empujones.\n\nLa presión sonora es la variación de presión que produce una onda sonora respecto de la presión atmosférica. En una explicación inicial, puede pensarse como cuánto se modifica la presión del aire cuando pasa la onda sonora.\n\nLa intensidad se relaciona con la amplitud de la onda y con la percepción de volumen. Sonidos de mayor amplitud suelen percibirse como más fuertes; sonidos de menor amplitud, como más débiles.\n\nEl nivel de presión sonora se expresa habitualmente en decibeles SPL o NPS. Esta escala permite comparar niveles sonoros de manera práctica, pero no debe interpretarse como una regla lineal simple.\n\nEn la práctica, el técnico no usa los decibeles solo como un número aislado. Los interpreta junto con el contexto: tipo de evento, distancia al público, tamaño del espacio, tiempo de exposición, fatiga auditiva y calidad de la mezcla.\n\nLa medición ayuda a salir de la subjetividad. Dos personas pueden percibir el mismo evento de manera distinta, pero un sonómetro o decibelímetro permite tener una referencia objetiva para tomar mejores decisiones.\n\nEl nivel sonoro baja con la distancia. Por eso, escuchar o medir solo cerca del parlante no representa necesariamente lo que escucha el público ubicado más lejos.\n\nComo regla práctica, en campo libre y con una fuente puntual, duplicar la distancia puede reducir el nivel aproximadamente 6 dB. En salas reales esta regla puede variar por reflexiones, absorción, reverberación, cantidad de público y geometría del lugar.\n\nEn un espectáculo, el operador debe buscar un equilibrio: suficiente nivel para lograr claridad y cobertura, pero sin excederse ni generar una experiencia incómoda o riesgosa.\n\nLa seguridad auditiva forma parte del trabajo técnico. En eventos, ensayos y montajes puede haber exposición prolongada a niveles altos, tanto para el público como para músicos, técnicos y personal de producción.\n\nComo referencia institucional, NIOSH recomienda un límite de exposición ocupacional de 85 dBA para una jornada de 8 horas. OSHA también usa 85 dBA como nivel de acción para programas de conservación auditiva en exposición ocupacional de 8 horas. En Argentina, la SRT dispone el protocolo oficial para medición del nivel de ruido en ambiente laboral mediante la Resolución SRT 85/12.\n\nEstos valores se incorporan como referencia educativa y deben validarse con el experto técnico y el marco normativo aplicable antes de usarse en una certificación o recomendación profesional formal.",
-                              "documentPages": [
-                                    {
-                                          "src": "assets/source/2-1-unidad-02-intensidad-db-seguridad-formato-c-continuo.png",
-                                          "alt": "Documento Fuente Formato C Digital Premium para Unidad 02: Intensidad, dB y Seguridad Auditiva",
-                                          "caption": "Formato C Digital Premium: documento fuente completo de Unidad 02, preparado para lectura en app."
-                                    }
-                              ],
-                              "visualLabel": "Documento Fuente · Formato C",
-                              "expertStatus": "Formato C integrado · Pendiente de validacion final por Matias",
-                              "tags": [
-                                    "Fuente de conocimiento",
-                                    "Unidad 2",
-                                    "Formato C",
-                                    "dB",
-                                    "Presion sonora",
-                                    "Seguridad auditiva",
-                                    "Antes del cuestionario"
-                              ],
-                              "preserveLineBreaks": true
-                        }
-                  ],
-                  "theoryBlocks": [
-                        {
-                              "title": "Seguridad auditiva",
-                              "body": "La seguridad auditiva no es un agregado externo al trabajo de sonido: forma parte de la operación profesional. Quien opera sonido toma decisiones que afectan la experiencia y la salud auditiva de público, artistas y equipo técnico.",
-                              "note": "Cuidar la escucha también es trabajo técnico."
-                        },
-                        {
-                              "title": "Nivel y tiempo de exposición",
-                              "body": "El riesgo auditivo depende del nivel sonoro y del tiempo de exposición. Un nivel elevado durante pocos segundos no es lo mismo que una exposición sostenida durante horas. Por eso los criterios de seguridad suelen relacionar dBA con duración.",
-                              "note": "Nivel y tiempo deben pensarse juntos."
-                        },
-                        {
-                              "title": "Referencias institucionales",
-                              "body": "Como referencia de apoyo, NIOSH recomienda 85 dBA para una jornada ocupacional de 8 horas. OSHA usa 85 dBA como nivel de acción para conservación auditiva en exposición ocupacional de 8 horas. En Argentina, la SRT establece protocolos para medición de ruido laboral mediante Resolución SRT 85/12.",
-                              "note": "Estos valores deben validarse antes de usarse como indicación normativa dentro de una certificación."
-                        },
-                        {
-                              "title": "Operación responsable",
-                              "body": "Una práctica responsable combina medición, escucha, pausas, ubicación de parlantes, comunicación con producción, protección auditiva cuando corresponde y revisión de que el nivel sea coherente con el tipo de evento.",
-                              "note": "La seguridad se diseña antes de que aparezca el problema."
-                        }
-                  ],
-                  "questions": [
-                        {
-                              "prompt": "¿Por qué la seguridad auditiva forma parte del trabajo de sonido?",
-                              "difficulty": "recognition",
-                              "options": [
-                                    "Porque el operador influye en el nivel al que se expone el público y el equipo.",
-                                    "Porque reemplaza la necesidad de mezclar.",
-                                    "Porque solo importa en estudios, nunca en vivo.",
-                                    "Porque depende únicamente de la marca de la consola."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "Las decisiones de operación pueden afectar exposición sonora y comodidad auditiva."
-                        },
-                        {
-                              "prompt": "El riesgo auditivo se relaciona principalmente con:",
-                              "difficulty": "comprehension",
-                              "options": [
-                                    "Nivel sonoro y tiempo de exposición.",
-                                    "Color de los parlantes y tamaño del escenario.",
-                                    "Cantidad de canciones en la lista.",
-                                    "Tipo de iluminación usada."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "La exposición combina cuánto nivel y durante cuánto tiempo."
-                        },
-                        {
-                              "prompt": "¿Qué significa usar una referencia como 85 dBA / 8 h en este curso?",
-                              "difficulty": "comprehension",
-                              "options": [
-                                    "Una referencia institucional para estudiar, pendiente de validación normativa según contexto.",
-                                    "Una autorización automática para cualquier evento.",
-                                    "Una garantía de que todo sonido menor es perfecto.",
-                                    "Una regla que reemplaza al experto técnico."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "Debe usarse como referencia educativa, no como habilitación o recomendación legal automática."
-                        },
-                        {
-                              "prompt": "En un ensayo largo, el nivel está alto y el equipo técnico permanece cerca de los parlantes. ¿Qué conviene considerar?",
-                              "difficulty": "application",
-                              "options": [
-                                    "Reducir exposición, medir, hacer pausas o usar protección auditiva si corresponde.",
-                                    "Mantener el nivel porque el ensayo no tiene público.",
-                                    "Acercar más los monitores para sentir más potencia.",
-                                    "Quitar toda medición porque se trata de una práctica."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "La exposición del equipo también importa; no solo la del público."
-                        },
-                        {
-                              "prompt": "¿Cuál sería una conducta responsable antes de un evento?",
-                              "difficulty": "application",
-                              "options": [
-                                    "Revisar niveles, cobertura, contexto y posibles riesgos de exposición.",
-                                    "Decidir el nivel final solo por potencia disponible.",
-                                    "Evitar medir para no complicar el montaje.",
-                                    "Subir todo antes de que entre el público."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "La operación responsable prevé nivel, cobertura y seguridad."
-                        },
-                        {
-                              "prompt": "Durante un evento, varias personas se tapan los oídos cerca del frente. ¿Qué señal puede estar apareciendo?",
-                              "difficulty": "criterion",
-                              "options": [
-                                    "Posible exceso de nivel o molestia auditiva en esa zona.",
-                                    "Garantía de que la mezcla está perfecta.",
-                                    "Necesidad automática de subir agudos.",
-                                    "Falla segura del micrófono principal."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "La reacción del público es un dato operativo que debe considerarse."
-                        },
-                        {
-                              "prompt": "¿Qué frase representa mejor el criterio de esta unidad?",
-                              "difficulty": "criterion",
-                              "options": [
-                                    "Medir, escuchar, ajustar y proteger.",
-                                    "Subir, sostener, ignorar y terminar.",
-                                    "Mezclar sin mirar el espacio.",
-                                    "Usar el número de dB como única verdad."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "El criterio profesional combina medición, escucha, ajuste y prevención."
-                        }
-                  ]
-            },
-            {
-                  "id": "challenge-02",
-                  "type": "challenge",
-                  "title": "Desafío: nivel seguro y cobertura en sala chica",
-                  "xp": 170,
-                  "objective": "Aplicar presión sonora, medición, distancia, cobertura y seguridad auditiva en un caso operativo realista.",
-                  "sourceSegments": [
-                        {
-                              "title": "2.1 - Unidad 02 - Intensidad, dB y Seguridad Auditiva",
-                              "sourceRef": "Documento Fuente · Unidad 02 · Formato C Digital Premium",
-                              "body": "Unidad 02 - Intensidad, dB y Seguridad Auditiva\n\nEl sonido se propaga como una sucesión de compresiones y rarefacciones del aire. Las partículas no viajan grandes distancias: transmiten energía a las partículas vecinas, de forma similar a una cadena de empujones.\n\nLa presión sonora es la variación de presión que produce una onda sonora respecto de la presión atmosférica. En una explicación inicial, puede pensarse como cuánto se modifica la presión del aire cuando pasa la onda sonora.\n\nLa intensidad se relaciona con la amplitud de la onda y con la percepción de volumen. Sonidos de mayor amplitud suelen percibirse como más fuertes; sonidos de menor amplitud, como más débiles.\n\nEl nivel de presión sonora se expresa habitualmente en decibeles SPL o NPS. Esta escala permite comparar niveles sonoros de manera práctica, pero no debe interpretarse como una regla lineal simple.\n\nEn la práctica, el técnico no usa los decibeles solo como un número aislado. Los interpreta junto con el contexto: tipo de evento, distancia al público, tamaño del espacio, tiempo de exposición, fatiga auditiva y calidad de la mezcla.\n\nLa medición ayuda a salir de la subjetividad. Dos personas pueden percibir el mismo evento de manera distinta, pero un sonómetro o decibelímetro permite tener una referencia objetiva para tomar mejores decisiones.\n\nEl nivel sonoro baja con la distancia. Por eso, escuchar o medir solo cerca del parlante no representa necesariamente lo que escucha el público ubicado más lejos.\n\nComo regla práctica, en campo libre y con una fuente puntual, duplicar la distancia puede reducir el nivel aproximadamente 6 dB. En salas reales esta regla puede variar por reflexiones, absorción, reverberación, cantidad de público y geometría del lugar.\n\nEn un espectáculo, el operador debe buscar un equilibrio: suficiente nivel para lograr claridad y cobertura, pero sin excederse ni generar una experiencia incómoda o riesgosa.\n\nLa seguridad auditiva forma parte del trabajo técnico. En eventos, ensayos y montajes puede haber exposición prolongada a niveles altos, tanto para el público como para músicos, técnicos y personal de producción.\n\nComo referencia institucional, NIOSH recomienda un límite de exposición ocupacional de 85 dBA para una jornada de 8 horas. OSHA también usa 85 dBA como nivel de acción para programas de conservación auditiva en exposición ocupacional de 8 horas. En Argentina, la SRT dispone el protocolo oficial para medición del nivel de ruido en ambiente laboral mediante la Resolución SRT 85/12.\n\nEstos valores se incorporan como referencia educativa y deben validarse con el experto técnico y el marco normativo aplicable antes de usarse en una certificación o recomendación profesional formal.",
-                              "documentPages": [
-                                    {
-                                          "src": "assets/source/2-1-unidad-02-intensidad-db-seguridad-formato-c-continuo.png",
-                                          "alt": "Documento Fuente Formato C Digital Premium para Unidad 02: Intensidad, dB y Seguridad Auditiva",
-                                          "caption": "Formato C Digital Premium: documento fuente completo de Unidad 02, preparado para lectura en app."
-                                    }
-                              ],
-                              "visualLabel": "Documento Fuente · Formato C",
-                              "expertStatus": "Formato C integrado · Pendiente de validacion final por Matias",
-                              "tags": [
-                                    "Fuente de conocimiento",
-                                    "Unidad 2",
-                                    "Formato C",
-                                    "dB",
-                                    "Presion sonora",
-                                    "Seguridad auditiva",
-                                    "Antes del cuestionario"
-                              ],
-                              "preserveLineBreaks": true
-                        }
-                  ],
-                  "theoryBlocks": [
-                        {
-                              "title": "Escenario del desafío",
-                              "body": "Llegás a una sala chica para una charla con música de apertura. Hay dos parlantes principales al frente. Las primeras filas dicen que el sonido está muy fuerte, pero al fondo algunas personas dicen que la voz pierde claridad. Producción pide “subir un poco más” porque cree que así se arregla todo.",
-                              "note": "El desafío integra toda la Unidad 02."
-                        },
-                        {
-                              "title": "Qué deberías poder decidir",
-                              "body": "Debés evaluar si el problema es solo de volumen o si hay una cuestión de cobertura, ubicación, acústica, mezcla o medición. La respuesta correcta no siempre es subir nivel. También hay que pensar en comodidad y seguridad auditiva.",
-                              "note": "El criterio vale más que la reacción automática."
-                        },
-                        {
-                              "title": "Acciones razonables",
-                              "body": "Medir en distintos puntos, escuchar desde frente y fondo, revisar orientación de parlantes, ajustar nivel según tipo de evento, cuidar exposición del equipo y evitar soluciones que mejoren una zona empeorando otra.",
-                              "note": "La unidad se demuestra aplicando conceptos a un caso."
-                        }
-                  ],
-                  "questions": [
-                        {
-                              "prompt": "¿Cuál es el problema principal del caso?",
-                              "difficulty": "comprehension",
-                              "options": [
-                                    "No hay un único problema de volumen: también puede haber cobertura y claridad desigual.",
-                                    "La única falla posible es que falta potencia general.",
-                                    "La voz no puede medirse porque es una charla.",
-                                    "El público del frente siempre debe recibir más nivel."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "El caso combina nivel, cobertura, distancia y comodidad auditiva."
-                        },
-                        {
-                              "prompt": "¿Qué acción inicial es más razonable?",
-                              "difficulty": "application",
-                              "options": [
-                                    "Escuchar y medir en más de un punto de la sala.",
-                                    "Subir el master porque producción lo pidió.",
-                                    "Medir solo al lado de un parlante.",
-                                    "Ignorar al público del frente."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "El diagnóstico requiere puntos representativos, no una sola posición."
-                        },
-                        {
-                              "prompt": "Si el frente está fuerte y el fondo poco claro, ¿qué conviene sospechar?",
-                              "difficulty": "application",
-                              "options": [
-                                    "Problema de cobertura, orientación o acústica, no solo falta de volumen.",
-                                    "Que los decibeles no existen en salas chicas.",
-                                    "Que el micrófono no puede captar voz humana.",
-                                    "Que el parlante no necesita aire para funcionar."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "La distribución del sonido puede ser desigual."
-                        },
-                        {
-                              "prompt": "¿Por qué subir todo puede ser una mala decisión?",
-                              "difficulty": "criterion",
-                              "options": [
-                                    "Porque puede empeorar la molestia del frente y aumentar riesgo sin resolver claridad al fondo.",
-                                    "Porque todo aumento de nivel elimina reverberación.",
-                                    "Porque el sonido deja de llegar al fondo.",
-                                    "Porque los parlantes pierden su función de reproducción."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "Más nivel global puede agravar molestias y no resolver la causa."
-                        },
-                        {
-                              "prompt": "¿Qué dato técnico ayuda a justificar la decisión ante producción?",
-                              "difficulty": "criterion",
-                              "options": [
-                                    "Mediciones y escucha comparativa entre frente, centro y fondo.",
-                                    "La opinión de quien habla más fuerte.",
-                                    "El tamaño del logo del parlante.",
-                                    "El nombre del archivo musical de apertura."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "Medir y escuchar en zonas diferentes permite argumentar con evidencia."
-                        },
-                        {
-                              "prompt": "¿Qué criterio de seguridad aparece en el caso?",
-                              "difficulty": "criterion",
-                              "options": [
-                                    "Evitar niveles innecesariamente altos y considerar tiempo de exposición.",
-                                    "Mantener volumen alto porque es más profesional.",
-                                    "No medir para que el evento fluya más rápido.",
-                                    "Priorizar la sensación de potencia sobre la comodidad auditiva."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "La seguridad auditiva incluye nivel y tiempo de exposición."
-                        },
-                        {
-                              "prompt": "¿Cuál sería una respuesta profesional a producción?",
-                              "difficulty": "criterion",
-                              "options": [
-                                    "“Voy a medir y revisar cobertura; subir todo puede empeorar el frente sin mejorar la claridad del fondo”.",
-                                    "“Sí, subimos todo al máximo y listo”.",
-                                    "“No hace falta medir porque la sala es chica”.",
-                                    "“La seguridad auditiva no tiene relación con sonido en vivo”."
-                              ],
-                              "correctIndex": 0,
-                              "explanation": "La respuesta explica criterio técnico y evita una solución automática riesgosa."
-                        }
-                  ]
+              "title": "Presión Sonora, dB y Seguridad Auditiva",
+              "sourceRef": "Documento Fuente · Unidad 02 · Formato C v0.2 · Documento Madre + fuentes verdes/controladas",
+              "body": "Esta unidad amplía la Clase 2 del Documento Madre. El contenido original trabaja presión sonora, intensidad, ejemplos de dB, distancia y medición con decibelímetro. La versión aplicada al curso corrige una simplificación frecuente: intensidad no es exactamente lo mismo que volumen percibido.\n\nLa presión sonora es una variación de presión respecto de la presión atmosférica. El nivel de presión sonora se expresa habitualmente en dB SPL. La escala de decibeles es logarítmica: pequeños cambios numéricos pueden representar cambios importantes en energía o percepción.\n\nEn espectáculos, medir no reemplaza escuchar, pero ayuda a tomar decisiones con evidencia. El objetivo no es “sonar fuerte”, sino lograr inteligibilidad, cobertura y seguridad auditiva. El tiempo de exposición también importa: un nivel tolerable durante pocos segundos puede no ser seguro durante horas.",
+              "documentPages": [],
+              "visualLabel": "Documento Fuente · Formato C v0.2",
+              "expertStatus": "Documento ampliado · Pendiente de validación técnica por Matías",
+              "tags": [
+                "Documento Madre",
+                "Formato C",
+                "Unidad 02",
+                "Fuente ampliada",
+                "Cuestionario progresivo"
+              ],
+              "preserveLineBreaks": true
             }
+          ],
+          "theoryBlocks": [
+            {
+              "title": "Presión sonora",
+              "body": "El sonido produce pequeñas variaciones de presión en el aire. Esas variaciones pueden medirse y expresarse como nivel de presión sonora.",
+              "note": "dB SPL no mide watts ni calidad artística; mide nivel de presión sonora."
+            },
+            {
+              "title": "Decibeles y escala logarítmica",
+              "body": "El decibel no se comporta como una escala lineal. Por eso no se interpreta igual que metros o kilos. En audio, esta escala permite manejar rangos muy amplios de presión, voltaje o potencia.",
+              "note": "Leer dB requiere contexto: dB SPL, dBA, dBu y dBV no significan lo mismo."
+            },
+            {
+              "title": "Distancia y cobertura",
+              "body": "Al alejarnos de una fuente puntual en condiciones ideales, el nivel directo tiende a disminuir. En campo libre, duplicar distancia puede aproximarse a una caída de 6 dB, pero las salas reales agregan reflexiones y absorción.",
+              "note": "Medir en un solo punto no representa necesariamente a todo el público."
+            },
+            {
+              "title": "Seguridad auditiva",
+              "body": "La operación responsable considera nivel, tiempo de exposición, tipo de evento, público y normativa aplicable. La referencia de SRT sirve como apoyo para entender medición de ruido laboral en Argentina.",
+              "note": "Más fuerte no siempre es más profesional."
+            }
+          ],
+          "questions": [
+            {
+              "prompt": "¿Qué expresa principalmente dB SPL?",
+              "difficulty": "recognition",
+              "options": [
+                "Nivel de presión sonora.",
+                "Potencia eléctrica del amplificador.",
+                "Cantidad de canales de consola.",
+                "Velocidad del cableado."
+              ],
+              "correctIndex": 0,
+              "explanation": "dB SPL refiere al nivel de presión sonora."
+            },
+            {
+              "prompt": "¿Qué instrumento se usa para medir nivel sonoro?",
+              "difficulty": "recognition",
+              "options": [
+                "Sonómetro o decibelímetro.",
+                "Afinador cromático.",
+                "Cable Speakon.",
+                "Adaptador RCA."
+              ],
+              "correctIndex": 0,
+              "explanation": "El sonómetro permite medir niveles sonoros de forma más objetiva."
+            },
+            {
+              "prompt": "¿Por qué el decibel puede resultar difícil de interpretar?",
+              "difficulty": "comprehension",
+              "options": [
+                "Porque es una escala logarítmica y depende de la referencia usada.",
+                "Porque siempre mide temperatura.",
+                "Porque solo sirve para video.",
+                "Porque no tiene relación con audio."
+              ],
+              "correctIndex": 0,
+              "explanation": "dB cambia de significado según la magnitud y referencia: SPL, dBA, dBu, dBV, entre otras."
+            },
+            {
+              "prompt": "¿Cuál diferencia está mejor planteada?",
+              "difficulty": "comprehension",
+              "options": [
+                "Intensidad es una magnitud física; sonoridad/volumen percibido es una experiencia auditiva.",
+                "Intensidad y volumen percibido son siempre idénticos.",
+                "El volumen percibido se mide solamente en ohms.",
+                "La intensidad no depende de energía."
+              ],
+              "correctIndex": 0,
+              "explanation": "La percepción depende de nivel, frecuencia, duración, oído y contexto."
+            },
+            {
+              "prompt": "El frente del público se queja de exceso de nivel, pero el fondo pide más voz. ¿Qué conviene hacer antes de subir todo?",
+              "difficulty": "application",
+              "options": [
+                "Revisar cobertura, orientación, mediciones y distribución del sistema.",
+                "Subir el master al máximo.",
+                "Desactivar toda medición.",
+                "Cambiar el nombre del canal."
+              ],
+              "correctIndex": 0,
+              "explanation": "El problema puede ser distribución/cobertura, no falta global de nivel."
+            },
+            {
+              "prompt": "Si duplicás distancia a una fuente puntual en campo libre, ¿qué aproximación puede usarse como guía?",
+              "difficulty": "application",
+              "options": [
+                "Una caída cercana a 6 dB.",
+                "Un aumento automático de 20 dB.",
+                "Ningún cambio posible.",
+                "Una inversión de polaridad obligatoria."
+              ],
+              "correctIndex": 0,
+              "explanation": "Es una aproximación útil en condiciones ideales, no una regla exacta para toda sala."
+            },
+            {
+              "prompt": "¿Qué decisión muestra mejor criterio de seguridad auditiva?",
+              "difficulty": "criterion",
+              "options": [
+                "Considerar nivel y tiempo de exposición antes de sostener niveles altos.",
+                "Mantener el máximo nivel posible todo el evento.",
+                "No medir porque la percepción alcanza siempre.",
+                "Ignorar molestias del público si el sistema no clippea."
+              ],
+              "correctIndex": 0,
+              "explanation": "La seguridad auditiva no depende solo del instante de medición sino también de la exposición."
+            },
+            {
+              "prompt": "Producción pide “más fuerte” aunque la voz ya se entiende y hay quejas. ¿Cuál respuesta es más profesional?",
+              "difficulty": "criterion",
+              "options": [
+                "Medir, escuchar varias zonas y explicar que subir nivel puede empeorar comodidad y seguridad.",
+                "Subir todo sin revisar.",
+                "Bajar todos los micrófonos a cero.",
+                "Decir que la seguridad no importa en vivo."
+              ],
+              "correctIndex": 0,
+              "explanation": "La respuesta profesional combina evidencia, criterio técnico y cuidado auditivo."
+            }
+          ]
+        }
       ]
-},
-    {
-      id: "module-03",
-      title: "Frecuencia, ondas y percepción",
-      status: "locked",
-      description:
-        "Graves, medios, agudos, longitud de onda, rango audible y escucha técnica."
     },
     {
-      id: "module-04",
-      title: "Acústica de espacios",
-      status: "locked",
-      description:
-        "Reflexión, absorción, eco, reverberación y decisiones básicas para eventos."
+      "id": "module-03",
+      "title": "Eco, reverberación y absorción",
+      "status": "available",
+      "description": "Reflexión, reverberación, eco, absorción, refracción e inteligibilidad.",
+      "lessons": [
+        {
+          "id": "u03",
+          "type": "lesson",
+          "title": "Eco, Reverberación, Absorción y Refracción",
+          "xp": 115,
+          "objective": "Entender cómo las superficies, materiales y condiciones del espacio modifican la claridad, duración y comportamiento del sonido.",
+          "sourceSegments": [
+            {
+              "title": "Eco, Reverberación, Absorción y Refracción",
+              "sourceRef": "Documento Fuente · Unidad 03 · Formato C v0.2 · Documento Madre + fuentes verdes/controladas",
+              "body": "Esta unidad desarrolla los fenómenos acústicos de sala presentes en el Documento Madre: reflexión, eco, reverberación, absorción y cambios de propagación. El objetivo es evitar una confusión habitual: eco y reverberación no son lo mismo.\n\nCuando una onda sonora encuentra una superficie, parte de su energía puede reflejarse, absorberse o transmitirse. En una sala con superficies duras, aparecen más reflexiones. Si esas reflexiones se acumulan muy rápido, el sonido puede volverse confuso o poco inteligible. Si una reflexión llega claramente separada del sonido original, puede percibirse como eco.\n\nLa absorción no “borra” mágicamente el sonido: reduce parte de la energía reflejada y puede transformar una fracción de esa energía en calor. La refracción, por su parte, describe cambios de dirección asociados a variaciones del medio, como temperatura, viento o cambio de medio.",
+              "documentPages": [],
+              "visualLabel": "Documento Fuente · Formato C v0.2",
+              "expertStatus": "Documento ampliado · Pendiente de validación técnica por Matías",
+              "tags": [
+                "Documento Madre",
+                "Formato C",
+                "Unidad 03",
+                "Fuente ampliada",
+                "Cuestionario progresivo"
+              ],
+              "preserveLineBreaks": true
+            }
+          ],
+          "theoryBlocks": [
+            {
+              "title": "Reflexión",
+              "body": "La reflexión aparece cuando parte de la energía sonora rebota en una superficie. Paredes duras, vidrio, cemento o azulejos suelen reflejar más que cortinas, butacas o materiales porosos.",
+              "note": "Más reflexión no siempre es malo; el problema aparece cuando afecta la claridad."
+            },
+            {
+              "title": "Eco y reverberación",
+              "body": "El eco se percibe como repetición separada del sonido original. La reverberación es la persistencia del sonido por muchas reflexiones cercanas en el tiempo.",
+              "note": "Eco es repetición distinguible; reverberación es cola o permanencia del sonido."
+            },
+            {
+              "title": "Absorción",
+              "body": "Los materiales absorbentes reducen parte de la energía reflejada. No todos absorben igual ni en todas las frecuencias. Los graves suelen requerir soluciones distintas a los agudos.",
+              "note": "Un material puede absorber agudos y dejar graves problemáticos."
+            },
+            {
+              "title": "Aplicación en eventos",
+              "body": "Antes de ecualizar de forma extrema, conviene evaluar la sala, orientar parlantes, ubicar micrófonos con criterio y evitar apuntar energía innecesaria hacia superficies reflectantes.",
+              "note": "La sala se corrige primero con decisiones de ubicación y cobertura."
+            }
+          ],
+          "questions": [
+            {
+              "prompt": "¿Qué es reflexión sonora?",
+              "difficulty": "recognition",
+              "options": [
+                "Rebote parcial del sonido en una superficie.",
+                "Ausencia total de sonido.",
+                "Conversión de sonido en electricidad.",
+                "Aumento de velocidad por cableado."
+              ],
+              "correctIndex": 0,
+              "explanation": "La reflexión ocurre cuando parte de la energía sonora rebota."
+            },
+            {
+              "prompt": "¿Qué describe mejor la reverberación?",
+              "difficulty": "recognition",
+              "options": [
+                "Persistencia del sonido por múltiples reflexiones.",
+                "Un único rebote separado y claramente repetido.",
+                "Un tipo de micrófono dinámico.",
+                "Un conector balanceado."
+              ],
+              "correctIndex": 0,
+              "explanation": "La reverberación es una suma densa de reflexiones que prolonga el sonido."
+            },
+            {
+              "prompt": "¿Cuál diferencia entre eco y reverberación es correcta?",
+              "difficulty": "comprehension",
+              "options": [
+                "El eco se distingue como repetición; la reverberación se percibe como cola o permanencia.",
+                "Son exactamente lo mismo siempre.",
+                "La reverberación solo existe al aire libre.",
+                "El eco ocurre únicamente dentro de cables."
+              ],
+              "correctIndex": 0,
+              "explanation": "La diferencia clave es la separación temporal y percepción de repetición."
+            },
+            {
+              "prompt": "¿Por qué un baño suele sonar más reverberante que una sala tratada?",
+              "difficulty": "comprehension",
+              "options": [
+                "Porque tiene superficies duras y reflectantes.",
+                "Porque no hay aire.",
+                "Porque los azulejos absorben todos los graves.",
+                "Porque la voz no vibra."
+              ],
+              "correctIndex": 0,
+              "explanation": "Las superficies duras favorecen reflexiones."
+            },
+            {
+              "prompt": "En una sala con mucha reverberación, ¿qué acción inicial puede ayudar?",
+              "difficulty": "application",
+              "options": [
+                "Revisar orientación de parlantes y ubicación de micrófonos.",
+                "Subir todos los agudos al máximo.",
+                "Agregar micrófonos sin criterio.",
+                "Ignorar el espacio porque solo importa la consola."
+              ],
+              "correctIndex": 0,
+              "explanation": "La ubicación y la cobertura pueden reducir energía innecesaria hacia zonas reflectantes."
+            },
+            {
+              "prompt": "Un orador se escucha con poca claridad aunque el nivel es alto. ¿Qué fenómeno conviene sospechar?",
+              "difficulty": "application",
+              "options": [
+                "Exceso de reflexiones/reverberación.",
+                "Falta de color en el cable.",
+                "Ausencia de energía sonora.",
+                "Uso de una partitura incorrecta."
+              ],
+              "correctIndex": 0,
+              "explanation": "La inteligibilidad puede empeorar por reverberación aun con mucho nivel."
+            },
+            {
+              "prompt": "¿Qué criterio evita una solución superficial?",
+              "difficulty": "criterion",
+              "options": [
+                "No confundir falta de nivel con problema acústico de sala.",
+                "Subir volumen siempre que no se entienda.",
+                "Usar más micrófonos en cualquier situación.",
+                "Ecualizar sin escuchar el recinto."
+              ],
+              "correctIndex": 0,
+              "explanation": "La causa puede estar en la sala, no en el nivel de la consola."
+            },
+            {
+              "prompt": "¿Qué afirmación sobre absorción es más precisa?",
+              "difficulty": "criterion",
+              "options": [
+                "Reduce parte de la energía reflejada y depende del material y la frecuencia.",
+                "Elimina todo sonido en cualquier sala.",
+                "Solo funciona si el micrófono es de condensador.",
+                "Aumenta siempre el eco."
+              ],
+              "correctIndex": 0,
+              "explanation": "La absorción es parcial y depende de materiales y frecuencias."
+            }
+          ]
+        }
+      ]
     },
     {
-      id: "module-05",
-      title: "Micrófonos",
-      status: "locked",
-      description:
-        "Transducción, tipos de micrófonos, patrones polares, sensibilidad y uso en vivo."
+      "id": "module-04",
+      "title": "Onda sonora, frecuencia y timbre",
+      "status": "available",
+      "description": "Amplitud, frecuencia, longitud de onda, timbre, armónicos y duración.",
+      "lessons": [
+        {
+          "id": "u04",
+          "type": "lesson",
+          "title": "Onda Sonora, Frecuencia, Timbre y Longitud de Onda",
+          "xp": 120,
+          "objective": "Relacionar las propiedades físicas de la onda sonora con lo que se escucha: grave/agudo, intensidad, timbre, duración y tamaño de onda.",
+          "sourceSegments": [
+            {
+              "title": "Onda Sonora, Frecuencia, Timbre y Longitud de Onda",
+              "sourceRef": "Documento Fuente · Unidad 04 · Formato C v0.2 · Documento Madre + fuentes verdes/controladas",
+              "body": "Esta unidad ordena el bloque del Documento Madre sobre onda sonora, frecuencia, velocidad, timbre, duración y longitud de onda. Se corrige una imprecisión importante: duración y longitud de onda no son lo mismo.\n\nLa frecuencia indica cuántos ciclos ocurren por segundo y se mide en Hertz. La longitud de onda indica la distancia espacial entre dos puntos equivalentes de una onda. Están relacionadas por la fórmula λ = c / f, donde c es la velocidad de propagación del sonido en el medio y f es la frecuencia.\n\nEl timbre permite distinguir fuentes aunque produzcan una misma nota a nivel similar. Depende de la forma de onda, armónicos, material de la fuente, modo de excitación y evolución temporal. Fourier se introduce como una idea de análisis: sonidos complejos pueden comprenderse como combinación de componentes senoidales.",
+              "documentPages": [],
+              "visualLabel": "Documento Fuente · Formato C v0.2",
+              "expertStatus": "Documento ampliado · Pendiente de validación técnica por Matías",
+              "tags": [
+                "Documento Madre",
+                "Formato C",
+                "Unidad 04",
+                "Fuente ampliada",
+                "Cuestionario progresivo"
+              ],
+              "preserveLineBreaks": true
+            }
+          ],
+          "theoryBlocks": [
+            {
+              "title": "Frecuencia",
+              "body": "La frecuencia se mide en Hz y se relaciona perceptivamente con la altura: graves, medios y agudos. Menor frecuencia suele percibirse más grave; mayor frecuencia, más aguda.",
+              "note": "Frecuencia no es volumen."
+            },
+            {
+              "title": "Longitud de onda",
+              "body": "La longitud de onda es una distancia. En aire, las frecuencias graves tienen longitudes de onda largas; las agudas, longitudes de onda cortas.",
+              "note": "Esto ayuda a entender parlantes, absorción y obstáculos."
+            },
+            {
+              "title": "Timbre",
+              "body": "El timbre explica por qué una guitarra y una trompeta pueden tocar la misma nota y sonar diferentes. Intervienen armónicos, forma de onda y comportamiento temporal.",
+              "note": "El timbre no depende de una sola variable."
+            },
+            {
+              "title": "Duración",
+              "body": "La duración describe cuánto tiempo permanece un sonido. No debe confundirse con la longitud de onda, que es una distancia física asociada a frecuencia y velocidad.",
+              "note": "Tiempo y distancia son dimensiones distintas."
+            }
+          ],
+          "questions": [
+            {
+              "prompt": "¿Qué mide la frecuencia?",
+              "difficulty": "recognition",
+              "options": [
+                "Cantidad de ciclos por segundo.",
+                "Distancia entre parlantes.",
+                "Potencia del amplificador.",
+                "Cantidad de cables."
+              ],
+              "correctIndex": 0,
+              "explanation": "La frecuencia se expresa en Hertz."
+            },
+            {
+              "prompt": "¿Qué describe la longitud de onda?",
+              "difficulty": "recognition",
+              "options": [
+                "Distancia entre dos puntos equivalentes de la onda.",
+                "Duración total de una canción.",
+                "Nivel SPL de la sala.",
+                "Impedancia del micrófono."
+              ],
+              "correctIndex": 0,
+              "explanation": "La longitud de onda es una distancia espacial."
+            },
+            {
+              "prompt": "Si una frecuencia aumenta y la velocidad se mantiene, ¿qué ocurre con la longitud de onda?",
+              "difficulty": "comprehension",
+              "options": [
+                "Disminuye.",
+                "Aumenta siempre al doble.",
+                "Se transforma en volumen.",
+                "Desaparece."
+              ],
+              "correctIndex": 0,
+              "explanation": "λ = c/f: si f sube, λ baja."
+            },
+            {
+              "prompt": "¿Por qué los graves suelen atravesar obstáculos mejor que los agudos?",
+              "difficulty": "comprehension",
+              "options": [
+                "Porque tienen longitudes de onda más largas.",
+                "Porque no son ondas sonoras.",
+                "Porque viajan sin medio.",
+                "Porque son señales digitales."
+              ],
+              "correctIndex": 0,
+              "explanation": "Las longitudes de onda largas tienden a rodear obstáculos con más facilidad."
+            },
+            {
+              "prompt": "Dos instrumentos tocan la misma nota al mismo nivel, pero suenan distintos. ¿Qué propiedad explica mejor la diferencia?",
+              "difficulty": "application",
+              "options": [
+                "Timbre.",
+                "Cantidad de butacas.",
+                "Tipo de escenario únicamente.",
+                "Color del cable."
+              ],
+              "correctIndex": 0,
+              "explanation": "El timbre diferencia fuentes por armónicos, forma de onda y evolución."
+            },
+            {
+              "prompt": "Un alumno confunde duración con longitud de onda. ¿Cómo lo corregís?",
+              "difficulty": "application",
+              "options": [
+                "Duración es tiempo; longitud de onda es distancia.",
+                "Ambas significan volumen.",
+                "Longitud de onda es el tiempo de la canción.",
+                "Duración solo existe en cables."
+              ],
+              "correctIndex": 0,
+              "explanation": "La corrección separa magnitudes temporales y espaciales."
+            },
+            {
+              "prompt": "¿Qué uso práctico tiene estimar longitud de onda?",
+              "difficulty": "criterion",
+              "options": [
+                "Pensar tamaño de parlantes, absorción, obstáculos y comportamiento de graves/agudos.",
+                "Decidir el color de la consola.",
+                "Reemplazar cualquier medición auditiva.",
+                "Evitar usar micrófonos."
+              ],
+              "correctIndex": 0,
+              "explanation": "La relación frecuencia-longitud de onda tiene consecuencias prácticas en sonido."
+            },
+            {
+              "prompt": "¿Qué afirmación sobre Fourier es prudente para este nivel?",
+              "difficulty": "criterion",
+              "options": [
+                "Sirve como idea introductoria para entender sonidos complejos como combinación de componentes.",
+                "Debe usarse para operar cualquier consola desde la primera clase.",
+                "Demuestra que el timbre no existe.",
+                "Solo se aplica a iluminación."
+              ],
+              "correctIndex": 0,
+              "explanation": "En esta etapa se usa como concepto de apoyo, no como matemática avanzada obligatoria."
+            }
+          ]
+        }
+      ]
     },
     {
-      id: "module-06",
-      title: "Cables, señales y conexiones",
-      status: "locked",
-      description:
-        "XLR, TS, TRS, RCA, Speakon, señales balanceadas y niveles de audio."
+      "id": "module-05",
+      "title": "Fase e interferencias",
+      "status": "available",
+      "description": "Relación temporal, cancelaciones, comb filter y prevención.",
+      "lessons": [
+        {
+          "id": "u05",
+          "type": "lesson",
+          "title": "Fase, Interferencias y Comb Filter",
+          "xp": 125,
+          "objective": "Comprender por qué señales parecidas con pequeños retardos pueden reforzarse, perder cuerpo o producir cancelaciones.",
+          "sourceSegments": [
+            {
+              "title": "Fase, Interferencias y Comb Filter",
+              "sourceRef": "Documento Fuente · Unidad 05 · Formato C v0.2 · Documento Madre + fuentes verdes/controladas",
+              "body": "Esta unidad amplía el Documento Madre sobre cancelaciones de fase, interferencia acústica, comb filter y regla 3:1. Se incorporan correcciones para evitar errores frecuentes: el botón Φ suele invertir polaridad, no “arreglar fase” en todos los casos; la cancelación total solo ocurre en condiciones ideales; y la regla 3:1 es una guía práctica, no una garantía.\n\nLa fase describe la posición relativa de una onda dentro de su ciclo. Cuando dos señales similares llegan alineadas, pueden reforzarse. Cuando llegan con retardo, algunas frecuencias se suman y otras se reducen. Ese patrón de picos y cancelaciones puede formar un comb filter.\n\nEn vivo y grabación, estos problemas aparecen con múltiples micrófonos, reflexiones cercanas, parlantes mal ubicados o señales duplicadas con latencia.",
+              "documentPages": [
+                {
+                  "src": "assets/source/formato-c-v0-2/sonido_play_u05_fase_interferencias_comb_filter_formato_c_v0_2_page_01.png",
+                  "alt": "Vista previa del Documento Fuente sonido_play_u05_fase_interferencias_comb_filter_formato_c_v0_2",
+                  "caption": "Vista renderizada del Documento Fuente Formato C v0.2."
+                }
+              ],
+              "visualLabel": "Documento Fuente · Formato C v0.2",
+              "expertStatus": "Documento ampliado · Pendiente de validación técnica por Matías",
+              "tags": [
+                "Documento Madre",
+                "Formato C",
+                "Unidad 05",
+                "Fuente ampliada",
+                "Cuestionario progresivo"
+              ],
+              "preserveLineBreaks": true
+            }
+          ],
+          "theoryBlocks": [
+            {
+              "title": "Fase como relación temporal",
+              "body": "La fase compara el estado de dos ondas o señales. No alcanza mirar el volumen: dos señales pueden tener nivel alto y aun así generar pérdida de cuerpo al combinarse.",
+              "note": "La fase se escucha muchas veces como cambio de color, no como silencio total."
+            },
+            {
+              "title": "Interferencia",
+              "body": "Cuando dos ondas coinciden en un punto, se combinan. Según su relación temporal pueden reforzar ciertas frecuencias o reducirlas.",
+              "note": "Constructiva y destructiva no siempre afectan a todas las frecuencias por igual."
+            },
+            {
+              "title": "Comb filter",
+              "body": "El comb filter aparece al sumar una señal con una versión retrasada de sí misma. En una gráfica de respuesta se ven picos y caídas periódicas, similares a las púas de un peine.",
+              "note": "Puede sonar hueco, metálico o con pérdida de graves/cuerpo."
+            },
+            {
+              "title": "Prevención",
+              "body": "Ubicar micrófonos con intención, reducir captaciones innecesarias, orientar patrones polares y revisar reflexiones tempranas suele ser mejor que ecualizar después.",
+              "note": "La prevención empieza antes de tocar la consola."
+            }
+          ],
+          "questions": [
+            {
+              "prompt": "¿Qué describe la fase?",
+              "difficulty": "recognition",
+              "options": [
+                "La posición relativa de una onda o señal dentro de su ciclo.",
+                "La potencia máxima del amplificador.",
+                "La cantidad de parlantes conectados.",
+                "La marca del micrófono."
+              ],
+              "correctIndex": 0,
+              "explanation": "La fase expresa relación temporal/cíclica entre ondas o señales."
+            },
+            {
+              "prompt": "¿Qué es un comb filter?",
+              "difficulty": "recognition",
+              "options": [
+                "Un patrón de refuerzos y cancelaciones por sumar una señal con una versión retardada.",
+                "Un filtro para limpiar polvo de micrófonos.",
+                "Un tipo de cable balanceado.",
+                "Una técnica para aumentar watts."
+              ],
+              "correctIndex": 0,
+              "explanation": "El retardo genera picos y caídas en frecuencia."
+            },
+            {
+              "prompt": "¿Por qué dos micrófonos pueden empeorar una toma?",
+              "difficulty": "comprehension",
+              "options": [
+                "Porque captan la misma fuente con retardos distintos y generan interferencias.",
+                "Porque todo micrófono cancela automáticamente los graves.",
+                "Porque la consola no acepta más de un canal.",
+                "Porque el sonido deja de necesitar aire."
+              ],
+              "correctIndex": 0,
+              "explanation": "La diferencia temporal entre captaciones puede producir comb filter o cancelaciones."
+            },
+            {
+              "prompt": "¿Qué corrige realmente el botón Φ en muchas consolas?",
+              "difficulty": "comprehension",
+              "options": [
+                "Invierte polaridad; no compensa necesariamente un retardo acústico.",
+                "Mueve físicamente el micrófono.",
+                "Elimina todas las reflexiones de sala.",
+                "Convierte señal mono en estéreo real."
+              ],
+              "correctIndex": 0,
+              "explanation": "La inversión de polaridad puede ayudar en algunos casos, pero no corrige todos los desfases por tiempo."
+            },
+            {
+              "prompt": "Al abrir dos canales de guitarra acústica, el sonido pierde cuerpo. ¿Qué probás antes de ecualizar agresivamente?",
+              "difficulty": "application",
+              "options": [
+                "Revisar distancia/posición de micrófonos, polaridad y combinación de canales.",
+                "Subir agudos al máximo.",
+                "Agregar reverberación sin escuchar.",
+                "Comprimir el master."
+              ],
+              "correctIndex": 0,
+              "explanation": "La pérdida de cuerpo puede ser interferencia entre captaciones."
+            },
+            {
+              "prompt": "Un micrófono capta fuente directa y rebote de una pared cercana. ¿Qué problema puede aparecer?",
+              "difficulty": "application",
+              "options": [
+                "Comb filter por retardo entre sonido directo y reflexión.",
+                "Aumento automático de claridad.",
+                "Desaparición de la fuente sonora.",
+                "Conversión a señal MIDI."
+              ],
+              "correctIndex": 0,
+              "explanation": "La reflexión llega retrasada y puede interferir con el sonido directo."
+            },
+            {
+              "prompt": "¿Cómo debería usarse la regla 3:1?",
+              "difficulty": "criterion",
+              "options": [
+                "Como guía práctica inicial para reducir interferencias, no como garantía absoluta.",
+                "Como fórmula para calcular dB SPL exacto.",
+                "Como reemplazo de la escucha.",
+                "Como regla para elegir impedancia."
+              ],
+              "correctIndex": 0,
+              "explanation": "La regla ayuda a pensar distancias entre micrófonos, pero no reemplaza criterio."
+            },
+            {
+              "prompt": "¿Qué decisión muestra mejor criterio técnico ante fase?",
+              "difficulty": "criterion",
+              "options": [
+                "Usar menos micrófonos si no aportan y ubicar los necesarios con intención.",
+                "Agregar micrófonos hasta que el sistema suene más fuerte.",
+                "Ecualizar sin revisar captación.",
+                "Ignorar reflexiones tempranas."
+              ],
+              "correctIndex": 0,
+              "explanation": "Menos captación innecesaria suele reducir problemas de interferencia."
+            }
+          ]
+        }
+      ]
     },
     {
-      id: "module-07",
-      title: "Consola de sonido",
-      status: "locked",
-      description:
-        "Canales, ganancia, ruteo, salidas, auxiliares y mezcla básica."
+      "id": "module-06",
+      "title": "Micrófonos y transductores",
+      "status": "available",
+      "description": "Tipos, patrones polares, sensibilidad, SPL máximo y selección.",
+      "lessons": [
+        {
+          "id": "u06",
+          "type": "lesson",
+          "title": "Micrófonos y Transductores",
+          "xp": 125,
+          "objective": "Elegir y ubicar micrófonos entendiendo transducción, tipo de cápsula, patrón polar, sensibilidad, SPL máximo y contexto de uso.",
+          "sourceSegments": [
+            {
+              "title": "Micrófonos y Transductores",
+              "sourceRef": "Documento Fuente · Unidad 06 · Formato C v0.2 · Documento Madre + fuentes verdes/controladas",
+              "body": "Esta unidad amplía el bloque del Documento Madre sobre micrófonos como transductores acústico-eléctricos. Un transductor transforma una forma de energía en otra. En audio, el micrófono transforma variaciones de presión sonora en una señal eléctrica.\n\nNo existe un micrófono universalmente mejor. Hay micrófonos más adecuados para una fuente, un entorno y un objetivo. Los dinámicos suelen ser robustos y prácticos en vivo; los condensadores suelen ser más sensibles y detallados; los de cinta requieren mayor cuidado; los piezoeléctricos y de contacto sirven para usos específicos.\n\nAdemás del tipo de transducción, importan patrón polar, sensibilidad, respuesta en frecuencia, máximo SPL, ruido, impedancia, alimentación phantom y condiciones del escenario.",
+              "documentPages": [
+                {
+                  "src": "assets/source/formato-c-v0-2/sonido_play_u06_microfonos_transductores_formato_c_v0_2_page_01.png",
+                  "alt": "Vista previa del Documento Fuente sonido_play_u06_microfonos_transductores_formato_c_v0_2",
+                  "caption": "Vista renderizada del Documento Fuente Formato C v0.2."
+                }
+              ],
+              "visualLabel": "Documento Fuente · Formato C v0.2",
+              "expertStatus": "Documento ampliado · Pendiente de validación técnica por Matías",
+              "tags": [
+                "Documento Madre",
+                "Formato C",
+                "Unidad 06",
+                "Fuente ampliada",
+                "Cuestionario progresivo"
+              ],
+              "preserveLineBreaks": true
+            }
+          ],
+          "theoryBlocks": [
+            {
+              "title": "Transducción",
+              "body": "El micrófono convierte energía acústica en señal eléctrica. Esa conversión condiciona nivel, respuesta, sensibilidad y uso posible.",
+              "note": "El micrófono no solo “agarra sonido”: transforma energía."
+            },
+            {
+              "title": "Tipos principales",
+              "body": "Dinámico, condensador, cinta, carbón y piezoeléctrico responden a principios distintos. En vivo se usan mucho dinámicos y condensadores según fuente y objetivo.",
+              "note": "Elegir tipo depende del contexto, no del precio solamente."
+            },
+            {
+              "title": "Patrón polar",
+              "body": "El patrón polar indica desde qué direcciones capta o rechaza el micrófono. Cardioide, supercardioide, hipercardioide, omni y figura de ocho tienen usos distintos.",
+              "note": "El rechazo es tan importante como la captación."
+            },
+            {
+              "title": "Sensibilidad y SPL máximo",
+              "body": "Un micrófono muy sensible puede captar detalles, pero también ambiente no deseado. El SPL máximo indica hasta qué nivel puede trabajar sin distorsionar de forma problemática.",
+              "note": "Más sensible no siempre significa mejor."
+            }
+          ],
+          "questions": [
+            {
+              "prompt": "¿Qué es un transductor?",
+              "difficulty": "recognition",
+              "options": [
+                "Un dispositivo que transforma una forma de energía en otra.",
+                "Un cable de corriente.",
+                "Una sala con poca reverberación.",
+                "Un tipo de playlist."
+              ],
+              "correctIndex": 0,
+              "explanation": "El micrófono es un transductor acústico-eléctrico."
+            },
+            {
+              "prompt": "¿Qué suele requerir muchos micrófonos de condensador?",
+              "difficulty": "recognition",
+              "options": [
+                "Alimentación phantom, generalmente 48 V.",
+                "Agua destilada.",
+                "Un parlante pasivo conectado directo.",
+                "Un cable de iluminación DMX exclusivamente."
+              ],
+              "correctIndex": 0,
+              "explanation": "Muchos condensadores necesitan phantom power para funcionar."
+            },
+            {
+              "prompt": "¿Por qué un dinámico cardioide suele funcionar bien para voz en vivo?",
+              "difficulty": "comprehension",
+              "options": [
+                "Porque es robusto y ayuda a captar la fuente cercana rechazando parte del entorno.",
+                "Porque capta igual en todas las direcciones sin rechazo.",
+                "Porque no necesita fuente sonora.",
+                "Porque elimina automáticamente cualquier acople."
+              ],
+              "correctIndex": 0,
+              "explanation": "Su robustez y direccionalidad son útiles en escenario, aunque no garantizan ausencia de problemas."
+            },
+            {
+              "prompt": "¿Qué indica el patrón polar?",
+              "difficulty": "comprehension",
+              "options": [
+                "Direcciones de mayor captación y rechazo del micrófono.",
+                "Longitud total del cable.",
+                "Potencia del parlante.",
+                "Cantidad de canciones del show."
+              ],
+              "correctIndex": 0,
+              "explanation": "El patrón polar ayuda a ubicar el micrófono y evitar captaciones no deseadas."
+            },
+            {
+              "prompt": "Hay mucho ruido de escenario y una voz cercana. ¿Qué criterio ayuda?",
+              "difficulty": "application",
+              "options": [
+                "Elegir patrón direccional y trabajar distancia/fuente con cuidado.",
+                "Usar siempre omni sin revisar nada.",
+                "Alejar el micrófono todo lo posible.",
+                "Apuntar el micrófono al monitor."
+              ],
+              "correctIndex": 0,
+              "explanation": "La direccionalidad y cercanía controlada ayudan a mejorar relación señal/ruido."
+            },
+            {
+              "prompt": "Un condensador capta demasiado ambiente en vivo. ¿Qué revisás?",
+              "difficulty": "application",
+              "options": [
+                "Sensibilidad, patrón polar, distancia a la fuente y entorno.",
+                "Solo el color del cuerpo del micrófono.",
+                "La cantidad de luces del escenario.",
+                "El nombre del archivo de audio."
+              ],
+              "correctIndex": 0,
+              "explanation": "La captación excesiva puede depender de sensibilidad, ubicación y patrón."
+            },
+            {
+              "prompt": "¿Qué afirmación muestra mejor criterio de selección?",
+              "difficulty": "criterion",
+              "options": [
+                "Elegir micrófono según fuente, entorno, nivel, patrón y objetivo.",
+                "Elegir siempre el más caro.",
+                "Usar siempre el mismo micrófono para todo.",
+                "Ignorar la ficha técnica."
+              ],
+              "correctIndex": 0,
+              "explanation": "La selección profesional cruza varias variables."
+            },
+            {
+              "prompt": "¿Por qué la ficha técnica no es decorativa?",
+              "difficulty": "criterion",
+              "options": [
+                "Porque anticipa sensibilidad, respuesta, SPL máximo, impedancia y alimentación.",
+                "Porque reemplaza toda escucha en sala.",
+                "Porque solo sirve para marketing.",
+                "Porque define la estética del escenario."
+              ],
+              "correctIndex": 0,
+              "explanation": "La ficha técnica aporta criterios para decidir y prevenir problemas."
+            }
+          ]
+        }
+      ]
     },
     {
-      id: "module-08",
-      title: "Amplificación y sistema completo",
-      status: "locked",
-      description:
-        "Amplificadores, parlantes, cadena completa y diagnóstico básico de fallas."
+      "id": "module-07",
+      "title": "Señales, niveles y cables",
+      "status": "available",
+      "description": "Mic, línea, instrumento, parlante, balanceado/desbalanceado y conectores.",
+      "lessons": [
+        {
+          "id": "u07",
+          "type": "lesson",
+          "title": "Señales, Niveles, Cables y Conexiones",
+          "xp": 120,
+          "objective": "Reconocer niveles de señal y conectores para evitar ruido, distorsión, pérdidas o conexiones peligrosas.",
+          "sourceSegments": [
+            {
+              "title": "Señales, Niveles, Cables y Conexiones",
+              "sourceRef": "Documento Fuente · Unidad 07 · Formato C v0.2 · Documento Madre + fuentes verdes/controladas",
+              "body": "Esta unidad amplía el bloque del Documento Madre sobre señales analógicas/digitales, niveles de micrófono, línea, instrumento y parlante, además de cables XLR, TRS, TS, RCA y Speakon.\n\nUno de los aprendizajes más importantes es que no todas las señales de audio tienen el mismo nivel ni el mismo destino. Una señal de micrófono es débil y necesita preamplificación. Una señal de línea es más fuerte. Una señal de instrumento requiere adaptación. Una señal de parlante es una señal de potencia y no debe conectarse a entradas de micrófono o línea.\n\nTambién se diferencia entre señal balanceada y desbalanceada. Una conexión balanceada puede reducir interferencias en recorridos largos si emisor, cable y receptor son compatibles.",
+              "documentPages": [
+                {
+                  "src": "assets/source/formato-c-v0-2/sonido_play_u07_senales_niveles_cables_conexiones_formato_c_v0_2_page_01.png",
+                  "alt": "Vista previa del Documento Fuente sonido_play_u07_senales_niveles_cables_conexiones_formato_c_v0_2",
+                  "caption": "Vista renderizada del Documento Fuente Formato C v0.2."
+                }
+              ],
+              "visualLabel": "Documento Fuente · Formato C v0.2",
+              "expertStatus": "Documento ampliado · Pendiente de validación técnica por Matías",
+              "tags": [
+                "Documento Madre",
+                "Formato C",
+                "Unidad 07",
+                "Fuente ampliada",
+                "Cuestionario progresivo"
+              ],
+              "preserveLineBreaks": true
+            }
+          ],
+          "theoryBlocks": [
+            {
+              "title": "Niveles de señal",
+              "body": "Micrófono, instrumento, línea y parlante tienen niveles y usos distintos. Conectarlos mal puede producir señal débil, ruido, distorsión o daño.",
+              "note": "No todo conector que encaja está bien conectado."
+            },
+            {
+              "title": "Balanceado y desbalanceado",
+              "body": "Las conexiones balanceadas usan dos conductores de señal y referencia para rechazar ruido común. Las desbalanceadas son más simples y más vulnerables en largas distancias.",
+              "note": "Balanceado depende de toda la cadena, no solo del cable."
+            },
+            {
+              "title": "Conectores",
+              "body": "XLR suele usarse en micrófonos profesionales; TRS puede llevar balanceado o estéreo; TS suele ser desbalanceado; RCA es común en consumo; Speakon se usa para parlantes pasivos.",
+              "note": "Mismo formato físico no siempre significa misma función."
+            },
+            {
+              "title": "Errores críticos",
+              "body": "No se debe conectar salida de amplificador a entrada de consola. Tampoco conviene usar cables desbalanceados largos en entornos con interferencias.",
+              "note": "Algunas conexiones no son errores menores: pueden ser peligrosas."
+            }
+          ],
+          "questions": [
+            {
+              "prompt": "¿Cuál es la señal más débil de la lista?",
+              "difficulty": "recognition",
+              "options": [
+                "Nivel de micrófono.",
+                "Nivel de parlante.",
+                "Salida de amplificador.",
+                "Señal de potencia."
+              ],
+              "correctIndex": 0,
+              "explanation": "La señal de micrófono requiere preamplificación."
+            },
+            {
+              "prompt": "¿Qué conector se usa habitualmente para micrófonos profesionales?",
+              "difficulty": "recognition",
+              "options": [
+                "XLR.",
+                "RCA de video compuesto.",
+                "HDMI.",
+                "USB-C siempre sin excepción."
+              ],
+              "correctIndex": 0,
+              "explanation": "XLR es común en micrófonos profesionales balanceados."
+            },
+            {
+              "prompt": "¿Por qué una salida de línea conectada a una entrada de micrófono puede distorsionar?",
+              "difficulty": "comprehension",
+              "options": [
+                "Porque la entrada espera una señal mucho más débil.",
+                "Porque la señal de línea no existe en audio.",
+                "Porque el cable convierte audio en luz.",
+                "Porque toda entrada de micrófono es de potencia."
+              ],
+              "correctIndex": 0,
+              "explanation": "La diferencia de nivel puede saturar la entrada."
+            },
+            {
+              "prompt": "¿Qué condición hace más útil una conexión balanceada?",
+              "difficulty": "comprehension",
+              "options": [
+                "Recorridos largos o entornos con interferencia, si toda la cadena es balanceada.",
+                "Cualquier cable corto de auricular sin importar equipos.",
+                "Solo señales de parlante pasivo.",
+                "Únicamente al grabar video."
+              ],
+              "correctIndex": 0,
+              "explanation": "El beneficio aparece cuando emisor, cable y receptor soportan señal balanceada."
+            },
+            {
+              "prompt": "Un micrófono suena bajísimo conectado a una entrada de línea. ¿Qué sospechás?",
+              "difficulty": "application",
+              "options": [
+                "Falta preamplificación adecuada para nivel de micrófono.",
+                "El micrófono emite demasiada potencia.",
+                "La sala absorbió la señal eléctrica.",
+                "El cable cambió la frecuencia de muestreo."
+              ],
+              "correctIndex": 0,
+              "explanation": "La entrada de línea espera mayor nivel que una salida de micrófono."
+            },
+            {
+              "prompt": "Tenés un cable TS largo cerca de alimentación eléctrica y aparece ruido. ¿Qué mejora probable aplicarías?",
+              "difficulty": "application",
+              "options": [
+                "Usar conexión balanceada adecuada y mejorar recorrido del cableado.",
+                "Subir todos los faders.",
+                "Cambiar el nombre del canal.",
+                "Usar un parlante más pesado."
+              ],
+              "correctIndex": 0,
+              "explanation": "Las líneas balanceadas y buen ruteo reducen interferencias."
+            },
+            {
+              "prompt": "¿Qué conexión debe evitarse por riesgo de daño?",
+              "difficulty": "criterion",
+              "options": [
+                "Salida de amplificador a entrada de consola.",
+                "Micrófono a entrada XLR de consola.",
+                "Salida auxiliar a procesador compatible.",
+                "Salida de línea a entrada de línea."
+              ],
+              "correctIndex": 0,
+              "explanation": "La señal de potencia puede dañar entradas diseñadas para señales débiles."
+            },
+            {
+              "prompt": "¿Qué criterio profesional conviene aplicar antes de conectar?",
+              "difficulty": "criterion",
+              "options": [
+                "Identificar tipo de señal, nivel, conector y destino.",
+                "Conectar donde entre físicamente.",
+                "Usar adaptadores sin revisar nivel.",
+                "Priorizar rapidez sobre compatibilidad."
+              ],
+              "correctIndex": 0,
+              "explanation": "La compatibilidad no depende solo de la forma del conector."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "module-08",
+      "title": "Consolas y ruteo",
+      "status": "available",
+      "description": "Gain, EQ, aux, pre/post, faders, buses y rutas de salida.",
+      "lessons": [
+        {
+          "id": "u08",
+          "type": "lesson",
+          "title": "Consolas de Sonido, Mezcla y Ruteo",
+          "xp": 125,
+          "objective": "Comprender la consola como sistema de entrada, ganancia, procesamiento, mezcla y rutas de salida.",
+          "sourceSegments": [
+            {
+              "title": "Consolas de Sonido, Mezcla y Ruteo",
+              "sourceRef": "Documento Fuente · Unidad 08 · Formato C v0.2 · Documento Madre + fuentes verdes/controladas",
+              "body": "Esta unidad amplía el bloque del Documento Madre sobre consola, módulo de canal, ganancia, EQ, envíos auxiliares, fader, pre/post y ruteo.\n\nLa consola no es una suma de perillas aisladas. Es un sistema de flujo de señal. Cada canal recibe una señal, la adapta mediante ganancia o preamplificación, permite filtrado/ecualización, envíos auxiliares, asignación a buses y control de nivel mediante fader.\n\nRutear significa decidir hacia dónde va la señal: mezcla principal, monitores, efectos, grabador, subgrupos o matrices. Muchos problemas de vivo no son “falta de volumen”, sino ruteos incompletos, envíos pre/post mal entendidos o ganancias mal ajustadas.",
+              "documentPages": [
+                {
+                  "src": "assets/source/formato-c-v0-2/sonido_play_u08_consolas_mezcla_ruteo_formato_c_v0_2_page_01.png",
+                  "alt": "Vista previa del Documento Fuente sonido_play_u08_consolas_mezcla_ruteo_formato_c_v0_2",
+                  "caption": "Vista renderizada del Documento Fuente Formato C v0.2."
+                }
+              ],
+              "visualLabel": "Documento Fuente · Formato C v0.2",
+              "expertStatus": "Documento ampliado · Pendiente de validación técnica por Matías",
+              "tags": [
+                "Documento Madre",
+                "Formato C",
+                "Unidad 08",
+                "Fuente ampliada",
+                "Cuestionario progresivo"
+              ],
+              "preserveLineBreaks": true
+            }
+          ],
+          "theoryBlocks": [
+            {
+              "title": "Ganancia antes de mezclar",
+              "body": "La ganancia ajusta el nivel de entrada para trabajar con señal útil sin ruido excesivo ni saturación. Mezclar con ganancia mal ajustada complica todo el flujo.",
+              "note": "Gain no es lo mismo que fader."
+            },
+            {
+              "title": "EQ y filtros",
+              "body": "La ecualización modifica balance de frecuencias. El filtro pasa altos puede limpiar graves no deseados en voces o fuentes que no requieren baja frecuencia.",
+              "note": "EQ corrige o adapta; no reemplaza buena captación."
+            },
+            {
+              "title": "Auxiliares y pre/post",
+              "body": "Los auxiliares envían copias de señal a monitores o efectos. Pre-fader y post-fader definen si ese envío depende o no del fader del canal.",
+              "note": "Monitores y efectos suelen requerir lógicas distintas."
+            },
+            {
+              "title": "Ruteo",
+              "body": "Una señal puede estar presente en un canal y aun así no salir si no está asignada a la ruta correcta. Por eso hay que seguir el camino completo.",
+              "note": "Ver señal no garantiza escuchar señal."
+            }
+          ],
+          "questions": [
+            {
+              "prompt": "¿Qué función cumple la ganancia/trim?",
+              "difficulty": "recognition",
+              "options": [
+                "Ajustar el nivel de entrada del canal.",
+                "Cambiar el color del botón.",
+                "Mover físicamente el micrófono.",
+                "Elegir la canción."
+              ],
+              "correctIndex": 0,
+              "explanation": "La ganancia prepara el nivel de trabajo del canal."
+            },
+            {
+              "prompt": "¿Qué significa rutear una señal?",
+              "difficulty": "recognition",
+              "options": [
+                "Definir hacia qué salida, bus o destino se envía.",
+                "Pintar el canal de otro color.",
+                "Aumentar automáticamente la potencia del parlante.",
+                "Convertir la señal en acústica sin parlante."
+              ],
+              "correctIndex": 0,
+              "explanation": "El ruteo define el camino de salida o destino de la señal."
+            },
+            {
+              "prompt": "¿Por qué gain y fader no son lo mismo?",
+              "difficulty": "comprehension",
+              "options": [
+                "Gain ajusta entrada; fader controla nivel del canal en la mezcla/ruta.",
+                "Ambos son exactamente iguales siempre.",
+                "Fader solo sirve para iluminación.",
+                "Gain es un tipo de conector."
+              ],
+              "correctIndex": 0,
+              "explanation": "Confundirlos lleva a mala estructura de ganancia."
+            },
+            {
+              "prompt": "¿Qué diferencia básica hay entre aux pre-fader y post-fader?",
+              "difficulty": "comprehension",
+              "options": [
+                "Pre no depende del fader; post sí depende del fader.",
+                "Pre siempre es estéreo y post siempre mono.",
+                "Post elimina la señal del canal.",
+                "No hay diferencia audible ni funcional."
+              ],
+              "correctIndex": 0,
+              "explanation": "La posición de toma determina dependencia respecto del fader."
+            },
+            {
+              "prompt": "Tenés señal en canal pero no sale por PA. ¿Qué revisás?",
+              "difficulty": "application",
+              "options": [
+                "Mute, asignación, routing, master, salidas y etapa posterior.",
+                "Solo el color del cable.",
+                "La letra de la canción.",
+                "La ubicación del público únicamente."
+              ],
+              "correctIndex": 0,
+              "explanation": "La señal puede no estar asignada o puede estar bloqueada en una etapa posterior."
+            },
+            {
+              "prompt": "Una voz tiene golpes de aire y graves innecesarios. ¿Qué herramienta puede ayudar?",
+              "difficulty": "application",
+              "options": [
+                "Filtro pasa altos/low cut.",
+                "Salida Speakon al micrófono.",
+                "Invertir el escenario.",
+                "Subir todos los graves."
+              ],
+              "correctIndex": 0,
+              "explanation": "El low cut ayuda a reducir bajas frecuencias no deseadas."
+            },
+            {
+              "prompt": "¿Qué criterio evita problemas de mezcla?",
+              "difficulty": "criterion",
+              "options": [
+                "Ajustar ganancia antes de equilibrar con faders.",
+                "Mezclar todos los canales con gain al máximo.",
+                "Usar EQ extrema antes de escuchar la fuente.",
+                "Rutear sin revisar salidas."
+              ],
+              "correctIndex": 0,
+              "explanation": "Una buena estructura de ganancia facilita mezcla limpia."
+            },
+            {
+              "prompt": "¿Qué respuesta muestra mejor criterio ante un monitor que no recibe voz?",
+              "difficulty": "criterion",
+              "options": [
+                "Revisar envío auxiliar, pre/post, nivel de aux, master de aux y salida física.",
+                "Subir el master principal solamente.",
+                "Cambiar el micrófono sin revisar consola.",
+                "Agregar reverberación al PA."
+              ],
+              "correctIndex": 0,
+              "explanation": "El monitor depende de su ruta auxiliar, no solo de la mezcla principal."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "module-09",
+      "title": "Amplificadores y parlantes",
+      "status": "available",
+      "description": "Potencia, impedancia, activos/pasivos y compatibilidad.",
+      "lessons": [
+        {
+          "id": "u09",
+          "type": "lesson",
+          "title": "Amplificadores, Potencia, Impedancia y Parlantes",
+          "xp": 125,
+          "objective": "Comprender la relación entre señal, potencia, amplificador, impedancia y parlantes activos/pasivos para evitar incompatibilidades.",
+          "sourceSegments": [
+            {
+              "title": "Amplificadores, Potencia, Impedancia y Parlantes",
+              "sourceRef": "Documento Fuente · Unidad 09 · Formato C v0.2 · Documento Madre + fuentes verdes/controladas",
+              "body": "Esta unidad amplía la Clase 10 del Documento Madre sobre amplificadores. Un amplificador no crea información sonora nueva: toma una señal de entrada y entrega más tensión, corriente o potencia para mover parlantes.\n\nLa potencia no debe leerse como “más watts = mejor”. La elección depende de parlantes, impedancia, sensibilidad, recinto, uso previsto, protecciones y margen operativo. Un parlante pasivo necesita amplificación externa; un parlante activo incluye amplificación interna.\n\nLa impedancia es crítica: conectar cargas incompatibles puede exigir demasiado al amplificador, generar distorsión, activar protecciones o dañar equipos. También hay que distinguir señales de línea y señales de parlante: no van a los mismos destinos.",
+              "documentPages": [
+                {
+                  "src": "assets/source/formato-c-v0-2/sonido_play_u09_amplificadores_potencia_impedancia_parlantes_formato_c_v0_2_page_01.png",
+                  "alt": "Vista previa del Documento Fuente sonido_play_u09_amplificadores_potencia_impedancia_parlantes_formato_c_v0_2",
+                  "caption": "Vista renderizada del Documento Fuente Formato C v0.2."
+                }
+              ],
+              "visualLabel": "Documento Fuente · Formato C v0.2",
+              "expertStatus": "Documento ampliado · Pendiente de validación técnica por Matías",
+              "tags": [
+                "Documento Madre",
+                "Formato C",
+                "Unidad 09",
+                "Fuente ampliada",
+                "Cuestionario progresivo"
+              ],
+              "preserveLineBreaks": true
+            }
+          ],
+          "theoryBlocks": [
+            {
+              "title": "Función del amplificador",
+              "body": "El amplificador aumenta la capacidad de la señal para entregar energía al parlante. No mejora por sí solo una mala mezcla ni corrige una mala captación.",
+              "note": "Amplificar no significa arreglar."
+            },
+            {
+              "title": "Potencia útil",
+              "body": "La potencia debe interpretarse con impedancia, distorsión, margen y tipo de uso. Un número aislado de watts puede ser engañoso.",
+              "note": "El dato técnico necesita contexto."
+            },
+            {
+              "title": "Impedancia",
+              "body": "La impedancia de la carga afecta el esfuerzo del amplificador. Usar valores no compatibles puede comprometer estabilidad y seguridad del equipo.",
+              "note": "No toda combinación amplificador-parlante es válida."
+            },
+            {
+              "title": "Activo y pasivo",
+              "body": "Un parlante activo integra amplificador. Un parlante pasivo requiere amplificador externo y cableado de potencia adecuado.",
+              "note": "No se cablean igual."
+            }
+          ],
+          "questions": [
+            {
+              "prompt": "¿Qué hace un amplificador de audio?",
+              "difficulty": "recognition",
+              "options": [
+                "Aumenta tensión, corriente o potencia de una señal para mover parlantes.",
+                "Convierte paredes en absorbentes.",
+                "Elige automáticamente el micrófono correcto.",
+                "Elimina toda distorsión de origen."
+              ],
+              "correctIndex": 0,
+              "explanation": "El amplificador entrega energía suficiente a la carga/parlante."
+            },
+            {
+              "prompt": "¿Qué unidad se usa para expresar impedancia?",
+              "difficulty": "recognition",
+              "options": [
+                "Ohms.",
+                "Hertz.",
+                "Decibeles SPL.",
+                "Grados Celsius."
+              ],
+              "correctIndex": 0,
+              "explanation": "La impedancia se expresa en ohms (Ω)."
+            },
+            {
+              "prompt": "¿Por qué “más watts” no significa siempre mejor sistema?",
+              "difficulty": "comprehension",
+              "options": [
+                "Porque hay que considerar parlantes, impedancia, sensibilidad, distorsión y uso.",
+                "Porque los watts no existen en audio.",
+                "Porque la potencia reemplaza la acústica.",
+                "Porque todos los amplificadores suenan igual en cualquier condición."
+              ],
+              "correctIndex": 0,
+              "explanation": "La potencia aislada no alcanza para decidir."
+            },
+            {
+              "prompt": "¿Cuál es la diferencia básica entre parlante activo y pasivo?",
+              "difficulty": "comprehension",
+              "options": [
+                "El activo incluye amplificación interna; el pasivo necesita amplificador externo.",
+                "El pasivo no reproduce sonido nunca.",
+                "El activo no necesita señal de audio.",
+                "Son iguales en conexión y uso."
+              ],
+              "correctIndex": 0,
+              "explanation": "La arquitectura interna cambia conexión y operación."
+            },
+            {
+              "prompt": "Un amplificador trabaja con carga de impedancia menor a la admitida. ¿Qué riesgo hay?",
+              "difficulty": "application",
+              "options": [
+                "Sobrecarga, protección, distorsión o daño.",
+                "Mejor claridad garantizada.",
+                "Eliminación de reverberación.",
+                "Reducción automática de acoples."
+              ],
+              "correctIndex": 0,
+              "explanation": "La carga incompatible puede exigir demasiado al equipo."
+            },
+            {
+              "prompt": "Tenés un parlante pasivo. ¿Qué necesitás para alimentarlo correctamente?",
+              "difficulty": "application",
+              "options": [
+                "Un amplificador compatible y cable de parlante adecuado.",
+                "Una salida de auriculares de celular sin más.",
+                "Un cable de micrófono al azar.",
+                "Un sonómetro conectado directo."
+              ],
+              "correctIndex": 0,
+              "explanation": "El pasivo requiere potencia desde amplificador."
+            },
+            {
+              "prompt": "¿Qué decisión muestra mejor criterio al elegir amplificación?",
+              "difficulty": "criterion",
+              "options": [
+                "Revisar compatibilidad completa: potencia, impedancia, parlantes, uso y protecciones.",
+                "Elegir solo el número más alto de watts.",
+                "Ignorar impedancia.",
+                "Usar cualquier salida disponible."
+              ],
+              "correctIndex": 0,
+              "explanation": "La compatibilidad se evalúa como sistema."
+            },
+            {
+              "prompt": "¿Qué advertencia debería recordar un operador?",
+              "difficulty": "criterion",
+              "options": [
+                "No conectar señales de parlante/potencia a entradas de línea o micrófono.",
+                "Conectar todo donde físicamente entre.",
+                "Usar cable fino para cualquier potencia.",
+                "Desactivar protecciones para sonar más fuerte."
+              ],
+              "correctIndex": 0,
+              "explanation": "Las señales de potencia pueden dañar entradas no diseñadas para eso."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "module-10",
+      "title": "Integrador y evaluación",
+      "status": "available",
+      "description": "Casos, diagnóstico, errores críticos y evaluación por criterio.",
+      "lessons": [
+        {
+          "id": "u10",
+          "type": "challenge",
+          "title": "Integrador: Diagnóstico, Casos y Evaluación",
+          "xp": 150,
+          "objective": "Integrar cadena, acústica, niveles, micrófonos, conexiones, consola y amplificación mediante casos de diagnóstico y criterio operativo.",
+          "sourceSegments": [
+            {
+              "title": "Integrador: Diagnóstico, Casos y Evaluación",
+              "sourceRef": "Documento Fuente · Unidad 10 · Formato C v0.2 · Documento Madre + fuentes verdes/controladas",
+              "body": "La unidad integradora usa Documento Madre + Formato C + Learning Lab. No agrega teoría aislada: organiza evidencia de aprendizaje mediante diagnóstico de casos, priorización de acciones y evaluación por criterio.\n\nEl alumno debe demostrar que puede mirar una situación de sonido como sistema. No alcanza con recordar definiciones. Debe decidir dónde puede estar el problema, qué revisar primero, qué acciones evitar y cómo justificar técnicamente una decisión.\n\nEsta unidad usa una lógica de evidencia: reconocimiento, comprensión, aplicación y criterio. El objetivo es preparar futuras simulaciones: diagnóstico de fallas, consola visual, selección de micrófonos, rutas de señal y decisiones seguras de conexión.",
+              "documentPages": [
+                {
+                  "src": "assets/source/formato-c-v0-2/sonido_play_u10_integrador_diagnostico_casos_evaluacion_formato_c_v0_2_page_01.png",
+                  "alt": "Vista previa del Documento Fuente sonido_play_u10_integrador_diagnostico_casos_evaluacion_formato_c_v0_2",
+                  "caption": "Vista renderizada del Documento Fuente Formato C v0.2."
+                }
+              ],
+              "visualLabel": "Documento Fuente · Formato C v0.2",
+              "expertStatus": "Documento ampliado · Pendiente de validación técnica por Matías",
+              "tags": [
+                "Documento Madre",
+                "Formato C",
+                "Unidad 10",
+                "Fuente ampliada",
+                "Cuestionario progresivo"
+              ],
+              "preserveLineBreaks": true
+            }
+          ],
+          "theoryBlocks": [
+            {
+              "title": "Diagnóstico por sistema",
+              "body": "Cada caso debe analizarse por cadena: fuente, medio, captación, cableado, consola, ruteo, amplificación, parlantes y acústica.",
+              "note": "Diagnosticar es ordenar la incertidumbre."
+            },
+            {
+              "title": "Errores críticos",
+              "body": "Hay errores que no son solo conceptuales: conectar salidas de potencia a entradas débiles, ignorar niveles excesivos, usar rutas incorrectas o aprobar soluciones sin verificar.",
+              "note": "El curso debe distinguir error menor de error crítico."
+            },
+            {
+              "title": "Criterio operativo",
+              "body": "El alumno debe justificar decisiones: por qué medir, por qué revisar ruteo, por qué no subir todo, por qué cambiar un micrófono o por qué mover un parlante.",
+              "note": "La respuesta correcta necesita razón técnica."
+            },
+            {
+              "title": "Puente a simulación",
+              "body": "Los casos integradores preparan el camino para desafíos E3/E4/E5: decisión contextual, diagnóstico y corrección inicial.",
+              "note": "La evaluación final debe parecerse a problemas reales."
+            }
+          ],
+          "questions": [
+            {
+              "prompt": "Caso: hay voz en consola pero no en parlantes principales. ¿Qué etapa revisás primero?",
+              "difficulty": "application",
+              "options": [
+                "Ruteo/salidas/conexión posterior a consola.",
+                "La respiración del cantante solamente.",
+                "El color de las luces.",
+                "La letra del tema."
+              ],
+              "correctIndex": 0,
+              "explanation": "Si hay señal en consola, el problema puede estar después o en asignaciones de salida."
+            },
+            {
+              "prompt": "Caso: al abrir dos micrófonos de una guitarra se pierde cuerpo. ¿Qué sospechás?",
+              "difficulty": "application",
+              "options": [
+                "Interferencia/fase por diferencias de tiempo.",
+                "Falta de watts exclusivamente.",
+                "Ausencia de medio material.",
+                "Impedancia de la pared."
+              ],
+              "correctIndex": 0,
+              "explanation": "Dos captaciones de la misma fuente pueden generar cancelaciones."
+            },
+            {
+              "prompt": "Caso: una charla se entiende pero molesta por nivel alto. ¿Qué decisión es mejor?",
+              "difficulty": "criterion",
+              "options": [
+                "Ajustar nivel preservando inteligibilidad y considerar exposición.",
+                "Subir más para que parezca profesional.",
+                "Ignorar al público.",
+                "Cambiar todos los cables."
+              ],
+              "correctIndex": 0,
+              "explanation": "Claridad y seguridad importan más que potencia innecesaria."
+            },
+            {
+              "prompt": "Caso: micrófono muy sensible capta demasiada sala. ¿Qué revisás?",
+              "difficulty": "application",
+              "options": [
+                "Tipo de micrófono, patrón, distancia y entorno.",
+                "Solo el fader master.",
+                "La marca del amplificador.",
+                "El tamaño del flyer."
+              ],
+              "correctIndex": 0,
+              "explanation": "La captación depende de micrófono, patrón, ubicación y acústica."
+            },
+            {
+              "prompt": "Caso: salida de amplificador quiere conectarse a una entrada de consola para grabar. ¿Qué criterio aplicás?",
+              "difficulty": "criterion",
+              "options": [
+                "No hacerlo: es una señal de potencia y puede dañar la entrada.",
+                "Hacerlo si el conector entra.",
+                "Subir ganancia para compensar.",
+                "Usar cualquier adaptador."
+              ],
+              "correctIndex": 0,
+              "explanation": "La compatibilidad de nivel y destino es crítica."
+            },
+            {
+              "prompt": "Caso: una sala dura suena confusa aunque el sistema está bien conectado. ¿Qué variable pesa?",
+              "difficulty": "comprehension",
+              "options": [
+                "Acústica: reflexiones/reverberación.",
+                "Solo potencia eléctrica.",
+                "Únicamente color del cable.",
+                "La consola apagada."
+              ],
+              "correctIndex": 0,
+              "explanation": "El entorno puede arruinar claridad aunque el sistema funcione."
+            },
+            {
+              "prompt": "¿Cuál es el orden más útil para diagnosticar un sistema completo?",
+              "difficulty": "recognition",
+              "options": [
+                "Fuente → captación → cableado → consola/ruteo → amplificación → parlantes → sala.",
+                "Sala → flyer → luces → redes sociales.",
+                "Amplificador → canción → público → micrófono sin revisar señal.",
+                "Cualquier orden al azar."
+              ],
+              "correctIndex": 0,
+              "explanation": "El orden por cadena evita omisiones."
+            },
+            {
+              "prompt": "¿Qué evidencia demuestra mejor competencia que un multiple choice simple?",
+              "difficulty": "criterion",
+              "options": [
+                "Detectar el error, justificarlo y proponer una acción segura.",
+                "Recordar una palabra aislada.",
+                "Completar una lectura sin aplicar nada.",
+                "Elegir al azar hasta acertar."
+              ],
+              "correctIndex": 0,
+              "explanation": "Learning Lab prioriza evidencia observable de criterio y acción."
+            },
+            {
+              "prompt": "Caso: monitor no recibe voz pero PA sí. ¿Dónde revisás?",
+              "difficulty": "application",
+              "options": [
+                "Envío auxiliar, pre/post, nivel de aux, salida de monitor y ruta correspondiente.",
+                "Solo master L/R.",
+                "Solo parlante principal.",
+                "Solo acústica del público."
+              ],
+              "correctIndex": 0,
+              "explanation": "El monitor tiene ruta propia, normalmente auxiliar."
+            },
+            {
+              "prompt": "Caso: el fondo no escucha claro y el frente está demasiado fuerte. ¿Qué evitás?",
+              "difficulty": "criterion",
+              "options": [
+                "Subir todo sin revisar cobertura.",
+                "Medir en varias zonas.",
+                "Revisar orientación de parlantes.",
+                "Considerar distribución del sistema."
+              ],
+              "correctIndex": 0,
+              "explanation": "Subir globalmente puede empeorar el frente sin resolver el fondo."
+            },
+            {
+              "prompt": "Caso: una voz tiene graves molestos por cercanía al micrófono. ¿Qué fenómeno puede estar interviniendo?",
+              "difficulty": "comprehension",
+              "options": [
+                "Efecto de proximidad.",
+                "Filtro de peine exclusivamente por consola apagada.",
+                "Impedancia del público.",
+                "Refracción por partitura."
+              ],
+              "correctIndex": 0,
+              "explanation": "Muchos direccionales aumentan graves cuando la fuente está muy cerca."
+            },
+            {
+              "prompt": "¿Qué resultado final buscamos en la evaluación integradora?",
+              "difficulty": "criterion",
+              "options": [
+                "Criterio técnico trazable: diagnóstico, acción y justificación.",
+                "Memorizar marcas de equipos.",
+                "Responder todo por velocidad sin leer casos.",
+                "Evitar explicar decisiones."
+              ],
+              "correctIndex": 0,
+              "explanation": "La evaluación integradora mide criterio aplicado, no solo memoria."
+            }
+          ]
+        }
+      ]
     }
   ]
 };
 
 function applyEditorialCuration() {
-  const curatedQuestions = {
-    "lesson-01": [
-      {
-        prompt: "¿Qué describe mejor el fenómeno sonoro explicado en la unidad?",
-        difficulty: "recognition",
-        options: [
-          "Una vibración que se propaga por un medio material y puede ser percibida por un receptor.",
-          "Una señal eléctrica que existe solamente cuando hay micrófono, consola y parlantes.",
-          "Una propiedad visual del escenario que aparece cuando se encienden las luces.",
-          "Una partitura escrita que se transforma automáticamente en música sin reproducción."
-        ],
-        correctIndex: 0,
-        explanation: "El sonido aparece como una perturbación o vibración que necesita un medio material, como el aire, para propagarse hasta un receptor."
-      },
-      {
-        prompt: "Cuando el documento dice que la música “vive cada vez que se reproduce”, ¿qué idea quiere remarcar?",
-        difficulty: "comprehension",
-        options: [
-          "Que la música solo existe si está escrita en una partitura correctamente.",
-          "Que la música se vuelve experiencia sonora cuando se ejecuta o reproduce en el tiempo.",
-          "Que todo instrumento produce música aunque nadie pueda oírlo.",
-          "Que la música depende únicamente del equipo de amplificación utilizado."
-        ],
-        correctIndex: 1,
-        explanation: "La idea central es que la música, como experiencia audible, ocurre en el tiempo cada vez que se reproduce, se canta o se ejecuta."
-      },
-      {
-        prompt: "¿Por qué en el espacio exterior no podríamos oír una explosión como en muchas películas?",
-        difficulty: "comprehension",
-        options: [
-          "Porque las ondas sonoras se transforman siempre en ondas de luz.",
-          "Porque la explosión tendría una frecuencia demasiado grave para el oído humano.",
-          "Porque falta un medio material, como aire u otro medio, que transporte la vibración sonora.",
-          "Porque el sonido solo puede existir dentro de una sala cerrada."
-        ],
-        correctIndex: 2,
-        explanation: "El sonido necesita un medio de propagación. En ausencia de aire u otro medio material, la vibración sonora no puede viajar hasta el oído."
-      },
-      {
-        prompt: "¿Cuál afirmación interpreta mejor la idea de energía sonora?",
-        difficulty: "comprehension",
-        options: [
-          "Es una energía infinita: una vez producida, mantiene siempre la misma intensidad.",
-          "Es exactamente lo mismo que la señal eléctrica que viaja por un cable de audio.",
-          "Es una propiedad exclusiva de los instrumentos musicales acústicos.",
-          "Es una forma de energía asociada al sonido, que puede ser mayor o menor según el impulso de la fuente."
-        ],
-        correctIndex: 3,
-        explanation: "La energía sonora no es infinita: depende del impulso de la fuente, como la voz, un parlante o un instrumento."
-      },
-      {
-        prompt: "¿Cuál es la diferencia más precisa entre absorción sonora y sonido reflejado?",
-        difficulty: "application",
-        options: [
-          "La absorción aumenta la velocidad del sonido; el reflejo elimina la fuente sonora.",
-          "La absorción transforma parte de la energía sonora; el sonido reflejado rebota en una superficie.",
-          "La absorción ocurre solo al aire libre; el reflejo ocurre solo en estudios de grabación.",
-          "La absorción convierte el sonido en señal eléctrica; el reflejo lo convierte en música."
-        ],
-        correctIndex: 1,
-        explanation: "Absorber implica transformar parte de la energía sonora, por ejemplo en calor. Reflejar implica que parte del sonido rebote en una superficie."
-      },
-      {
-        prompt: "Entrás a una sala con paredes duras, piso duro y casi ningún material absorbente. ¿Qué es más probable que ocurra con el sonido?",
-        difficulty: "application",
-        options: [
-          "El sonido dejará de necesitar aire para propagarse.",
-          "La velocidad del sonido bajará automáticamente a cero.",
-          "Aumentarán las reflexiones y puede empeorar la claridad de escucha.",
-          "El sonido se convertirá directamente en corriente eléctrica."
-        ],
-        correctIndex: 2,
-        explanation: "Las superficies duras tienden a reflejar más energía sonora. Eso puede aumentar rebotes y afectar la claridad."
-      },
-      {
-        prompt: "Un alumno dice: “El sonido desaparece porque la energía se pierde”. ¿Cuál sería la corrección más adecuada?",
-        difficulty: "criterion",
-        options: [
-          "La energía no desaparece sin más: se va transformando, por ejemplo, en calor.",
-          "La afirmación es correcta: la energía sonora se destruye completamente al tocar una pared.",
-          "El sonido nunca disminuye; si se produce una vez, conserva siempre la misma intensidad.",
-          "La energía sonora solo se pierde cuando se usa un micrófono dinámico."
-        ],
-        correctIndex: 0,
-        explanation: "La unidad plantea que la energía del sonido no se pierde simplemente, sino que se transforma gradualmente, por ejemplo en calor."
-      },
-      {
-        prompt: "Si recordamos que el sonido viaja aproximadamente a 340 metros por segundo en el aire, ¿qué conclusión práctica es correcta?",
-        difficulty: "application",
-        options: [
-          "Que todos los sonidos tienen la misma intensidad sin importar la fuente.",
-          "Que la música viaja más rápido que la luz dentro de un espectáculo.",
-          "Que el sonido no necesita medio de propagación si hay suficiente volumen.",
-          "Que en un segundo el sonido puede recorrer una distancia considerable dentro de un espacio."
-        ],
-        correctIndex: 3,
-        explanation: "La velocidad aproximada de 340 m/s ayuda a dimensionar cómo el sonido se propaga en el aire y por qué la distancia importa en espacios reales."
-      }
-    ],
-    "lesson-02": [
-      {
-        prompt: "Si aumenta la amplitud de una onda sonora, lo más probable es que percibamos:",
-        options: [
-          "Un mayor nivel de presión sonora.",
-          "Una frecuencia más aguda sin cambio de nivel.",
-          "Una variación de timbre sin energía asociada.",
-          "Una cancelación total de la señal."
-        ],
-        correctIndex: 0,
-        explanation: "La amplitud se relaciona con el nivel de presión sonora y con la percepción de intensidad."
-      },
-      {
-        prompt: "¿Qué instrumento se usa específicamente para medir nivel de presión sonora en un espacio?",
-        options: ["Sonómetro o decibelímetro.", "Multímetro de continuidad.", "Afinador cromático.", "Interfaz MIDI."],
-        correctIndex: 0,
-        explanation: "El sonómetro o decibelímetro mide niveles sonoros, usualmente expresados en dB SPL."
-      },
-      {
-        prompt: "Cuando hablamos de dB SPL nos referimos principalmente a:",
-        options: [
-          "Nivel de presión sonora.",
-          "Potencia eléctrica entregada por el amplificador.",
-          "Sensibilidad nominal de un micrófono.",
-          "Frecuencia fundamental de una fuente."
-        ],
-        correctIndex: 0,
-        explanation: "dB SPL significa decibeles de nivel de presión sonora."
-      },
-      {
-        prompt: "Verdadero o falso: un nivel sonoro adecuado depende del tipo de evento, del espacio y del tiempo de exposición.",
-        options: ["Verdadero", "Falso"],
-        correctIndex: 0,
-        explanation: "Verdadero. No existe un único nivel ideal para todos los contextos; debe evaluarse la situación."
-      },
-      {
-        prompt: "Estás operando una charla en una sala chica. La voz se entiende, pero el público se queja de molestia por exceso de nivel. ¿Qué harías primero?",
-        options: [
-          "Reducir y ajustar el nivel manteniendo inteligibilidad.",
-          "Aumentar la ganancia de entrada hasta el límite de clip.",
-          "Agregar más parlantes sin revisar cobertura.",
-          "Comprimir toda la mezcla para que parezca más fuerte."
-        ],
-        correctIndex: 0,
-        explanation: "La decisión razonable es adecuar el nivel al contexto sin perder claridad."
-      },
-      {
-        prompt: "¿Cuál relación técnica está mejor planteada?",
-        options: [
-          "dB SPL → nivel de presión sonora.",
-          "Sonómetro → tipo de cable balanceado.",
-          "Mayor nivel → siempre mayor inteligibilidad.",
-          "Sonido débil → mayor energía transmitida."
-        ],
-        correctIndex: 0,
-        explanation: "dB SPL expresa nivel de presión sonora. Más nivel no siempre implica mejor inteligibilidad."
-      },
-      {
-        prompt: "En una onda sonora, lo que se transmite desde la fuente hacia el receptor es principalmente:",
-        options: [
-          "Energía a través del medio.",
-          "Materia completa desplazándose desde el parlante al oído.",
-          "Corriente eléctrica aunque no haya equipos conectados.",
-          "Información visual codificada en el aire."
-        ],
-        correctIndex: 0,
-        explanation: "El sonido transmite energía mediante perturbaciones del medio."
-      }
-    ],
-    "lesson-03": [
-      {
-        prompt: "Cuando escuchamos un sonido en el aire, ¿qué se propaga realmente?",
-        options: [
-          "Una perturbación de presión en el medio.",
-          "Las partículas de aire viajando completas desde la fuente hasta el oído.",
-          "Una señal eléctrica flotando en el ambiente.",
-          "Un frente de luz producido por la fuente."
-        ],
-        correctIndex: 0,
-        explanation: "Se propaga una perturbación de presión; las partículas oscilan alrededor de su posición."
-      },
-      {
-        prompt: "En una zona de compresión de una onda sonora, las partículas del medio están:",
-        options: ["Más próximas entre sí.", "Más separadas entre sí.", "Sin oscilación posible.", "Con menor presión que en la rarefacción."],
-        correctIndex: 0,
-        explanation: "La compresión implica mayor concentración de partículas y mayor presión relativa."
-      },
-      {
-        prompt: "La propagación del sonido en el aire se describe mejor como:",
-        options: [
-          "Variaciones sucesivas de presión.",
-          "Una oscilación electromagnética transversal.",
-          "Un desplazamiento permanente de aire hacia el público.",
-          "Una corriente eléctrica que sale del parlante."
-        ],
-        correctIndex: 0,
-        explanation: "El sonido en el aire se propaga mediante variaciones sucesivas de presión."
-      },
-      {
-        prompt: "Verdadero o falso: el mismo sistema puede percibirse distinto en una sala cerrada y en un espacio abierto.",
-        options: ["Verdadero", "Falso"],
-        correctIndex: 0,
-        explanation: "Verdadero. El entorno modifica la propagación, las reflexiones y la percepción."
-      },
-      {
-        prompt: "La alternancia entre compresión y rarefacción forma:",
-        options: ["Una onda sonora longitudinal.", "Una conexión balanceada.", "Un patrón polar cardioide.", "Un filtro de ecualización."],
-        correctIndex: 0,
-        explanation: "En el aire, el sonido se comporta como una onda longitudinal de compresiones y rarefacciones."
-      },
-      {
-        prompt: "En un evento al aire libre, el público del fondo escucha de forma irregular en presencia de viento. ¿Qué factor conviene considerar?",
-        options: [
-          "Viento y condiciones atmosféricas que afectan la propagación.",
-          "Solo la marca del micrófono usado en escenario.",
-          "La alimentación phantom power de todos los canales.",
-          "La impedancia del cable de red del operador."
-        ],
-        correctIndex: 0,
-        explanation: "El viento y las condiciones atmosféricas pueden modificar la propagación sonora al aire libre."
-      },
-      {
-        prompt: "¿Cuál secuencia describe mejor el proceso físico básico?",
-        options: [
-          "Fuente vibra → variaciones de presión → propagación por el aire → receptor.",
-          "Receptor vibra → consola genera aire → fuente escucha → presión desaparece.",
-          "Parlante ilumina → cable comprime → público transmite → fuente recibe.",
-          "Aire entra a la consola → micrófono amplifica → pared ecualiza → oído mezcla."
-        ],
-        correctIndex: 0,
-        explanation: "El proceso parte de una fuente que vibra, genera variaciones de presión y llega a un receptor."
-      }
-    ],
-    "lesson-04": [
-      {
-        prompt: "En un espectáculo, la cadena de audio se entiende mejor como:",
-        options: [
-          "El recorrido funcional desde la fuente hasta lo que escucha el público.",
-          "La lista de canciones que interpreta la banda.",
-          "El conjunto de cables enrollados antes del armado.",
-          "El sistema de iluminación sincronizado con la música."
-        ],
-        correctIndex: 0,
-        explanation: "La cadena de audio permite analizar el recorrido desde la fuente hasta la reproducción final."
-      },
-      {
-        prompt: "¿Cuál de estos elementos es una fuente sonora original en vivo?",
-        options: [
-          "Una voz o instrumento que genera sonido.",
-          "Una consola que mezcla señales.",
-          "Un amplificador que eleva potencia eléctrica.",
-          "Un cable que transporta señal."
-        ],
-        correctIndex: 0,
-        explanation: "La fuente sonora original es aquello que genera el sonido inicial, como una voz o instrumento."
-      },
-      {
-        prompt: "¿Qué orden representa mejor una cadena básica de voz amplificada?",
-        options: [
-          "Voz → micrófono → consola/preamplificación → amplificación/parlante.",
-          "Parlante → consola → voz → micrófono.",
-          "Consola → pared → público → cable de instrumento.",
-          "Micrófono → parlante → voz → ganancia de entrada."
-        ],
-        correctIndex: 0,
-        explanation: "La voz se captura, se controla y luego se reproduce mediante el sistema de salida."
-      },
-      {
-        prompt: "¿Qué dispositivo cumple la función de capturar una voz acústica en vivo?",
-        options: ["Micrófono.", "Parlante principal.", "Amplificador de potencia.", "Caja de transporte."],
-        correctIndex: 0,
-        explanation: "El micrófono convierte energía acústica en señal eléctrica."
-      },
-      {
-        prompt: "¿Qué equipo permite ajustar niveles, mezclar señales y definir ruteos de salida?",
-        options: ["Consola de sonido.", "Parlante pasivo.", "Soporte de micrófono.", "Cable de corriente."],
-        correctIndex: 0,
-        explanation: "La consola concentra funciones de control, mezcla y ruteo de señales."
-      },
-      {
-        prompt: "Verdadero o falso: la acústica del lugar puede modificar el resultado aunque el sistema esté bien conectado.",
-        options: ["Verdadero", "Falso"],
-        correctIndex: 0,
-        explanation: "Verdadero. Reflexiones, absorción, distancia y materiales influyen en lo que escucha el público."
-      },
-      {
-        prompt: "Hay señal clara en la consola, pero no sale sonido por el sistema principal. ¿Dónde conviene buscar primero?",
-        options: [
-          "En la etapa posterior a la consola: salidas, procesado, amplificación, cableado o parlantes.",
-          "En la técnica vocal de la cantante, porque la consola ya muestra señal.",
-          "En el color de las luces, porque puede afectar la percepción sonora.",
-          "En la afinación del instrumento, porque siempre bloquea la salida principal."
-        ],
-        correctIndex: 0,
-        explanation: "Si la consola recibe señal, el problema probablemente está en una etapa posterior de la cadena."
-      }
-    ],
-    "challenge-01": [
-      {
-        prompt: "En el caso del salón con cantante, micrófono, consola y parlantes, ¿cuál es la fuente acústica original?",
-        options: ["La voz de la cantante.", "El micrófono de mano.", "La consola de sala.", "El parlante principal."],
-        correctIndex: 0,
-        explanation: "La voz es la fuente original; el resto de elementos captura, procesa o reproduce."
-      },
-      {
-        prompt: "¿Qué función cumple el micrófono dentro de esa cadena?",
-        options: [
-          "Transduce la energía acústica de la voz en señal eléctrica.",
-          "Aumenta directamente la potencia del parlante.",
-          "Reduce automáticamente la reverberación de la sala.",
-          "Convierte la mezcla final en presión sonora para el público."
-        ],
-        correctIndex: 0,
-        explanation: "El micrófono realiza transducción acústico-eléctrica."
-      },
-      {
-        prompt: "¿Qué etapa permite controlar nivel, mezcla y ruteo de la señal capturada?",
-        options: ["La consola.", "La pared trasera.", "El soporte del micrófono.", "El oído del público."],
-        correctIndex: 0,
-        explanation: "La consola es la etapa de control y mezcla."
-      },
-      {
-        prompt: "¿Qué elemento convierte la señal final del sistema en sonido audible para el público?",
-        options: ["Los parlantes.", "La entrada del salón.", "El canal de la consola sin salida asignada.", "La ficha del micrófono guardada."],
-        correctIndex: 0,
-        explanation: "Los parlantes convierten señal eléctrica en movimiento mecánico y presión sonora."
-      },
-      {
-        prompt: "¿Por qué una persona ubicada al fondo puede escuchar la voz amplificada?",
-        options: [
-          "Porque los parlantes generan variaciones de presión que se propagan por el aire.",
-          "Porque el cable lleva la voz hasta cada oyente individualmente.",
-          "Porque la luz del escenario transporta la onda sonora.",
-          "Porque la consola elimina la necesidad de un medio físico."
-        ],
-        correctIndex: 0,
-        explanation: "El aire sigue siendo el medio de propagación acústica hasta el público."
-      },
-      {
-        prompt: "El salón tiene paredes duras y el sonido rebota mucho. ¿Qué fenómeno conviene sospechar?",
-        options: [
-          "Exceso de reflexiones y reverberación.",
-          "Ausencia total de propagación sonora.",
-          "Falla obligatoria del micrófono.",
-          "Cambio de fase producido únicamente por el color de la pared."
-        ],
-        correctIndex: 0,
-        explanation: "Las superficies duras favorecen reflexiones y pueden aumentar la reverberación."
-      },
-      {
-        prompt: "¿Por qué subir volumen no siempre resuelve un problema de claridad en una sala reverberante?",
-        options: [
-          "Porque también puede aumentar reflexiones, molestia y riesgo auditivo.",
-          "Porque al subir volumen el sonido deja de propagarse por el aire.",
-          "Porque la consola cambia automáticamente de orden la cadena de audio.",
-          "Porque los micrófonos dejan de captar cualquier fuente sonora."
-        ],
-        correctIndex: 0,
-        explanation: "Más nivel puede empeorar la claridad si el problema principal es acústico o de cobertura."
-      }
-    ]
-  };
-
-  for (const lesson of getAllLessonsFromCourse()) {
-    for (const block of lesson.theoryBlocks || []) {
-      if (block.note) block.note = block.note.replace(/^Idea clave:\s*/i, "");
-    }
-
-    if (curatedQuestions[lesson.id]) {
-      lesson.questions = curatedQuestions[lesson.id];
-    }
-  }
+  // v17: las preguntas ya vienen curadas por unidad con dificultad progresiva.
 }
 
 function getAllLessonsFromCourse() {
@@ -1883,10 +1777,10 @@ function renderHome() {
   return `
     <section class="hero">
       <div class="hero-main panel">
-        <span class="badge">🎧 Prototipo v16 · Dist deploy</span>
+        <span class="badge">🎧 Prototipo v17 · Unidades + evaluaciones</span>
         <h1>Aprendé sonido para espectáculos practicando.</h1>
         <p class="hero-copy">
-          Esta versión permite revisar toda la navegación y la GUI con tema claro/oscuro y recorrido UX completo, incluyendo salto de cuestionarios sin responder.
+          Esta versión aplica los Documentos Fuente Formato C v0.2 a todas las unidades e incorpora cuestionarios/evaluaciones con dificultad progresiva.
         </p>
         <div class="cta-row">
           <button class="primary-btn" data-action="continue">Continuar curso</button>

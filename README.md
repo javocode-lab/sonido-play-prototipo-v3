@@ -1,4 +1,4 @@
-# Sonido Play — Prototipo v16 Dist Deploy
+# Sonido Play — Prototipo v17 Dist Deploy
 
 Prototipo estático de **Sonido Play / Blacksmith Academy** para validar flujo, GUI, documento fuente, tema claro/oscuro, cuestionarios y recorrido UX.
 
@@ -62,3 +62,12 @@ powershell -ExecutionPolicy Bypass -File scripts/build-dist.ps1
 ## Nota
 
 No ejecutar `npm init`. Este prototipo no requiere npm mientras siga siendo HTML/CSS/JS estático.
+
+
+## v17 — Unidades y evaluaciones
+
+Esta versión aplica los Documentos Fuente Formato C v0.2 a todas las unidades del curso y actualiza cuestionarios/evaluaciones con dificultad progresiva.
+
+Unidades activas: U01 a U10.
+
+Criterio de aprobación: lectura del Documento Fuente + guía curada + 70% en cuestionario.
