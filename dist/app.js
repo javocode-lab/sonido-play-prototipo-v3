@@ -1,10 +1,15 @@
-const STORAGE_KEY = "sonido-play-v17-2-progress";
+const APP_VERSION = "v18";
+const MODE_KEY = "sonido-play-v18-mode";
+const STORAGE_KEYS = {
+  student: "sonido-play-v18-student-progress",
+  dev: "sonido-play-v18-dev-progress"
+};
 
 const course = {
   "id": "sonido-play",
   "title": "Sonido Play",
   "subtitle": "Curso interactivo de sonido en espectáculos",
-  "editorialNote": "Versión v17: todas las unidades del curso usan Documento Madre + Formato C v0.2 como fuente de conocimiento. Los cuestionarios fueron rehechos con dificultad progresiva: reconocimiento, comprensión, aplicación y criterio. La unidad integradora usa además Learning Lab para evaluar diagnóstico y evidencia.",
+  "editorialNote": "Versión v18: todas las unidades del curso usan Documento Madre + Formato C v0.2. El acceso inicial separa Modo Alumno, para cursado real con desbloqueo progresivo, y Modo Dev/Revisión, para probar unidades, cuestionarios y evaluación integradora sin bloquear la navegación.",
   "modules": [
     {
       "id": "module-01",
@@ -1657,38 +1662,64 @@ function createRuntimeQuestions(questions) {
 
 applyEditorialCuration();
 
-function getDefaultState() {
+function isValidMode(mode) {
+  return mode === "student" || mode === "dev";
+}
+
+function loadMode() {
+  try {
+    const storedMode = localStorage.getItem(MODE_KEY);
+    return isValidMode(storedMode) ? storedMode : null;
+  } catch {
+    return null;
+  }
+}
+
+function getStorageKey(mode) {
+  return STORAGE_KEYS[isValidMode(mode) ? mode : "student"];
+}
+
+function isDevMode() {
+  return currentMode === "dev";
+}
+
+function getDefaultState(mode = currentMode || "student") {
+  const firstId = getFirstLessonId();
+  const lessonIds = getAllLessons().map((lesson) => lesson.id);
   return {
     xp: 0,
     hearts: 5,
     streak: 1,
     completed: [],
-    unlocked: ["u01"],
+    unlocked: mode === "dev" ? lessonIds : [firstId],
     bestScores: {},
     readingDone: {},
-    lastVisited: "u01",
+    lastVisited: firstId,
     uiTheme: "dark",
-    demoAdvances: 0
+    demoAdvances: 0,
+    mode
   };
 }
 
-function loadState() {
+function loadState(mode = currentMode || "student") {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    const loadedState = raw ? { ...getDefaultState(), ...JSON.parse(raw) } : getDefaultState();
-    return normalizeStateIds(loadedState);
+    const raw = localStorage.getItem(getStorageKey(mode));
+    const loadedState = raw ? { ...getDefaultState(mode), ...JSON.parse(raw), mode } : getDefaultState(mode);
+    return normalizeStateIds(loadedState, mode);
   } catch {
-    return normalizeStateIds(getDefaultState());
+    return normalizeStateIds(getDefaultState(mode), mode);
   }
 }
 
 function saveState() {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  if (!currentMode) return;
+  localStorage.setItem(getStorageKey(currentMode), JSON.stringify({ ...state, mode: currentMode }));
 }
 
-let state = loadState();
-let view = "home";
-let activeLessonId = getLesson(state.lastVisited) ? state.lastVisited : "u01";
+let currentMode = loadMode();
+let state = currentMode ? loadState(currentMode) : getDefaultState("student");
+let view = currentMode ? "home" : "gate";
+let activeLessonId = getLesson(state.lastVisited) ? state.lastVisited : getFirstLessonId();
 let quizRuntime = null;
 let toastTimer = null;
 
@@ -1714,14 +1745,18 @@ function getFirstLessonId() {
   return getAllLessons()[0]?.id || "u01";
 }
 
-function normalizeStateIds(rawState) {
+function normalizeStateIds(rawState, mode = currentMode || "student") {
   const validIds = getAllLessons().map((lesson) => lesson.id);
   const firstId = getFirstLessonId();
-  const normalized = { ...rawState };
+  const normalized = { ...rawState, mode };
 
   normalized.unlocked = Array.isArray(normalized.unlocked)
     ? normalized.unlocked.filter((id) => validIds.includes(id))
     : [];
+
+  if (mode === "dev") {
+    normalized.unlocked = [...validIds];
+  }
 
   if (!normalized.unlocked.length) {
     normalized.unlocked = [firstId];
@@ -1749,7 +1784,7 @@ function getNextLessonId(currentId) {
 }
 
 function isUnlocked(lessonId) {
-  return state.unlocked.includes(lessonId);
+  return isDevMode() || state.unlocked.includes(lessonId);
 }
 
 function isCompleted(lessonId) {
@@ -1765,7 +1800,9 @@ function render() {
   applyTheme();
   app.innerHTML = `
     <div class="app-shell">
-      ${renderTopbar()}
+      ${view !== "gate" ? renderTopbar() : ""}
+      ${view !== "gate" && isDevMode() ? renderDevToolbar() : ""}
+      ${view === "gate" ? renderModeGate() : ""}
       ${view === "home" ? renderHome() : ""}
       ${view === "lesson" ? renderLesson(getLesson(activeLessonId)) : ""}
       ${view === "quiz" ? renderQuiz() : ""}
@@ -1781,6 +1818,67 @@ function render() {
   if (view === "result") bindResultEvents();
 }
 
+function renderModeGate() {
+  return `
+    <main class="mode-gate panel">
+      <span class="badge">🎧 Sonido Play · ${APP_VERSION}</span>
+      <h1>¿Cómo querés ingresar?</h1>
+      <p class="hero-copy">
+        Separá la experiencia real del alumno de la revisión rápida del prototipo.
+        Así podemos probar a fondo sin romper el avance progresivo del curso.
+      </p>
+
+      <div class="mode-grid">
+        <article class="mode-card student-mode-card">
+          <div class="mode-icon">🎓</div>
+          <p class="kicker">Camino real</p>
+          <h2>Entrar como alumno</h2>
+          <p>Curso progresivo: arranca en U01, exige lectura, cuestionario aprobado y desbloqueo ordenado.</p>
+          <ul>
+            <li>Unidades bloqueadas hasta completar la anterior.</li>
+            <li>Lectura obligatoria antes del cuestionario.</li>
+            <li>Progreso separado para pruebas reales.</li>
+          </ul>
+          <button class="primary-btn" data-action="choose-mode" data-mode="student">Entrar como alumno</button>
+        </article>
+
+        <article class="mode-card dev-mode-card">
+          <div class="mode-icon">🛠️</div>
+          <p class="kicker">Revisión rápida</p>
+          <h2>Entrar en modo dev</h2>
+          <p>Modo de control para revisar navegación, documentos, cuestionarios y evaluación integradora sin bloqueos.</p>
+          <ul>
+            <li>Todas las unidades disponibles.</li>
+            <li>Selector rápido U01 → U10.</li>
+            <li>Botón “Seguir flujo” y atajos de revisión.</li>
+          </ul>
+          <button class="secondary-btn" data-action="choose-mode" data-mode="dev">Entrar en modo dev</button>
+        </article>
+      </div>
+    </main>
+  `;
+}
+
+function renderDevToolbar() {
+  return `
+    <section class="dev-toolbar" aria-label="Barra de revisión para desarrollo">
+      <div class="dev-toolbar-main">
+        <strong>🛠️ Modo Dev</strong>
+        <span>Revisión libre · ${getLesson(activeLessonId)?.id?.toUpperCase() || "HOME"}</span>
+      </div>
+      <div class="dev-unit-list">
+        ${getAllLessons().map((lesson) => `
+          <button class="dev-unit-btn ${lesson.id === activeLessonId ? "active" : ""}" data-action="dev-open-lesson" data-lesson-id="${lesson.id}">${lesson.id.toUpperCase()}</button>
+        `).join("")}
+      </div>
+      <div class="dev-toolbar-actions">
+        <button class="ghost-btn" data-action="dev-mark-complete">Marcar unidad completa</button>
+        <button class="ghost-btn" data-action="change-mode">Volver al selector</button>
+      </div>
+    </section>
+  `;
+}
+
 function renderTopbar() {
   return `
     <header class="topbar">
@@ -1793,6 +1891,7 @@ function renderTopbar() {
       </div>
       <div class="stats" aria-label="Estado de progreso">
         <button class="theme-toggle-btn" data-action="toggle-theme" title="Cambiar tema visual">${getThemeIcon()} ${getThemeLabel()}</button>
+        <button class="mode-pill" data-action="change-mode" title="Cambiar modo de uso">${isDevMode() ? "🛠️ Dev" : "🎓 Alumno"}</button>
         <div class="stat-pill">⚡ <strong>${state.xp}</strong> XP</div>
         <div class="stat-pill">❤️ <strong>${state.hearts}</strong> vidas</div>
         <div class="stat-pill">🔥 <strong>${state.streak}</strong> día</div>
@@ -1806,14 +1905,16 @@ function renderHome() {
   return `
     <section class="hero">
       <div class="hero-main panel">
-        <span class="badge">🎧 Prototipo v17 · Unidades + evaluaciones</span>
-        <h1>Aprendé sonido para espectáculos practicando.</h1>
+        <span class="badge">🎧 Prototipo v18 · ${isDevMode() ? "Modo Dev" : "Modo Alumno"}</span>
+        <h1>${isDevMode() ? "Revisá Sonido Play sin bloqueos." : "Aprendé sonido para espectáculos practicando."}</h1>
         <p class="hero-copy">
-          Esta versión aplica los Documentos Fuente Formato C v0.2 a todas las unidades e incorpora cuestionarios/evaluaciones con dificultad progresiva.
+          ${isDevMode()
+            ? "Modo de revisión: todas las unidades están disponibles para validar navegación, documentos, cuestionarios y evaluación integradora."
+            : "Modo alumno: avanzás en orden con Documento Fuente, guía curada, cuestionario y desbloqueo progresivo."}
         </p>
         <div class="cta-row">
-          <button class="primary-btn" data-action="continue">Continuar curso</button>
-          <button class="secondary-btn" data-action="open-first">Revisar desde el inicio</button>
+          <button class="primary-btn" data-action="continue">${isDevMode() ? "Continuar revisión" : "Continuar curso"}</button>
+          <button class="secondary-btn" data-action="open-first">${isDevMode() ? "Abrir U01" : "Revisar desde el inicio"}</button>
         </div>
       </div>
       <aside class="hero-side panel">
@@ -1841,7 +1942,7 @@ function renderHome() {
           <div>
             <p class="kicker">Módulos disponibles</p>
             <h2>Unidades activas del prototipo</h2>
-            <p class="objective">Completá las lecciones en orden o usá el modo recorrido UX para revisar pantallas, unidades y GUI sin responder cuestionarios.</p>
+            <p class="objective">${isDevMode() ? "Todas las unidades están desbloqueadas para revisión rápida. El avance dev no modifica el progreso de alumno." : "Completá las lecciones en orden: Documento Fuente, guía curada, cuestionario y desbloqueo de la siguiente unidad."}</p>
           </div>
           <button class="ghost-btn" data-action="reset">Reiniciar</button>
         </div>
@@ -1911,7 +2012,8 @@ function renderLessonCard(lesson, index) {
 
 function renderLesson(lesson) {
   if (!lesson) return renderMissing();
-  const readingDone = Boolean(state.readingDone[lesson.id]);
+  const readingDone = isDevMode() || Boolean(state.readingDone[lesson.id]);
+  const canStartQuiz = isDevMode() || readingDone;
   return `
     <main class="panel screen">
       <div class="lesson-top">
@@ -1926,7 +2028,7 @@ function renderLesson(lesson) {
         <div class="flow-item active"><strong>1</strong><span>Documento Fuente</span></div>
         <div class="flow-item"><strong>2</strong><span>Guía curada</span></div>
         <div class="flow-item"><strong>3</strong><span>Cuestionario</span></div>
-        <div class="flow-item demo"><strong>UX</strong><span>Recorrido libre</span></div>
+        ${isDevMode() ? `<div class="flow-item demo"><strong>DEV</strong><span>Recorrido libre</span></div>` : ""}
       </div>
 
       <div class="source-policy">
@@ -1954,13 +2056,13 @@ function renderLesson(lesson) {
         </section>
 
         <div class="footer-actions">
-          <button id="startQuizBtn" class="primary-btn" data-action="start-quiz" ${readingDone ? "" : "disabled"}>
-            ${readingDone ? "Ir al cuestionario" : "Leé el Documento Fuente y la guía hasta el final"}
+          <button id="startQuizBtn" class="primary-btn" data-action="start-quiz" ${canStartQuiz ? "" : "disabled"}>
+            ${canStartQuiz ? "Ir al cuestionario" : "Leé el Documento Fuente y la guía hasta el final"}
           </button>
-          <button class="flow-forward-btn" data-action="advance-flow" title="Modo prototipo: avanza sin contestar cuestionario">Seguir flujo →</button>
+          ${isDevMode() ? `<button class="flow-forward-btn" data-action="advance-flow" title="Modo dev: avanza sin contestar cuestionario">Seguir flujo →</button>` : ""}
           <button class="secondary-btn" data-action="go-home">Guardar y volver</button>
         </div>
-        <p class="demo-note">Modo UX: “Seguir flujo” permite recorrer pantallas, unidades y tema visual sin responder el cuestionario. Usa un botón de alto contraste en tema claro y oscuro.</p>
+        ${isDevMode() ? `<p class="demo-note">Modo Dev: “Seguir flujo” permite recorrer pantallas, unidades y tema visual sin responder el cuestionario.</p>` : ""}
       </div>
     </main>
   `;
@@ -2129,10 +2231,10 @@ function renderQuiz() {
         <div id="feedback" class="feedback hidden"></div>
         <div class="footer-actions quiz-actions">
           <button id="nextQuestionBtn" class="primary-btn hidden" data-action="next-question">Continuar</button>
-          <button class="flow-forward-btn" data-action="advance-flow" title="Modo prototipo: salta este cuestionario y avanza al siguiente paso">Seguir flujo →</button>
+          ${isDevMode() ? `<button class="flow-forward-btn" data-action="advance-flow" title="Modo dev: salta este cuestionario y avanza al siguiente paso">Seguir flujo →</button>` : ""}
           <button class="ghost-btn" data-action="back-to-lesson">Repasar teoría</button>
         </div>
-        <p class="demo-note quiz-demo-note">Modo UX: podés saltar este cuestionario para revisar navegación, pantallas, unidad siguiente y GUI sin responder.</p>
+        ${isDevMode() ? `<p class="demo-note quiz-demo-note">Modo Dev: podés saltar este cuestionario para revisar navegación, pantallas, unidad siguiente y GUI sin responder.</p>` : ""}
       </section>
     </main>
   `;
@@ -2176,7 +2278,7 @@ function renderResult() {
         ${passed && getNextLessonId(activeLessonId) ? `<button class="secondary-btn" data-action="next-lesson">Siguiente lección</button>` : ""}
         <button class="ghost-btn" data-action="retry-lesson">Repetir cuestionario</button>
         <button class="ghost-btn" data-action="back-to-lesson">Repasar teoría</button>
-        <button class="flow-forward-btn" data-action="advance-flow">Seguir flujo →</button>
+        ${isDevMode() ? `<button class="flow-forward-btn" data-action="advance-flow">Seguir flujo →</button>` : ""}
       </div>
     </main>
   `;
@@ -2192,6 +2294,41 @@ function renderMissing() {
 }
 
 function bindCommonEvents() {
+  document.querySelectorAll("[data-action='choose-mode']").forEach((el) => {
+    el.addEventListener("click", () => {
+      selectMode(el.getAttribute("data-mode"));
+    });
+  });
+
+  document.querySelectorAll("[data-action='change-mode']").forEach((el) => {
+    el.addEventListener("click", () => {
+      view = "gate";
+      localStorage.removeItem(MODE_KEY);
+      currentMode = null;
+      render();
+    });
+  });
+
+  document.querySelectorAll("[data-action='dev-open-lesson']").forEach((el) => {
+    el.addEventListener("click", () => {
+      if (!isDevMode()) return;
+      openLesson(el.getAttribute("data-lesson-id"));
+    });
+  });
+
+  document.querySelectorAll("[data-action='dev-mark-complete']").forEach((el) => {
+    el.addEventListener("click", () => {
+      if (!isDevMode() || !getLesson(activeLessonId)) return;
+      state.readingDone[activeLessonId] = true;
+      if (!state.completed.includes(activeLessonId)) state.completed.push(activeLessonId);
+      const nextId = getNextLessonId(activeLessonId);
+      if (nextId && !state.unlocked.includes(nextId)) state.unlocked.push(nextId);
+      saveState();
+      render();
+      showToast("Modo Dev: unidad marcada como completa.");
+    });
+  });
+
   document.querySelectorAll("[data-action='go-home']").forEach((el) => {
     el.addEventListener("click", () => {
       view = "home";
@@ -2240,10 +2377,10 @@ function bindCommonEvents() {
     el.addEventListener("click", () => {
       const ok = confirm("¿Reiniciar progreso del prototipo?");
       if (!ok) return;
-      state = getDefaultState();
+      state = getDefaultState(currentMode || "student");
       saveState();
-      view = "home";
-      activeLessonId = "u01";
+      view = currentMode ? "home" : "gate";
+      activeLessonId = getFirstLessonId();
       quizRuntime = null;
       render();
       showToast("Progreso reiniciado.");
@@ -2278,7 +2415,7 @@ function bindLessonEvents() {
 
   document.querySelectorAll("[data-action='start-quiz']").forEach((el) => {
     el.addEventListener("click", () => {
-      if (!state.readingDone[activeLessonId]) {
+      if (!isDevMode() && !state.readingDone[activeLessonId]) {
         showToast("Primero leé el Documento Fuente y la guía hasta el final.");
         return;
       }
@@ -2373,6 +2510,19 @@ function bindResultEvents() {
   });
 }
 
+function selectMode(mode) {
+  if (!isValidMode(mode)) return;
+  currentMode = mode;
+  localStorage.setItem(MODE_KEY, mode);
+  state = loadState(mode);
+  activeLessonId = getLesson(state.lastVisited) ? state.lastVisited : getFirstLessonId();
+  view = "home";
+  quizRuntime = null;
+  saveState();
+  render();
+  showToast(mode === "dev" ? "Modo Dev activo." : "Modo Alumno activo.");
+}
+
 function advancePrototypeFlow() {
   const currentLesson = getLesson(activeLessonId);
   if (!currentLesson) {
@@ -2408,6 +2558,12 @@ function advancePrototypeFlow() {
 }
 
 function openLesson(lessonId) {
+  if (!getLesson(lessonId)) {
+    showToast("No se encontró la unidad solicitada.");
+    view = "home";
+    render();
+    return;
+  }
   activeLessonId = lessonId;
   state.lastVisited = lessonId;
   saveState();
@@ -2417,6 +2573,12 @@ function openLesson(lessonId) {
 }
 
 function startQuiz(lessonId) {
+  const lesson = getLesson(lessonId);
+  if (!lesson) {
+    view = "home";
+    render();
+    return;
+  }
   activeLessonId = lessonId;
   state.lastVisited = lessonId;
   if (state.hearts <= 0) state.hearts = 5;
@@ -2424,7 +2586,7 @@ function startQuiz(lessonId) {
     index: 0,
     correct: 0,
     locked: false,
-    questions: createRuntimeQuestions(getLesson(lessonId).questions),
+    questions: createRuntimeQuestions(lesson.questions),
     lastScore: 0,
     lastCorrect: 0
   };
