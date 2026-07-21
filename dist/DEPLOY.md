@@ -1,3 +1,11 @@
+# Nota v18.2 Matías A1
+
+Este paquete agrega material de revisión para Matías y documenta la decisión A1: el Documento Madre debe aparecer visible en cada unidad, con imágenes originales, explicación Blacksmith ampliada y refuerzos externos seguros.
+
+Ver primero: `00_LEER_PRIMERO_MATIAS.md`.
+
+---
+
 # DEPLOY — Sonido Play v18.1
 
 ## Tipo de deploy

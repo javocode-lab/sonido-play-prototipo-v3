@@ -1,15 +1,15 @@
-const APP_VERSION = "v18.1";
-const MODE_KEY = "sonido-play-v18-1-mode";
+const APP_VERSION = "v18.4-u01-u03-u04-a1";
+const MODE_KEY = "sonido-play-v18-4-mode";
 const STORAGE_KEYS = {
-  student: "sonido-play-v18-1-student-progress",
-  dev: "sonido-play-v18-1-dev-progress"
+  student: "sonido-play-v18-4-student-progress",
+  dev: "sonido-play-v18-4-dev-progress"
 };
 
 const course = {
   "id": "sonido-play",
   "title": "Sonido Play",
   "subtitle": "Curso interactivo de sonido en espectáculos",
-  "editorialNote": "Versión v18.1: todas las unidades del curso usan Documento Madre + Formato C v0.2. El acceso inicial separa Modo Alumno, para cursado real con desbloqueo progresivo, y Modo Dev/Revisión, para probar unidades, actividades, cuestionarios y el borrador metodológico de evaluación integradora sin bloquear la navegación.",
+  "editorialNote": "Versión v18.4 A1: U01, U02, U03 y U04 ya incorporan Documento Madre visible dentro de la pantalla con imágenes originales, transcripción de respaldo, explicación Blacksmith ampliada, actividades y cuestionarios progresivos. Modo Alumno y Modo Dev/Revisión se conservan para pruebas completas.",
   "modules": [
     {
       "id": "module-01",
@@ -25,42 +25,78 @@ const course = {
           "objective": "Comprender el recorrido completo del sonido desde la fuente hasta la escucha, diferenciando fenómeno acústico, señal eléctrica y acústica del espacio.",
           "sourceSegments": [
             {
-              "title": "Cadena de Audio y Acústica",
-              "sourceRef": "Documento Fuente · Unidad 01 · Formato C v0.2 · Documento Madre + fuentes verdes/controladas",
-              "body": "Esta unidad toma como base la Clase 1 del Documento Madre y la amplía con una explicación más precisa del fenómeno sonoro.\n\nEl sonido no es solamente “aire” ni solamente “señal eléctrica”. En una situación real de espectáculo conviven dos mundos: el sonido acústico, que viaja por un medio material como el aire, y la señal de audio, que circula por cables, consola, procesadores y amplificadores. La cadena de audio permite ordenar ese recorrido para diagnosticar problemas sin adivinar.\n\nUna cadena típica puede pensarse así: fuente sonora → acústica inicial → micrófono o entrada → cableado → consola → procesamiento → amplificación → parlante → acústica final → oyente. La acústica aparece al principio y al final: afecta cómo se genera, capta, reproduce y percibe el sonido.\n\nEl documento conserva la idea del Documento Madre sobre música como experiencia que ocurre en el tiempo, pero corrige la formulación “el sonido necesita aire”: técnicamente, el sonido necesita un medio material. En eventos, normalmente ese medio es el aire.",
-              "documentPages": [],
-              "visualLabel": "Documento Fuente · Formato C v0.2",
-              "expertStatus": "Documento ampliado · Pendiente de validación técnica por Matías",
+              "title": "Documento Madre visible · Clase 1: Cadena de Audio y Acústica",
+              "sourceRef": "Documento Madre · Sonido del Espectáculo 2020 · Clase 1 · páginas 5 a 7 · A1",
+              "body": "--- Página 5 del Documento Madre ---\n5 \n \nSistema desbalanceado ......................................................................................... 60 \n• \nOtros conectores balanceados y desbalanceados................................... 61 \nMas sobre consolas (material ampliado) ................................................................ 62 \n• \nConsolas para &quot;VIVO&quot; ............................................................................. 62 \n• \nSECCIONES DE UNA CONSOLA .......................................................... 62 \n• \nSECCION DE SALIDA ............................................................................ 65 \n• \nSalidas Submasters ................................................................................ 65 \n• \nSECCION AUXILIAR ............................................................................... 66 \n• \nRetornos Auxiliares Stereo: ..................................................................... 66 \n• \nAnexo Fotográfico ................................................................................... 66 \nClase 10: ................................................................................................................... 74 \nAmplificador. .......................................................................................................... 74 \n¿Como funciona un amplificador de audio? ............................................................ 74 \n¿Para que sirve un amplificador de sonido? ........................................................... 75 \nTipos ...................................................................................................................... 75 \n• \nClase A ................................................................................................... 76 \n• \nClase B ................................................................................................... 76 \n• \nClase C ................................................................................................... 77 \nUtilización ............................................................................................................... 77 \nAmplificadores de sonido ....................................................................................... 77 \n¿Como elegir Amplificadores de Audio Profesional? .............................................. 77 \n• \nGuía de Amplificadores de Audio Profesionales ...................................... 77 \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nClase 1: \n&quot;Cadena de Audio&quot;. Este esquema está presente en todo evento de sonido, \npor lo que es indispensable conocerlo:\n\n--- Página 6 del Documento Madre ---\n6 \n \n \nConcepto de &quot;Acústica&quot;. &quot;De la Música al sonido&quot; \nIntroducción: \nComprendemos que la música es una forma de arte que vive en el tiempo. En otras \npalabras, la música no es una partitura, no es un disco musical, ni tampoco lo es una banda, \nni un instrumento, sino que la música existe y vive cada vez que se reproduce. Para poder oír \nuna música y que ella viva, es necesario el sonido, y para que exista sonido descubrimos que \nes necesario el aire. En otras palabras, la música es un conjunto de sonidos que vive en \nel aire. Una canción vive y muere cada vez que le damos PLAY a nuestro reproductor, o cada \nvez que la ejecutamos con un instrumento o nuestra propia voz. \nPor otra parte, estuvimos estudiando el sonido que se transmite por los distintos \nmateriales. Hablamos que el sonido más comúnmente se transmite por medio del aire y \nllamamos a este fenómeno energía sonora. \nDato curioso: en el espacio exterior fuera de la atmósfera no es posible oírnos ni oír una \nexplosión (típica de las películas) ya que en ausencia de aire o medio de propagación de las \nondas es imposible el fenómeno sonoro. \nOtro aspecto estudiado en clase, es que el sonido es una forma de energía llamada \nenergía sonora. La energía sonora no es infinita, y puede ser mayor o menor dependiendo \ndel impulso que le demos, ya sea con nuestra voz, un parlante o un instrumento musical. \nTenemos sonidos fuertes o débiles de acuerdo a como los nombramos musicalmente, y \npodemos medirlo de manera científica mediante una escala que llamaremos “escala de \npresión sonora, en decibeles” mediante un dispositivo llamado decibelímetro o sonómetro. \nOtro aspecto a repasar es que la energía del sonido no se pierde, sino que se va \ntransformando en energía de calor. Comentamos en clase, que distintos materiales son \ncapaces de absorber la energía sonora transformando el sonido en calor, aunque también \nnombramos que es tan pequeña este tipo de energía que medir el aumento de calor de un \npanel absorbente instalado en una pared es muy difícil dado las pequeñas magnitudes que \nse manejan. En palabras científicas llamamos a la capacidad de absorber la energía sonora \n“coeficiente de absorción” mientras que el sonido que se refleja la llamamos sonido reflejado. \nPor último, recordamos que la velocidad del sonido es de 340 metros por segundo, \nquiere decir que, en el tiempo comprendido en un segundo, el sonido que sale de la voz \nhumana, un aplauso, un instrumento o un parlante, recorre 3 cuadras y 40 mts.\n\n--- Página 7 del Documento Madre ---\n7 \n \nRepaso \nEl sonido se propaga por el aire y el aire no lo vemos. El viento es la forma en que \npodemos percibir ese aire. \nEl sonido nos permite afirmar que hay aire porque hay un medio por el cual se va a \npropagar. \nSonido definición: sensación de escuchar / el fenómeno físico que está el aire. \nTeniendo 10 autos que chocan. el numero 10 choca al 9 y el 9 al 8 y así llega en menor \nmedida al primero. El sonido funcionaría así pero el auto se abolla y el sonido no. \nClase 2: \nEco, reverberancia y absorción de sonido. \nPresión sonora: \n“En la primaria te ponían en fila agarrando los hombros de la persona de adelante. Y el \nultimo estudiante empuja. El empujón avanza en cadena.” \nEn este ejemplo se pueden analizar varias cuestiones: la fuerza del empujón. Porque si \nempuja muy suave, puede que no llegue al primero (presión sonora: esto se puede/debe \nmedir para cuidar los oídos y para asegurarse que se escuche). Puede llamarse energía \nacústica o potencia acústica. (dB) \n-0,0005 a millones. Es el orden de micro Pascales que podemos oír. (intensidad). Y \nnosotrxs lo medimos con una unidad más amigable y con menos 0:dB \n-dB (nivel de presión sonora) \n-También se puede calcular cuánto se va perdiendo en el aire el sonido \nPor ejemplo, un \nmosquito suena a 5dB \ny el motor de un auto \ntiene entre 75 y 80 dB \nmedido a un mt. A \nmayor \ndistancia \nse \nmediría menos. \nA partir de los \n120dB duele el oído.  \nY entre 150 y \n160dB corro riesgo de \nmuerte. Porque puede \nque el aire en las vías \nrespiratorias rompa los \nalveolos pulmonares. \nUna \nbomba \ntiene \naprox 120dB y nos \npuede dejar sordxs.",
+              "documentPages": [
+                {
+                  "src": "assets/source/documento-madre/u01/u01_documento_madre_page_05.png",
+                  "alt": "Documento Madre pagina 5 para U01",
+                  "caption": "Documento Madre · página 05"
+                },
+                {
+                  "src": "assets/source/documento-madre/u01/u01_documento_madre_page_06.png",
+                  "alt": "Documento Madre pagina 6 para U01",
+                  "caption": "Documento Madre · página 06"
+                },
+                {
+                  "src": "assets/source/documento-madre/u01/u01_documento_madre_page_07.png",
+                  "alt": "Documento Madre pagina 7 para U01",
+                  "caption": "Documento Madre · página 07"
+                }
+              ],
+              "visualLabel": "Documento Madre visible · Imágenes originales",
+              "expertStatus": "A1 confirmado · Revisión técnica Matías",
               "tags": [
-                "Documento Madre",
-                "Formato C",
-                "Unidad 01",
-                "Fuente ampliada",
-                "Cuestionario progresivo"
+                "Documento Madre visible",
+                "A1",
+                "Clase 1",
+                "Cadena de audio",
+                "Acústica"
+              ],
+              "preserveLineBreaks": true
+            },
+            {
+              "title": "Lectura guiada Blacksmith · De la música al sistema de audio",
+              "sourceRef": "Blacksmith Academy · Desarrollo ampliado propio · Refuerzo OpenStax",
+              "body": "La Clase 1 instala una idea central: en un espectáculo, la música se vuelve experiencia cuando aparece como sonido en el tiempo. Para que eso ocurra hay una fuente que vibra, un medio material por el que se propaga la perturbación, un sistema que puede captarla o reproducirla y un oyente que la percibe.\n\nEl Documento Madre habla del aire porque es el medio habitual en salas, teatros y eventos. La corrección técnica suave es que el sonido no necesita específicamente aire: necesita un medio material. En la práctica de espectáculos, ese medio casi siempre es aire, y sus condiciones influyen en cómo se propaga el sonido.\n\nLa cadena de audio sirve como mapa de trabajo. Permite ordenar fuente, acústica inicial, micrófono, cableado, consola, procesamiento, amplificación, parlante, sala y público. Cuando aparece una falla, esta cadena evita que el operador actúe al azar: primero se identifica en qué etapa del recorrido se perdió o se degradó la señal.",
+              "documentPages": [],
+              "visualLabel": "Explicación Blacksmith ampliada",
+              "expertStatus": "Contenido ampliado · Validar con Matías",
+              "tags": [
+                "Desarrollo Blacksmith",
+                "OpenStax",
+                "Cadena",
+                "Diagnóstico"
               ],
               "preserveLineBreaks": true
             }
           ],
           "theoryBlocks": [
             {
-              "title": "Cadena como mapa de diagnóstico",
-              "body": "La cadena de audio no es una lista decorativa de equipos. Es una herramienta para ubicar dónde puede fallar el sistema: fuente, captación, cableado, consola, amplificación, parlantes o sala.",
-              "note": "Si no se entiende el recorrido, se corrige a ciegas."
+              "title": "Música, sonido y reproducción",
+              "body": "La música no es solamente el soporte que la contiene. Como experiencia auditiva aparece cuando algo vibra, se propaga en un medio y llega a un oyente.",
+              "note": "Una partitura, un archivo o un instrumento no son todavía la experiencia sonora completa."
             },
             {
-              "title": "Sonido acústico y señal eléctrica",
-              "body": "Antes del micrófono y después del parlante trabajamos con sonido acústico. Entre esos puntos trabajamos con señales eléctricas de audio. Confundir ambos planos lleva a errores de conexión, medición y diagnóstico.",
-              "note": "El micrófono transforma energía acústica en señal eléctrica; el parlante hace el camino inverso."
+              "title": "Sonido como energía que se propaga",
+              "body": "El sonido puede entenderse como una perturbación mecánica que se transmite por un medio. En el aire, esa perturbación aparece como variaciones de presión.",
+              "note": "En eventos trabajamos casi siempre con sonido propagándose por aire, pero el concepto general es medio material."
             },
             {
-              "title": "La acústica afecta todo",
-              "body": "La sala modifica lo que la fuente produce, lo que el micrófono capta y lo que el público escucha. Paredes, piso, techo, materiales y distancia forman parte del resultado final.",
-              "note": "La acústica no es un accesorio: es parte del sistema."
+              "title": "Cadena de audio como herramienta",
+              "body": "La cadena permite seguir el recorrido del sonido y la señal: fuente, captación, cableado, consola, amplificación, reproducción y sala.",
+              "note": "Ordenar la cadena reduce diagnósticos impulsivos."
             },
             {
-              "title": "Música, reproducción y escucha",
-              "body": "La música como experiencia sonora ocurre cuando se ejecuta, reproduce o escucha. Una partitura o archivo contiene información, pero la experiencia audible aparece cuando hay vibración, medio y receptor.",
-              "note": "El curso separa soporte musical, fenómeno sonoro y sistema de audio."
+              "title": "Acústica al principio y al final",
+              "body": "La acústica afecta lo que emite la fuente, lo que capta el micrófono y lo que escucha el público. No aparece solo después del parlante.",
+              "note": "La sala también es parte del sistema."
+            },
+            {
+              "title": "Energía, absorción y reflexión",
+              "body": "Cuando el sonido encuentra superficies, parte de su energía puede reflejarse, absorberse o transformarse. Esta idea prepara las unidades de presión, reverberación y absorción.",
+              "note": "El comportamiento de materiales modifica la experiencia sonora."
             }
           ],
           "questions": [
@@ -168,28 +204,76 @@ const course = {
       "id": "module-02",
       "title": "Presión sonora, dB y seguridad",
       "status": "available",
-      "description": "Nivel, medición, distancia, cobertura y cuidado auditivo.",
+      "description": "Nivel, medición, distancia, intensidad y cuidado auditivo con Documento Madre visible.",
       "lessons": [
         {
           "id": "u02",
           "type": "lesson",
           "title": "Presión Sonora, dB y Seguridad Auditiva",
-          "xp": 115,
-          "objective": "Diferenciar presión sonora, intensidad, sonoridad percibida, decibeles y criterios básicos de exposición segura.",
+          "xp": 130,
+          "objective": "Diferenciar presión sonora, intensidad, sonoridad percibida, decibeles, distancia y criterios básicos de exposición segura a partir del Documento Madre visible.",
+          "sectionStatus": "U02 v0.3 A1 · Lista para revisión de Matías",
           "sourceSegments": [
             {
-              "title": "Presión Sonora, dB y Seguridad Auditiva",
-              "sourceRef": "Documento Fuente · Unidad 02 · Formato C v0.2 · Documento Madre + fuentes verdes/controladas",
-              "body": "Esta unidad amplía la Clase 2 del Documento Madre. El contenido original trabaja presión sonora, intensidad, ejemplos de dB, distancia y medición con decibelímetro. La versión aplicada al curso corrige una simplificación frecuente: intensidad no es exactamente lo mismo que volumen percibido.\n\nLa presión sonora es una variación de presión respecto de la presión atmosférica. El nivel de presión sonora se expresa habitualmente en dB SPL. La escala de decibeles es logarítmica: pequeños cambios numéricos pueden representar cambios importantes en energía o percepción.\n\nEn espectáculos, medir no reemplaza escuchar, pero ayuda a tomar decisiones con evidencia. El objetivo no es “sonar fuerte”, sino lograr inteligibilidad, cobertura y seguridad auditiva. El tiempo de exposición también importa: un nivel tolerable durante pocos segundos puede no ser seguro durante horas.",
-              "documentPages": [],
-              "visualLabel": "Documento Fuente · Formato C v0.2",
-              "expertStatus": "Documento ampliado · Pendiente de validación técnica por Matías",
+              "title": "Documento Madre visible · Clase 2 completa aplicada a U02",
+              "sourceRef": "Documento Madre · Sonido del Espectáculo 2020 · Clase 2 · páginas 7-12 · A1 visible",
+              "body": "--- Página 7 del Documento Madre ---\n7 \n \nRepaso \nEl sonido se propaga por el aire y el aire no lo vemos. El viento es la forma en que \npodemos percibir ese aire. \nEl sonido nos permite afirmar que hay aire porque hay un medio por el cual se va a \npropagar. \nSonido definición: sensación de escuchar / el fenómeno físico que está el aire. \nTeniendo 10 autos que chocan. el numero 10 choca al 9 y el 9 al 8 y así llega en menor \nmedida al primero. El sonido funcionaría así pero el auto se abolla y el sonido no. \nClase 2: \nEco, reverberancia y absorción de sonido. \nPresión sonora: \n“En la primaria te ponían en fila agarrando los hombros de la persona de adelante. Y el \nultimo estudiante empuja. El empujón avanza en cadena.” \nEn este ejemplo se pueden analizar varias cuestiones: la fuerza del empujón. Porque si \nempuja muy suave, puede que no llegue al primero (presión sonora: esto se puede/debe \nmedir para cuidar los oídos y para asegurarse que se escuche). Puede llamarse energía \nacústica o potencia acústica. (dB) \n-0,0005 a millones. Es el orden de micro Pascales que podemos oír. (intensidad). Y \nnosotrxs lo medimos con una unidad más amigable y con menos 0:dB \n-dB (nivel de presión sonora) \n-También se puede calcular cuánto se va perdiendo en el aire el sonido \nPor ejemplo, un \nmosquito suena a 5dB \ny el motor de un auto \ntiene entre 75 y 80 dB \nmedido a un mt. A \nmayor \ndistancia \nse \nmediría menos. \nA partir de los \n120dB duele el oído.  \nY entre 150 y \n160dB corro riesgo de \nmuerte. Porque puede \nque el aire en las vías \nrespiratorias rompa los \nalveolos pulmonares. \nUna \nbomba \ntiene \naprox 120dB y nos \npuede dejar sordxs.\n\n--- Página 8 del Documento Madre ---\n8 \n \n \nIlustración 1bx o dB meter para medir dB \nLa intensidad \nLa intensidad de un sonido es equivalente al volumen. Se clasifican como sonidos \nfuertes o débiles y es la potencia la que consigue una mayor o menor amplitud de la onda \nsonora. \nLa intensidad se mide en decibelios, y también existe un rango audible para el ser \nhumano: 0 dB, que indica que el hombre no es capaz de distinguirlo y 140 dB, un volumen \nque resultaría doloroso. La intensidad hace referencia a la amplitud de la onda sonora. \n \nEjemplo: En un recital pueden ser \naceptados diferentes niveles. Si hay una \ncena entre 60dB, 80dB para rock \n70/80dB y en electrónica puede hasta \n110dB \nVolvemos al ejemplo del empujón \nen la fila en primaria. Si el compañero \nempuja una sola vez, no habría un \nfenómeno vibratorio. Para que el sonido \nse perciba tiene que haber empujones \nconstantes. (varios empujones). Esa \nrepetición de empujones y la cantidad \nde veces que lo haga en un tiempo determinado, sería la frecuencia.\n\n--- Página 9 del Documento Madre ---\n9 \n \nEl oído, al igual que \nel ojo con la luz, tiene un \nmargen de audición. Tanto \npor intensidad como por el \nrango audible. Podemos \nescuchar entre 20hz a \n20000hz.\n\n--- Página 10 del Documento Madre ---\n10 \n \n \n \n \nEl eje de abajo (hz) la frecuencia. Mas bajo es grave, medios y hasta altas y agudas. \nEl eje y es dBsPL niveles de presión sonora en dB- la línea roja está al margen de los \n0dB \nEs el análisis de un parlante que funciona recién a partir de los 60hz de un modo \naudible.\n\n--- Página 11 del Documento Madre ---\n11 \n \n \nGráfico de cómo funciona el oído humano \nLas pancitas hacia abajo son más agudas y son las más sensibles. Pueden doler. Y las \ncurvas hacia arriba son las más graves y menos sensibles. Las palabras suenan en la zona \nen que están los números. \nLos números son los dB a los que escuchamos.  Y las curvas muestran a la izquierda \ncómo escuchamos los graves y a la derecha los agudos. \n En una habitación cerrada, el sonido va a rebotar (reflexión) en todas las paredes de \nla sala tantas veces como sea necesario para agotar su energía. Por esta razón las salas \nconstruidas con materiales duros (no absorbentes) como ser el baño, tienen muchos rebotes \n(reflexiones) mientras que lugares como un teatro, un estudio de grabación, una radio, etc. \nque están construidas con materiales absorbentes el sonido dura menos tiempo en la sala. A \neste efecto le llamamos reverberación, o reverberancia. Y llamamos eco cuando el sonido \nrebota solo una vez en una pared, y debe ser lejana para que podamos reconocerlo como tal. \nPor último, llamamos absorción a la capacidad que tiene un material de atrapar y transformar \nla energía sonora en energía de calor.\n\n--- Página 12 del Documento Madre ---\n12 \n \n \nLa configuración de sonido cambia si cambia la temperatura y la humedad del aire. \nEl viento puede llevarse el sonido. \nAnálisis de la onda: \n“la onda no existe, sino que es una forma de explicar un fenómeno en la vida real.” Dice \nel profe. Es una convención.  \nEn la zona más oscura \nsería la parte del empujón, \nvolviendo al ejemplo \nLa parte más clara es \nla parte de rarefacción o \nseparación donde hay menor \npresión \nEntre presión y presión \ntenemos un ciclo \nEn el caso b vemos \nque en el eje y tenemos la \npresión. Y en x el tiempo.  \nEl parlante empuja y \nvuelve a su posición para \nvolver a empujar. \nEste es un gráfico ideal. De presión y descompresión constante. \nEl punto entre medio es el punto en que no hay presión ni descompresión.",
+              "documentPages": [
+                {
+                  "src": "assets/source/documento-madre/u02/u02_documento_madre_clase_2_page_07.png",
+                  "alt": "Documento Madre Clase 2 pagina 7",
+                  "caption": "Documento Madre · Clase 2 · página 07"
+                },
+                {
+                  "src": "assets/source/documento-madre/u02/u02_documento_madre_clase_2_page_08.png",
+                  "alt": "Documento Madre Clase 2 pagina 8",
+                  "caption": "Documento Madre · Clase 2 · página 08"
+                },
+                {
+                  "src": "assets/source/documento-madre/u02/u02_documento_madre_clase_2_page_09.png",
+                  "alt": "Documento Madre Clase 2 pagina 9",
+                  "caption": "Documento Madre · Clase 2 · página 09"
+                },
+                {
+                  "src": "assets/source/documento-madre/u02/u02_documento_madre_clase_2_page_10.png",
+                  "alt": "Documento Madre Clase 2 pagina 10",
+                  "caption": "Documento Madre · Clase 2 · página 10"
+                },
+                {
+                  "src": "assets/source/documento-madre/u02/u02_documento_madre_clase_2_page_11.png",
+                  "alt": "Documento Madre Clase 2 pagina 11",
+                  "caption": "Documento Madre · Clase 2 · página 11"
+                },
+                {
+                  "src": "assets/source/documento-madre/u02/u02_documento_madre_clase_2_page_12.png",
+                  "alt": "Documento Madre Clase 2 pagina 12",
+                  "caption": "Documento Madre · Clase 2 · página 12"
+                }
+              ],
+              "visualLabel": "Documento Madre visible · Imágenes originales",
+              "expertStatus": "A1 confirmado · Revisión técnica Matías",
               "tags": [
-                "Documento Madre",
-                "Formato C",
-                "Unidad 02",
-                "Fuente ampliada",
-                "Cuestionario progresivo"
+                "Documento Madre visible",
+                "A1",
+                "Clase 2",
+                "Imágenes originales",
+                "U02 v0.3"
+              ],
+              "preserveLineBreaks": true
+            },
+            {
+              "title": "Lectura guiada Blacksmith · Presión, intensidad y seguridad",
+              "sourceRef": "Blacksmith Academy · Desarrollo ampliado propio · Refuerzo OpenStax/SRT",
+              "body": "La Clase 2 del Documento Madre introduce presión sonora, intensidad, dB, distancia, rango audible, curvas de audición, reverberación, eco, absorción y análisis de onda. Para esta unidad nos concentramos en presión sonora, intensidad, nivel en dB, distancia y seguridad auditiva.\n\nEl ejemplo del empujón en fila funciona como puente pedagógico: una perturbación se transmite de una partícula a otra. En sonido, esa perturbación se manifiesta como pequeñas variaciones de presión en el medio.\n\nLa intensidad no debe confundirse de forma absoluta con el volumen percibido. La intensidad es una magnitud física; la sonoridad o volumen percibido depende también del oído humano, la frecuencia, el tiempo de exposición y el contexto.\n\nEl decibel permite trabajar con rangos enormes usando una escala logarítmica. Por eso pequeños cambios numéricos pueden representar cambios importantes, y siempre hay que aclarar de qué dB hablamos: dB SPL/NPS, dBA, dBu o dBV.\n\nEn operación de espectáculos, medir sirve para tomar decisiones con evidencia: cobertura, inteligibilidad, comodidad del público y cuidado auditivo. Más fuerte no siempre significa mejor.",
+              "documentPages": [],
+              "visualLabel": "Explicación Blacksmith ampliada",
+              "expertStatus": "Contenido ampliado · Validar con Matías",
+              "tags": [
+                "Desarrollo Blacksmith",
+                "Refuerzo externo",
+                "OpenStax",
+                "SRT",
+                "Seguridad auditiva"
               ],
               "preserveLineBreaks": true
             }
@@ -197,28 +281,60 @@ const course = {
           "theoryBlocks": [
             {
               "title": "Presión sonora",
-              "body": "El sonido produce pequeñas variaciones de presión en el aire. Esas variaciones pueden medirse y expresarse como nivel de presión sonora.",
-              "note": "dB SPL no mide watts ni calidad artística; mide nivel de presión sonora."
+              "body": "El sonido produce variaciones muy pequeñas de presión alrededor de la presión atmosférica. El nivel de presión sonora se expresa habitualmente como dB SPL o NPS.",
+              "note": "dB SPL no mide watts ni calidad artística: mide nivel de presión sonora respecto de una referencia."
+            },
+            {
+              "title": "Intensidad vs volumen percibido",
+              "body": "La intensidad es una magnitud física asociada a energía por unidad de área. El volumen percibido o sonoridad es una experiencia auditiva que depende de nivel, frecuencia, duración y sensibilidad del oído.",
+              "note": "Esta es una corrección pedagógica suave sobre la simplificación del Documento Madre."
             },
             {
               "title": "Decibeles y escala logarítmica",
-              "body": "El decibel no se comporta como una escala lineal. Por eso no se interpreta igual que metros o kilos. En audio, esta escala permite manejar rangos muy amplios de presión, voltaje o potencia.",
-              "note": "Leer dB requiere contexto: dB SPL, dBA, dBu y dBV no significan lo mismo."
+              "body": "El dB permite representar rangos enormes. No se interpreta como una escala lineal: una diferencia de pocos dB puede ser relevante y siempre depende de la referencia usada.",
+              "note": "dB SPL, dBA, dBu y dBV no significan lo mismo."
             },
             {
               "title": "Distancia y cobertura",
-              "body": "Al alejarnos de una fuente puntual en condiciones ideales, el nivel directo tiende a disminuir. En campo libre, duplicar distancia puede aproximarse a una caída de 6 dB, pero las salas reales agregan reflexiones y absorción.",
-              "note": "Medir en un solo punto no representa necesariamente a todo el público."
+              "body": "Como guía inicial, al duplicar distancia desde una fuente puntual en campo libre, el nivel directo puede caer cerca de 6 dB. En salas reales influyen reflexiones, absorción, público y distribución del sistema.",
+              "note": "Medir en una sola zona no representa a todo el público."
             },
             {
               "title": "Seguridad auditiva",
-              "body": "La operación responsable considera nivel, tiempo de exposición, tipo de evento, público y normativa aplicable. La referencia de SRT sirve como apoyo para entender medición de ruido laboral en Argentina.",
+              "body": "El riesgo auditivo depende del nivel y del tiempo de exposición. En eventos, el criterio profesional combina escucha, medición, normativa y comunicación clara con producción.",
               "note": "Más fuerte no siempre es más profesional."
             }
           ],
+          "readingChecklist": [
+            "Explicar el ejemplo del empujón como propagación de energía/perturbación.",
+            "Distinguir presión sonora, intensidad física y volumen percibido.",
+            "Leer una referencia de dB sin tratarla como escala lineal.",
+            "Usar la regla de caída aproximada por distancia como guía, no como verdad absoluta.",
+            "Relacionar nivel y tiempo de exposición con seguridad auditiva."
+          ],
+          "preQuizFocus": [
+            "dB SPL/NPS y medición con sonómetro.",
+            "Diferencia entre intensidad física y sonoridad percibida.",
+            "Distancia, cobertura e inteligibilidad.",
+            "Criterio operativo ante quejas de volumen.",
+            "Seguridad auditiva y exposición."
+          ],
+          "flowOutcome": "El alumno debe poder tomar una decisión básica de nivel sonoro sin limitarse a “subir o bajar volumen”: debe medir, escuchar por zonas y justificar técnicamente.",
+          "activity": {
+            "title": "Diagnóstico de nivel por zonas",
+            "scenario": "En una cena con música en vivo, las primeras mesas dicen que está muy fuerte y el fondo dice que no entiende la voz. El operador tiene un sonómetro básico y puede moverse por la sala.",
+            "tasks": [
+              "Medir o estimar el nivel en tres zonas: frente, centro y fondo.",
+              "Anotar qué se entiende bien y qué se pierde: voz, música, graves o agudos.",
+              "Proponer una acción antes de subir el master general.",
+              "Justificar cómo esa acción cuida inteligibilidad y seguridad auditiva."
+            ],
+            "evidence": "Diagnóstico breve con niveles aproximados por zona, hipótesis de cobertura y acción técnica justificada.",
+            "teacherNote": "Validar con Matías si los rangos de referencia por tipo de evento deben ajustarse a su experiencia práctica."
+          },
           "questions": [
             {
-              "prompt": "¿Qué expresa principalmente dB SPL?",
+              "prompt": "¿Qué expresa principalmente dB SPL o NPS?",
               "difficulty": "recognition",
               "options": [
                 "Nivel de presión sonora.",
@@ -227,7 +343,7 @@ const course = {
                 "Velocidad del cableado."
               ],
               "correctIndex": 0,
-              "explanation": "dB SPL refiere al nivel de presión sonora."
+              "explanation": "dB SPL/NPS refiere al nivel de presión sonora respecto de una referencia."
             },
             {
               "prompt": "¿Qué instrumento se usa para medir nivel sonoro?",
@@ -331,18 +447,49 @@ const course = {
           "objective": "Entender cómo las superficies, materiales y condiciones del espacio modifican la claridad, duración y comportamiento del sonido.",
           "sourceSegments": [
             {
-              "title": "Eco, Reverberación, Absorción y Refracción",
-              "sourceRef": "Documento Fuente · Unidad 03 · Formato C v0.2 · Documento Madre + fuentes verdes/controladas",
-              "body": "Esta unidad desarrolla los fenómenos acústicos de sala presentes en el Documento Madre: reflexión, eco, reverberación, absorción y cambios de propagación. El objetivo es evitar una confusión habitual: eco y reverberación no son lo mismo.\n\nCuando una onda sonora encuentra una superficie, parte de su energía puede reflejarse, absorberse o transmitirse. En una sala con superficies duras, aparecen más reflexiones. Si esas reflexiones se acumulan muy rápido, el sonido puede volverse confuso o poco inteligible. Si una reflexión llega claramente separada del sonido original, puede percibirse como eco.\n\nLa absorción no “borra” mágicamente el sonido: reduce parte de la energía reflejada y puede transformar una fracción de esa energía en calor. La refracción, por su parte, describe cambios de dirección asociados a variaciones del medio, como temperatura, viento o cambio de medio.",
-              "documentPages": [],
-              "visualLabel": "Documento Fuente · Formato C v0.2",
-              "expertStatus": "Documento ampliado · Pendiente de validación técnica por Matías",
+              "title": "Documento Madre visible · Eco, reverberancia, absorción y condiciones del aire",
+              "sourceRef": "Documento Madre · Sonido del Espectáculo 2020 · Clase 2/3 · páginas 7, 11 y 12 · A1",
+              "body": "--- Página 7 del Documento Madre ---\n7 \n \nRepaso \nEl sonido se propaga por el aire y el aire no lo vemos. El viento es la forma en que \npodemos percibir ese aire. \nEl sonido nos permite afirmar que hay aire porque hay un medio por el cual se va a \npropagar. \nSonido definición: sensación de escuchar / el fenómeno físico que está el aire. \nTeniendo 10 autos que chocan. el numero 10 choca al 9 y el 9 al 8 y así llega en menor \nmedida al primero. El sonido funcionaría así pero el auto se abolla y el sonido no. \nClase 2: \nEco, reverberancia y absorción de sonido. \nPresión sonora: \n“En la primaria te ponían en fila agarrando los hombros de la persona de adelante. Y el \nultimo estudiante empuja. El empujón avanza en cadena.” \nEn este ejemplo se pueden analizar varias cuestiones: la fuerza del empujón. Porque si \nempuja muy suave, puede que no llegue al primero (presión sonora: esto se puede/debe \nmedir para cuidar los oídos y para asegurarse que se escuche). Puede llamarse energía \nacústica o potencia acústica. (dB) \n-0,0005 a millones. Es el orden de micro Pascales que podemos oír. (intensidad). Y \nnosotrxs lo medimos con una unidad más amigable y con menos 0:dB \n-dB (nivel de presión sonora) \n-También se puede calcular cuánto se va perdiendo en el aire el sonido \nPor ejemplo, un \nmosquito suena a 5dB \ny el motor de un auto \ntiene entre 75 y 80 dB \nmedido a un mt. A \nmayor \ndistancia \nse \nmediría menos. \nA partir de los \n120dB duele el oído.  \nY entre 150 y \n160dB corro riesgo de \nmuerte. Porque puede \nque el aire en las vías \nrespiratorias rompa los \nalveolos pulmonares. \nUna \nbomba \ntiene \naprox 120dB y nos \npuede dejar sordxs.\n\n--- Página 11 del Documento Madre ---\n11 \n \n \nGráfico de cómo funciona el oído humano \nLas pancitas hacia abajo son más agudas y son las más sensibles. Pueden doler. Y las \ncurvas hacia arriba son las más graves y menos sensibles. Las palabras suenan en la zona \nen que están los números. \nLos números son los dB a los que escuchamos.  Y las curvas muestran a la izquierda \ncómo escuchamos los graves y a la derecha los agudos. \n En una habitación cerrada, el sonido va a rebotar (reflexión) en todas las paredes de \nla sala tantas veces como sea necesario para agotar su energía. Por esta razón las salas \nconstruidas con materiales duros (no absorbentes) como ser el baño, tienen muchos rebotes \n(reflexiones) mientras que lugares como un teatro, un estudio de grabación, una radio, etc. \nque están construidas con materiales absorbentes el sonido dura menos tiempo en la sala. A \neste efecto le llamamos reverberación, o reverberancia. Y llamamos eco cuando el sonido \nrebota solo una vez en una pared, y debe ser lejana para que podamos reconocerlo como tal. \nPor último, llamamos absorción a la capacidad que tiene un material de atrapar y transformar \nla energía sonora en energía de calor.\n\n--- Página 12 del Documento Madre ---\n12 \n \n \nLa configuración de sonido cambia si cambia la temperatura y la humedad del aire. \nEl viento puede llevarse el sonido. \nAnálisis de la onda: \n“la onda no existe, sino que es una forma de explicar un fenómeno en la vida real.” Dice \nel profe. Es una convención.  \nEn la zona más oscura \nsería la parte del empujón, \nvolviendo al ejemplo \nLa parte más clara es \nla parte de rarefacción o \nseparación donde hay menor \npresión \nEntre presión y presión \ntenemos un ciclo \nEn el caso b vemos \nque en el eje y tenemos la \npresión. Y en x el tiempo.  \nEl parlante empuja y \nvuelve a su posición para \nvolver a empujar. \nEste es un gráfico ideal. De presión y descompresión constante. \nEl punto entre medio es el punto en que no hay presión ni descompresión.",
+              "documentPages": [
+                {
+                  "src": "assets/source/documento-madre/u03/u03_documento_madre_page_07.png",
+                  "alt": "Documento Madre pagina 7 para U03",
+                  "caption": "Documento Madre · página 07"
+                },
+                {
+                  "src": "assets/source/documento-madre/u03/u03_documento_madre_page_11.png",
+                  "alt": "Documento Madre pagina 11 para U03",
+                  "caption": "Documento Madre · página 11"
+                },
+                {
+                  "src": "assets/source/documento-madre/u03/u03_documento_madre_page_12.png",
+                  "alt": "Documento Madre pagina 12 para U03",
+                  "caption": "Documento Madre · página 12"
+                }
+              ],
+              "visualLabel": "Documento Madre visible · Imágenes originales",
+              "expertStatus": "A1 confirmado · Revisión técnica Matías",
               "tags": [
-                "Documento Madre",
-                "Formato C",
-                "Unidad 03",
-                "Fuente ampliada",
-                "Cuestionario progresivo"
+                "Documento Madre visible",
+                "A1",
+                "Eco",
+                "Reverberación",
+                "Absorción"
+              ],
+              "preserveLineBreaks": true
+            },
+            {
+              "title": "Lectura guiada Blacksmith · La sala también mezcla",
+              "sourceRef": "Blacksmith Academy · Desarrollo ampliado propio · Refuerzo conceptual externo",
+              "body": "La unidad U03 toma el bloque de la Clase 2 donde el Documento Madre explica que, en una habitación cerrada, el sonido rebota en superficies hasta agotar su energía. Esta idea es clave: el resultado que escucha el público no depende solo de consola y parlantes, sino también de paredes, piso, techo, distancia, materiales y geometría.\n\nReflexión es el rebote de una parte de la energía sonora. Reverberación es la acumulación de muchas reflexiones que permanecen durante un tiempo y pueden dar sensación de espacio, pero también reducir claridad. Eco es una reflexión suficientemente separada en el tiempo como para percibirse como repetición. Absorción es la capacidad de un material de tomar parte de la energía sonora y transformarla principalmente en calor.\n\nLa temperatura, la humedad y el viento no son detalles decorativos. En exteriores, el viento puede alterar cobertura y dirección aparente; en interiores, la materialidad del espacio define cuánto dura el sonido y cuánto se entiende la palabra. Por eso, ante una voz poco clara, subir volumen no siempre resuelve: a veces aumenta todavía más la energía que rebota.",
+              "documentPages": [],
+              "visualLabel": "Explicación Blacksmith ampliada",
+              "expertStatus": "Contenido ampliado · Validar con Matías",
+              "tags": [
+                "Desarrollo Blacksmith",
+                "Sala",
+                "Inteligibilidad",
+                "Reflexiones"
               ],
               "preserveLineBreaks": true
             }
@@ -350,121 +497,126 @@ const course = {
           "theoryBlocks": [
             {
               "title": "Reflexión",
-              "body": "La reflexión aparece cuando parte de la energía sonora rebota en una superficie. Paredes duras, vidrio, cemento o azulejos suelen reflejar más que cortinas, butacas o materiales porosos.",
-              "note": "Más reflexión no siempre es malo; el problema aparece cuando afecta la claridad."
+              "body": "Ocurre cuando parte de la energía sonora rebota en una superficie. En salas con materiales duros, las reflexiones suelen ser más notorias.",
+              "note": "No toda reflexión es mala: el problema aparece cuando afecta claridad, cobertura o control."
             },
             {
-              "title": "Eco y reverberación",
-              "body": "El eco se percibe como repetición separada del sonido original. La reverberación es la persistencia del sonido por muchas reflexiones cercanas en el tiempo.",
-              "note": "Eco es repetición distinguible; reverberación es cola o permanencia del sonido."
+              "title": "Reverberación",
+              "body": "Es la permanencia del sonido en un espacio por acumulación de muchas reflexiones. Puede aportar sensación de sala, pero si es excesiva reduce inteligibilidad.",
+              "note": "Una sala reverberante puede sonar fuerte y aun así entenderse mal."
+            },
+            {
+              "title": "Eco",
+              "body": "Se percibe cuando una reflexión llega con suficiente retardo como para ser reconocida como repetición separada del sonido directo.",
+              "note": "No todo rebote es eco; muchos rebotes cercanos forman reverberación."
             },
             {
               "title": "Absorción",
-              "body": "Los materiales absorbentes reducen parte de la energía reflejada. No todos absorben igual ni en todas las frecuencias. Los graves suelen requerir soluciones distintas a los agudos.",
-              "note": "Un material puede absorber agudos y dejar graves problemáticos."
+              "body": "Es la capacidad de un material de reducir la energía reflejada. No elimina mágicamente todo el sonido: depende de material, superficie, frecuencia y ubicación.",
+              "note": "Absorber no es lo mismo que aislar."
             },
             {
-              "title": "Aplicación en eventos",
-              "body": "Antes de ecualizar de forma extrema, conviene evaluar la sala, orientar parlantes, ubicar micrófonos con criterio y evitar apuntar energía innecesaria hacia superficies reflectantes.",
-              "note": "La sala se corrige primero con decisiones de ubicación y cobertura."
+              "title": "Condiciones del aire",
+              "body": "Temperatura, humedad y viento pueden modificar la propagación. En exteriores, el viento puede afectar la cobertura más de lo que parece.",
+              "note": "El contexto físico siempre influye."
             }
           ],
           "questions": [
             {
-              "prompt": "¿Qué es reflexión sonora?",
-              "difficulty": "recognition",
-              "options": [
-                "Rebote parcial del sonido en una superficie.",
-                "Ausencia total de sonido.",
-                "Conversión de sonido en electricidad.",
-                "Aumento de velocidad por cableado."
-              ],
-              "correctIndex": 0,
-              "explanation": "La reflexión ocurre cuando parte de la energía sonora rebota."
-            },
-            {
               "prompt": "¿Qué describe mejor la reverberación?",
               "difficulty": "recognition",
               "options": [
-                "Persistencia del sonido por múltiples reflexiones.",
-                "Un único rebote separado y claramente repetido.",
-                "Un tipo de micrófono dinámico.",
-                "Un conector balanceado."
+                "La permanencia del sonido por múltiples reflexiones en un espacio.",
+                "Un único rebote percibido como repetición aislada.",
+                "La conversión de una señal balanceada a no balanceada.",
+                "La pérdida de voltaje en un cable largo."
               ],
               "correctIndex": 0,
-              "explanation": "La reverberación es una suma densa de reflexiones que prolonga el sonido."
+              "explanation": "La reverberación aparece por acumulación de reflexiones que siguen sonando después del sonido directo."
             },
             {
-              "prompt": "¿Cuál diferencia entre eco y reverberación es correcta?",
+              "prompt": "¿Qué diferencia básica hay entre eco y reverberación?",
               "difficulty": "comprehension",
               "options": [
-                "El eco se distingue como repetición; la reverberación se percibe como cola o permanencia.",
-                "Son exactamente lo mismo siempre.",
-                "La reverberación solo existe al aire libre.",
-                "El eco ocurre únicamente dentro de cables."
+                "El eco se percibe como repetición separada; la reverberación como permanencia acumulada.",
+                "El eco ocurre solo en cables y la reverberación solo en micrófonos.",
+                "La reverberación siempre mejora la palabra y el eco siempre mejora la música.",
+                "No hay diferencia técnica ni perceptiva."
               ],
               "correctIndex": 0,
-              "explanation": "La diferencia clave es la separación temporal y percepción de repetición."
+              "explanation": "La percepción temporal es clave: repetición distinguible versus cola o acumulación."
             },
             {
-              "prompt": "¿Por qué un baño suele sonar más reverberante que una sala tratada?",
+              "prompt": "Una sala de baño suele sonar “viva” porque...",
+              "difficulty": "application",
+              "options": [
+                "tiene superficies duras que reflejan mucho sonido.",
+                "tiene demasiada absorción en todas las frecuencias.",
+                "el aire no permite propagación sonora.",
+                "los graves desaparecen por completo."
+              ],
+              "correctIndex": 0,
+              "explanation": "El Documento Madre usa este tipo de ejemplo: materiales duros generan más reflexiones."
+            },
+            {
+              "prompt": "¿Qué afirmación sobre absorción es más correcta?",
               "difficulty": "comprehension",
               "options": [
-                "Porque tiene superficies duras y reflectantes.",
-                "Porque no hay aire.",
-                "Porque los azulejos absorben todos los graves.",
-                "Porque la voz no vibra."
+                "Reduce parte de la energía sonora reflejada y suele depender de la frecuencia.",
+                "Hace que el sonido deje de existir antes de llegar al micrófono.",
+                "Convierte una señal de micrófono en señal de línea.",
+                "Siempre equivale a aislamiento acústico."
               ],
               "correctIndex": 0,
-              "explanation": "Las superficies duras favorecen reflexiones."
+              "explanation": "Absorción e aislamiento no son lo mismo. La absorción trata energía dentro del recinto."
             },
             {
-              "prompt": "En una sala con mucha reverberación, ¿qué acción inicial puede ayudar?",
+              "prompt": "En una charla, la voz suena fuerte pero poco clara en una sala vidriada. ¿Qué conviene sospechar?",
               "difficulty": "application",
               "options": [
-                "Revisar orientación de parlantes y ubicación de micrófonos.",
-                "Subir todos los agudos al máximo.",
-                "Agregar micrófonos sin criterio.",
-                "Ignorar el espacio porque solo importa la consola."
+                "Exceso de reflexiones/reverberación que afecta inteligibilidad.",
+                "Falta de watts en el cable XLR.",
+                "Ausencia total de frecuencia en la voz.",
+                "Que el problema se resuelve siempre subiendo master."
               ],
               "correctIndex": 0,
-              "explanation": "La ubicación y la cobertura pueden reducir energía innecesaria hacia zonas reflectantes."
+              "explanation": "El nivel puede ser suficiente; el problema puede ser acústico."
             },
             {
-              "prompt": "Un orador se escucha con poca claridad aunque el nivel es alto. ¿Qué fenómeno conviene sospechar?",
-              "difficulty": "application",
-              "options": [
-                "Exceso de reflexiones/reverberación.",
-                "Falta de color en el cable.",
-                "Ausencia de energía sonora.",
-                "Uso de una partitura incorrecta."
-              ],
-              "correctIndex": 0,
-              "explanation": "La inteligibilidad puede empeorar por reverberación aun con mucho nivel."
-            },
-            {
-              "prompt": "¿Qué criterio evita una solución superficial?",
+              "prompt": "¿Por qué subir volumen puede empeorar una sala reverberante?",
               "difficulty": "criterion",
               "options": [
-                "No confundir falta de nivel con problema acústico de sala.",
-                "Subir volumen siempre que no se entienda.",
-                "Usar más micrófonos en cualquier situación.",
-                "Ecualizar sin escuchar el recinto."
+                "Porque aumenta la energía directa y también la energía que rebota en la sala.",
+                "Porque elimina automáticamente los rebotes.",
+                "Porque convierte reverberación en absorción.",
+                "Porque baja la presión sonora."
               ],
               "correctIndex": 0,
-              "explanation": "La causa puede estar en la sala, no en el nivel de la consola."
+              "explanation": "Más nivel puede alimentar más reflexiones y empeorar la inteligibilidad."
             },
             {
-              "prompt": "¿Qué afirmación sobre absorción es más precisa?",
+              "prompt": "¿Cuál sería una primera acción razonable ante voz poco clara por sala?",
               "difficulty": "criterion",
               "options": [
-                "Reduce parte de la energía reflejada y depende del material y la frecuencia.",
-                "Elimina todo sonido en cualquier sala.",
-                "Solo funciona si el micrófono es de condensador.",
-                "Aumenta siempre el eco."
+                "Revisar ubicación, orientación de parlantes/micrófonos y posibles superficies reflectantes.",
+                "Subir todos los graves al máximo.",
+                "Agregar más micrófonos sin analizar la sala.",
+                "Desactivar todos los parlantes sin escuchar."
               ],
               "correctIndex": 0,
-              "explanation": "La absorción es parcial y depende de materiales y frecuencias."
+              "explanation": "Primero se evalúa el comportamiento físico del sistema y la sala."
+            },
+            {
+              "prompt": "¿Qué muestra mejor criterio técnico?",
+              "difficulty": "criterion",
+              "options": [
+                "Diferenciar problema de nivel de problema de inteligibilidad antes de corregir.",
+                "Usar siempre la misma EQ en toda sala.",
+                "Resolver todo con el volumen principal.",
+                "Ignorar materiales porque la consola digital compensa todo."
+              ],
+              "correctIndex": 0,
+              "explanation": "La decisión técnica comienza por diagnosticar la causa real del síntoma."
             }
           ]
         }
@@ -484,140 +636,227 @@ const course = {
           "objective": "Relacionar las propiedades físicas de la onda sonora con lo que se escucha: grave/agudo, intensidad, timbre, duración y tamaño de onda.",
           "sourceSegments": [
             {
-              "title": "Onda Sonora, Frecuencia, Timbre y Longitud de Onda",
-              "sourceRef": "Documento Fuente · Unidad 04 · Formato C v0.2 · Documento Madre + fuentes verdes/controladas",
-              "body": "Esta unidad ordena el bloque del Documento Madre sobre onda sonora, frecuencia, velocidad, timbre, duración y longitud de onda. Se corrige una imprecisión importante: duración y longitud de onda no son lo mismo.\n\nLa frecuencia indica cuántos ciclos ocurren por segundo y se mide en Hertz. La longitud de onda indica la distancia espacial entre dos puntos equivalentes de una onda. Están relacionadas por la fórmula λ = c / f, donde c es la velocidad de propagación del sonido en el medio y f es la frecuencia.\n\nEl timbre permite distinguir fuentes aunque produzcan una misma nota a nivel similar. Depende de la forma de onda, armónicos, material de la fuente, modo de excitación y evolución temporal. Fourier se introduce como una idea de análisis: sonidos complejos pueden comprenderse como combinación de componentes senoidales.",
-              "documentPages": [],
-              "visualLabel": "Documento Fuente · Formato C v0.2",
-              "expertStatus": "Documento ampliado · Pendiente de validación técnica por Matías",
+              "title": "Documento Madre visible · Frecuencia, rango audible, onda, timbre y longitud de onda",
+              "sourceRef": "Documento Madre · Sonido del Espectáculo 2020 · Clase 2/4 · páginas 8 a 12 y 14 a 21 · A1",
+              "body": "--- Página 8 del Documento Madre ---\n8 \n \n \nIlustración 1bx o dB meter para medir dB \nLa intensidad \nLa intensidad de un sonido es equivalente al volumen. Se clasifican como sonidos \nfuertes o débiles y es la potencia la que consigue una mayor o menor amplitud de la onda \nsonora. \nLa intensidad se mide en decibelios, y también existe un rango audible para el ser \nhumano: 0 dB, que indica que el hombre no es capaz de distinguirlo y 140 dB, un volumen \nque resultaría doloroso. La intensidad hace referencia a la amplitud de la onda sonora. \n \nEjemplo: En un recital pueden ser \naceptados diferentes niveles. Si hay una \ncena entre 60dB, 80dB para rock \n70/80dB y en electrónica puede hasta \n110dB \nVolvemos al ejemplo del empujón \nen la fila en primaria. Si el compañero \nempuja una sola vez, no habría un \nfenómeno vibratorio. Para que el sonido \nse perciba tiene que haber empujones \nconstantes. (varios empujones). Esa \nrepetición de empujones y la cantidad \nde veces que lo haga en un tiempo determinado, sería la frecuencia.\n\n--- Página 9 del Documento Madre ---\n9 \n \nEl oído, al igual que \nel ojo con la luz, tiene un \nmargen de audición. Tanto \npor intensidad como por el \nrango audible. Podemos \nescuchar entre 20hz a \n20000hz.\n\n--- Página 10 del Documento Madre ---\n10 \n \n \n \n \nEl eje de abajo (hz) la frecuencia. Mas bajo es grave, medios y hasta altas y agudas. \nEl eje y es dBsPL niveles de presión sonora en dB- la línea roja está al margen de los \n0dB \nEs el análisis de un parlante que funciona recién a partir de los 60hz de un modo \naudible.\n\n--- Página 11 del Documento Madre ---\n11 \n \n \nGráfico de cómo funciona el oído humano \nLas pancitas hacia abajo son más agudas y son las más sensibles. Pueden doler. Y las \ncurvas hacia arriba son las más graves y menos sensibles. Las palabras suenan en la zona \nen que están los números. \nLos números son los dB a los que escuchamos.  Y las curvas muestran a la izquierda \ncómo escuchamos los graves y a la derecha los agudos. \n En una habitación cerrada, el sonido va a rebotar (reflexión) en todas las paredes de \nla sala tantas veces como sea necesario para agotar su energía. Por esta razón las salas \nconstruidas con materiales duros (no absorbentes) como ser el baño, tienen muchos rebotes \n(reflexiones) mientras que lugares como un teatro, un estudio de grabación, una radio, etc. \nque están construidas con materiales absorbentes el sonido dura menos tiempo en la sala. A \neste efecto le llamamos reverberación, o reverberancia. Y llamamos eco cuando el sonido \nrebota solo una vez en una pared, y debe ser lejana para que podamos reconocerlo como tal. \nPor último, llamamos absorción a la capacidad que tiene un material de atrapar y transformar \nla energía sonora en energía de calor.\n\n--- Página 12 del Documento Madre ---\n12 \n \n \nLa configuración de sonido cambia si cambia la temperatura y la humedad del aire. \nEl viento puede llevarse el sonido. \nAnálisis de la onda: \n“la onda no existe, sino que es una forma de explicar un fenómeno en la vida real.” Dice \nel profe. Es una convención.  \nEn la zona más oscura \nsería la parte del empujón, \nvolviendo al ejemplo \nLa parte más clara es \nla parte de rarefacción o \nseparación donde hay menor \npresión \nEntre presión y presión \ntenemos un ciclo \nEn el caso b vemos \nque en el eje y tenemos la \npresión. Y en x el tiempo.  \nEl parlante empuja y \nvuelve a su posición para \nvolver a empujar. \nEste es un gráfico ideal. De presión y descompresión constante. \nEl punto entre medio es el punto en que no hay presión ni descompresión.\n\n--- Página 14 del Documento Madre ---\n14 \n \n \nCada elemento que emite sonido hace vibrar el aire que lo rodea (cantante, instrumento, \nuna pava) \nSe van formando esferas alrededor de los objetos. \nClase 4 \n \nLa amplitud es la fuerza/intensidad de la \nenergía \nEntre ambas curvas no se modifica la \nfrecuencia. Sólo la amplitud. \nLa manera más habitual de expresar \ncuantitativamente la magnitud de un campo \nsonoro es mediante la presión sonora, o \nfuerza que ejercen las partículas de aire por \nunidad de superficie.\n\n--- Página 15 del Documento Madre ---\n15 \n \nEsto sucede con el sonido a \ntravés de la distancia. \nSi fuese luz, la luz se va \ndispersando y tenemos menos \ncantidad de luz, pero abarcando \nmás \nsuperficie \n(menos \nintensidad) \nA medida que duplicas la \ndistancia, bajan 6 dB según la \nley \n1mt=80dB    2mt=74dB     \n4mt=68dB    8mt=62dB \nEl parlante suele estar a más de un mt de la gente. Así que se le puede aplicar más dB \ny se calcula lo que escucha la gente. \n \nSPL o NPS es el nivel de presión sonora. \n \nHaciendo un pequeño repaso, recordamos que la presión sonora, o el sonido puede \nconsiderarse como una sucesión de ondas de compresión y rarefacción que se propaga por \nel aire. Sin embargo, si nos ubicamos en un punto en el espacio (una posición fija) veremos \ncomo la presión atmosférica aumenta y disminuye periódicamente a medida que tienen lugar \nlas sucesivas perturbaciones. La presión atmosférica se mide en Pascal y es del orden de los \n100.000 Pa (o como en los informes meteorológicos de 100 hPa). Sin embargo, cambios de \npresión debidos al pasaje de una onda sonora son muy pequeños respecto a este valor de \npresión atmosférica. Los sonidos más intensos que se perciben implican un incremento de \n20 Pa. Por esta razón, para distinguir el incremento de presión de la presión atmosférica en \nausencia de sonido se lo denomina presión sonora (p). La presión sonora es la presión que \nse debe agregar a la presión atmosférica para obtener el valor real de presión atmosférica en \npresencia de sonido. \nLa oscilación de las partículas tiene lugar en la misma dirección que la de propagación \nde la onda. En este caso se habla de ondas sonoras longitudinales, en contraposición a \nlas ondas electromagnéticas que son transversales (oscilación de la señal generadora \nperpendículo- lar a la dirección de propagación de la onda).\n\n--- Página 16 del Documento Madre ---\n16 \n \n \n \nFrecuencia \nCantidad de ciclos o de veces que pasa en \nuna determinada cantidad de tiempo \nTambién llamada altura del sonido, es la \nafinación \nde \nun \nsonido. \nLa \naltura \nestá \ndeterminada por la frecuencia de vibración de las \nondas sonoras. \nSe puede distinguir entre tres tipos de \nsonidos: \n-graves, \n-medios \n-agudos. \nEsta clasificación hace alusión a unos \nparámetros \nque \npueden \nser \nmedidos \nfísicamente. \nSegún estos indicadores, decimos que un \nsonido puede ser grave o agudo. Esto está \nvalorando un rango del sonido que es perceptible para el ser humano. \nLos instrumentos y las voces están dentro de este rango, situado entre los 20 y los \n20000 Hz. Fuera de él quedan sonidos que los seres humanos no estamos capacitados para \ndistinguir. \nOnda de 20khz tiene 1,7cm (la más aguda que podemos escuchar) \nUna onda de 20hz son 17mt. (la más grave) \nLa frecuencia se mide en Hertz, se define como el número de oscilaciones por unidad \nde tiempo.\n\n--- Página 17 del Documento Madre ---\n17 \n \n \nOtro factor a tener en cuenta es la velocidad a la que viaja el sonido.  \nEl sonido recorre 340mt x segundo \nSi yo tengo un segundo se tiempo puedo tener los 20000hz, recorre 340mt. \nCon esos datos puedo saber cuánto mide la onda.  \n340mts / 20.000= 0,017 mts \nVelocidad de propagación del sonido (c) \nLa velocidad de propagación del sonido (c) es función de la elasticidad y densidad del \nmedio de propagación. Debido a que, en el aire, ambas magnitudes dependen de la presión \natmosférica estática P0 y de la temperatura, resulta que, considerando las condiciones \nnormales de 1 atmosfera de presión y 22 °C de temperatura, la velocidad de propagación del \nsonido es de, aproximadamente, 345 m/s. \nSi bien el aire constituye el medio habitual de propagación de las ondas sonoras, \nconviene tener presente que el sonido puede propagarse a través de cualquier otro medio \nelástico y denso. Cuanto más denso y menos elástico sea el medio, mayor será́  la velocidad \ndel sonido a su través. Por ejemplo, la velocidad de propagación del sonido generado por un \ntren a través de los raíles es mucho mayor que a través del aire, por lo que la vibración del \nrail se percibirá́ mucho antes que el sonido aéreo debido a dicho tren. \nSaber el tamaño de la onda sirve para la elección del parlante. Los graves necesitan \nparlantes más grandes, que recorren más distancia en menor tiempo. Y los agudos recorre \npoca distancia en poco tiempo (mayor frecuencia) \nDepende el tamaño de la onda es con qué se puede tapar. La onda aguda se puede \ntapar con la mano. La onda grave, no. Esquiva una mano.\n\n--- Página 18 del Documento Madre ---\n18 \n \n \n \nSi nos fijamos, tanto la marrón como la celeste tienen la misma frecuencia, pero la forma \nde la onda es diferente. Hasta ahora venimos viendo ondas sinusoidales ideales. Pero en \nrealidad tienen más variables. Que hacen que suene distinto una trompeta a una guitarra. El \ntimbre. \n \n \n \nLa forma de la onda es lo que define el timbre \nEn el cuadradito celeste se ve una frecuencia pura a la izquierda- pero la de la derecha \ntiene dos frecuencias más (la básica y dos armónicos) \nEl timbre \nEl timbre es la cualidad que más datos te aporta. El timbre de una misma nota musical \ntocada al mismo volumen en un violín y una flauta no será igual. Cada fuente de sonido tiene \ncaracterísticas propias sonoras según el material del que esté hecho, el modo de hacerlo \nsonar, etc.\n\n--- Página 19 del Documento Madre ---\n19 \n \nTambién se aplica a \nlas voces humanas. Puedes \nencontrar una voz ronca, \ndulce o ligera, áspera… El \ntimbre puede modificarse \ncon la intensidad y la \nduración, pudiendo variar la \ncalidad del sonido. El timbre \nde \nun \nsonido \nestá \ncompuesto de un sonido \nfundamental y otros sonidos \nllamados \narmónicos, \nde \nmenor intensidad. \n \n \n \nCada armonía aporta una amplitud y una fase (corrida respecto a la básica) \nEl análisis de los armónicos presentes en un sonido que tiene un determinado timbre, \nse realiza mediante análisis de Fourier. El teorema de Fourier es viene a decir algo parecido \na lo siguiente: \nCualquier forma de onda, a condición de que sea periódica (se repita siempre igual) se \npuede descomponer en una serie más o menos larga (quizás infinita) de ondas puras \n(senoidales) llamadas armónicos. Estos armónicos son tales que su combinación o mezcla \ndan lugar de nuevo al sonido original, y sus frecuencias son múltiplos enteros de la del sonido \nfundamental.\n\n--- Página 20 del Documento Madre ---\n20 \n \n \nEste proceso sacrifica calidad y se pierden armónicos \nLa duración \nLa duración de un sonido hace referencia a la longitud de onda. Indica el tiempo que se \nmantiene una onda sonora completa. Puedes diferenciar sonidos largos o cortos. Según cuál \nsea la fuente que los produzca, los sonidos pueden alargarse de forma ininterrumpida o \nacortarse, como en instrumentos de cuerda frotada, o producir sonidos con una longitud \nespecífica, como un tambor o la nota de un piano. \nEl sonido cesa cuando cesa la vibración. Esta cualidad está limitada al físico de la fuente \ndel sonido. Con la tecnología, esta limitación se ha superado y los sonidos pueden \nmantenerse digitalmente por tiempo indefinido. \nLongitud de onda del sonido (λ) (letra lamnda) \n(tamaño/longitud de cada onda representada en metro) \nUna vez definidos los conceptos fundamentales de frecuencia y velocidad de \npropagación del sonido, es preciso definir otro concepto básico que guarda una estrecha \nrelación con ambos: la longitud de onda del sonido (λ). \nSe define como la distancia entre dos puntos consecutivos del campo sonoro que se \nhallan en el mismo estado de vibración en cualquier instante de tiempo. Por ejemplo, si en un \ninstante dado se seleccionan dos puntos consecutivos del espacio donde los valores de \npresión son máximos, la longitud de onda es precisamente la distancia entre ambos puntos \n(figura 1.9).\n\n--- Página 21 del Documento Madre ---\n21 \n \nLa relación entre las tres magnitudes: \nfrecuencia (f), velocidad de propagación (c) \ny longitud de onda (λ), viene dada por la \nsiguiente expresión: λ = c/f \nSegún \nse \nobserva, \npara \ncada \nfrecuencia, la longitud de onda depende del \nmedio \nde \npropagación, \nya \nque \nes \nproporcional a la velocidad, y esta varia para \ncada medio. \nPor otro lado, se puede ver que la \nlongitud de onda y la frecuencia son inversamente proporcionales, es decir, cuanto mayor es \nf menor es λ, y viceversa. \nPor ejemplo, en el aire, las longitudes de onda correspondientes a la banda de \nfrecuencias audibles se hallan situadas entre 17,25 m (f = 20 Hz) y 1,72 cm (f = 20 kHz). \n  \n \nClase 5 \nCancelaciones de Fase \nInterferencia acústica de fase \n También denominada “Comb Filter”, se produce cuando la misma fuente sonora es \ncaptada por dos micrófonos o más, en diferentes tiempos. La diferencia de tiempo de \ncaptación es en razón de la distancia que tienen los micrófonos con respecto a la fuente. La \nsuma de las mismas señales en la consola, darán como resultado una nueva respuesta de \nfrecuencia con cancelaciones en diferentes frecuencias. También podemos tener estas \ncancelaciones con un micrófono que tiene una pared cercana. El micrófono captará la fuente \nsonora directa y a su vez, captará la reflexión que se produce en la pared, pero con un \npequeño retardo de tiempo dependiendo de la distancia.",
+              "documentPages": [
+                {
+                  "src": "assets/source/documento-madre/u04/u04_documento_madre_page_08.png",
+                  "alt": "Documento Madre pagina 8 para U04",
+                  "caption": "Documento Madre · página 08"
+                },
+                {
+                  "src": "assets/source/documento-madre/u04/u04_documento_madre_page_09.png",
+                  "alt": "Documento Madre pagina 9 para U04",
+                  "caption": "Documento Madre · página 09"
+                },
+                {
+                  "src": "assets/source/documento-madre/u04/u04_documento_madre_page_10.png",
+                  "alt": "Documento Madre pagina 10 para U04",
+                  "caption": "Documento Madre · página 10"
+                },
+                {
+                  "src": "assets/source/documento-madre/u04/u04_documento_madre_page_11.png",
+                  "alt": "Documento Madre pagina 11 para U04",
+                  "caption": "Documento Madre · página 11"
+                },
+                {
+                  "src": "assets/source/documento-madre/u04/u04_documento_madre_page_12.png",
+                  "alt": "Documento Madre pagina 12 para U04",
+                  "caption": "Documento Madre · página 12"
+                },
+                {
+                  "src": "assets/source/documento-madre/u04/u04_documento_madre_page_14.png",
+                  "alt": "Documento Madre pagina 14 para U04",
+                  "caption": "Documento Madre · página 14"
+                },
+                {
+                  "src": "assets/source/documento-madre/u04/u04_documento_madre_page_15.png",
+                  "alt": "Documento Madre pagina 15 para U04",
+                  "caption": "Documento Madre · página 15"
+                },
+                {
+                  "src": "assets/source/documento-madre/u04/u04_documento_madre_page_16.png",
+                  "alt": "Documento Madre pagina 16 para U04",
+                  "caption": "Documento Madre · página 16"
+                },
+                {
+                  "src": "assets/source/documento-madre/u04/u04_documento_madre_page_17.png",
+                  "alt": "Documento Madre pagina 17 para U04",
+                  "caption": "Documento Madre · página 17"
+                },
+                {
+                  "src": "assets/source/documento-madre/u04/u04_documento_madre_page_18.png",
+                  "alt": "Documento Madre pagina 18 para U04",
+                  "caption": "Documento Madre · página 18"
+                },
+                {
+                  "src": "assets/source/documento-madre/u04/u04_documento_madre_page_19.png",
+                  "alt": "Documento Madre pagina 19 para U04",
+                  "caption": "Documento Madre · página 19"
+                },
+                {
+                  "src": "assets/source/documento-madre/u04/u04_documento_madre_page_20.png",
+                  "alt": "Documento Madre pagina 20 para U04",
+                  "caption": "Documento Madre · página 20"
+                },
+                {
+                  "src": "assets/source/documento-madre/u04/u04_documento_madre_page_21.png",
+                  "alt": "Documento Madre pagina 21 para U04",
+                  "caption": "Documento Madre · página 21"
+                }
+              ],
+              "visualLabel": "Documento Madre visible · Imágenes originales",
+              "expertStatus": "A1 confirmado · Revisión técnica Matías",
               "tags": [
-                "Documento Madre",
-                "Formato C",
-                "Unidad 04",
-                "Fuente ampliada",
-                "Cuestionario progresivo"
+                "Documento Madre visible",
+                "A1",
+                "Frecuencia",
+                "Timbre",
+                "Longitud de onda"
+              ],
+              "preserveLineBreaks": true
+            },
+            {
+              "title": "Lectura guiada Blacksmith · La onda como modelo de trabajo",
+              "sourceRef": "Blacksmith Academy · Desarrollo ampliado propio · Refuerzo OpenStax",
+              "body": "El Documento Madre insiste en que la onda es una forma de representar un fenómeno real. Esa aclaración es muy valiosa: el gráfico no es “el sonido en sí”, sino un modelo que permite entender presión, tiempo, ciclos, frecuencia, amplitud, timbre y longitud de onda.\n\nFrecuencia es cantidad de ciclos por segundo y se mide en hertz. En percepción musical se relaciona con altura: grave, medio o agudo. Amplitud se relaciona con el tamaño de la variación de presión y con el nivel, pero no debe confundirse de forma automática con calidad sonora. Longitud de onda es una distancia: la separación entre puntos equivalentes de una onda, como dos compresiones consecutivas.\n\nEl timbre permite distinguir dos fuentes aunque hagan una nota parecida a nivel similar. Depende de la forma de onda, los armónicos, la envolvente, el material y la forma de producir el sonido. La duración, por su parte, no es longitud de onda: duración es cuánto tiempo permanece un sonido; longitud de onda es tamaño espacial de cada ciclo. Esta corrección queda marcada para evitar una confusión frecuente.",
+              "documentPages": [],
+              "visualLabel": "Explicación Blacksmith ampliada",
+              "expertStatus": "Contenido ampliado · Validar con Matías",
+              "tags": [
+                "Desarrollo Blacksmith",
+                "OpenStax",
+                "Onda",
+                "Frecuencia",
+                "Timbre"
               ],
               "preserveLineBreaks": true
             }
           ],
           "theoryBlocks": [
             {
-              "title": "Frecuencia",
-              "body": "La frecuencia se mide en Hz y se relaciona perceptivamente con la altura: graves, medios y agudos. Menor frecuencia suele percibirse más grave; mayor frecuencia, más aguda.",
-              "note": "Frecuencia no es volumen."
+              "title": "Frecuencia y altura",
+              "body": "La frecuencia indica cuántos ciclos ocurren por segundo. En audición se asocia a la altura: frecuencias bajas se perciben como graves y frecuencias altas como agudas.",
+              "note": "Hz mide repetición por segundo, no volumen."
+            },
+            {
+              "title": "Amplitud y nivel",
+              "body": "La amplitud describe el tamaño de la variación de presión. Se relaciona con intensidad/nivel, pero la percepción depende también de frecuencia, duración y sensibilidad del oído.",
+              "note": "Dos sonidos con igual nivel pueden percibirse distinto."
             },
             {
               "title": "Longitud de onda",
-              "body": "La longitud de onda es una distancia. En aire, las frecuencias graves tienen longitudes de onda largas; las agudas, longitudes de onda cortas.",
-              "note": "Esto ayuda a entender parlantes, absorción y obstáculos."
+              "body": "Es una distancia entre puntos equivalentes de la onda. A igual velocidad, una frecuencia más baja tiene una longitud de onda mayor.",
+              "note": "Los graves son largos; los agudos son cortos."
             },
             {
-              "title": "Timbre",
-              "body": "El timbre explica por qué una guitarra y una trompeta pueden tocar la misma nota y sonar diferentes. Intervienen armónicos, forma de onda y comportamiento temporal.",
-              "note": "El timbre no depende de una sola variable."
+              "title": "Timbre y armónicos",
+              "body": "El timbre depende de cómo se combina la frecuencia fundamental con armónicos y de cómo evoluciona el sonido en el tiempo.",
+              "note": "Por eso una trompeta y una guitarra pueden tocar la misma nota y sonar distintas."
             },
             {
-              "title": "Duración",
-              "body": "La duración describe cuánto tiempo permanece un sonido. No debe confundirse con la longitud de onda, que es una distancia física asociada a frecuencia y velocidad.",
-              "note": "Tiempo y distancia son dimensiones distintas."
+              "title": "Duración y envolvente",
+              "body": "La duración describe cuánto permanece el sonido. La envolvente describe cómo aparece, se sostiene y desaparece. No es lo mismo que longitud de onda.",
+              "note": "Corrección pedagógica clave para esta unidad."
             }
           ],
           "questions": [
             {
-              "prompt": "¿Qué mide la frecuencia?",
+              "prompt": "¿Qué mide la frecuencia de una onda sonora?",
               "difficulty": "recognition",
               "options": [
-                "Cantidad de ciclos por segundo.",
-                "Distancia entre parlantes.",
-                "Potencia del amplificador.",
-                "Cantidad de cables."
+                "La cantidad de ciclos por segundo.",
+                "La distancia entre el escenario y la consola.",
+                "La cantidad de cables conectados.",
+                "El tamaño físico del parlante únicamente."
               ],
               "correctIndex": 0,
-              "explanation": "La frecuencia se expresa en Hertz."
+              "explanation": "La frecuencia se mide en hertz y representa ciclos por segundo."
             },
             {
-              "prompt": "¿Qué describe la longitud de onda?",
-              "difficulty": "recognition",
-              "options": [
-                "Distancia entre dos puntos equivalentes de la onda.",
-                "Duración total de una canción.",
-                "Nivel SPL de la sala.",
-                "Impedancia del micrófono."
-              ],
-              "correctIndex": 0,
-              "explanation": "La longitud de onda es una distancia espacial."
-            },
-            {
-              "prompt": "Si una frecuencia aumenta y la velocidad se mantiene, ¿qué ocurre con la longitud de onda?",
+              "prompt": "¿Qué relación general hay entre frecuencia y longitud de onda si la velocidad se mantiene aproximadamente constante?",
               "difficulty": "comprehension",
               "options": [
-                "Disminuye.",
-                "Aumenta siempre al doble.",
-                "Se transforma en volumen.",
-                "Desaparece."
+                "A mayor frecuencia, menor longitud de onda.",
+                "A mayor frecuencia, mayor longitud de onda siempre.",
+                "No tienen ninguna relación.",
+                "La longitud de onda depende solo del volumen."
               ],
               "correctIndex": 0,
-              "explanation": "λ = c/f: si f sube, λ baja."
+              "explanation": "La relación es inversa: λ = c/f."
             },
             {
-              "prompt": "¿Por qué los graves suelen atravesar obstáculos mejor que los agudos?",
-              "difficulty": "comprehension",
+              "prompt": "¿Por qué los graves suelen ser más difíciles de controlar con objetos pequeños?",
+              "difficulty": "application",
               "options": [
-                "Porque tienen longitudes de onda más largas.",
-                "Porque no son ondas sonoras.",
-                "Porque viajan sin medio.",
-                "Porque son señales digitales."
+                "Porque tienen longitudes de onda grandes y rodean obstáculos pequeños.",
+                "Porque no viajan por el aire.",
+                "Porque no tienen energía.",
+                "Porque solo existen dentro de la consola."
               ],
               "correctIndex": 0,
-              "explanation": "Las longitudes de onda largas tienden a rodear obstáculos con más facilidad."
+              "explanation": "Las longitudes de onda graves son grandes en comparación con muchos objetos cotidianos."
             },
             {
-              "prompt": "Dos instrumentos tocan la misma nota al mismo nivel, pero suenan distintos. ¿Qué propiedad explica mejor la diferencia?",
+              "prompt": "Dos instrumentos tocan la misma nota a nivel parecido, pero se distinguen. ¿Qué concepto explica mejor esto?",
               "difficulty": "application",
               "options": [
                 "Timbre.",
-                "Cantidad de butacas.",
-                "Tipo de escenario únicamente.",
-                "Color del cable."
+                "Solo distancia.",
+                "Cantidad de conectores.",
+                "Impedancia de salida del amplificador."
               ],
               "correctIndex": 0,
-              "explanation": "El timbre diferencia fuentes por armónicos, forma de onda y evolución."
+              "explanation": "El timbre depende de armónicos, forma de onda, material y modo de ejecución."
             },
             {
-              "prompt": "Un alumno confunde duración con longitud de onda. ¿Cómo lo corregís?",
+              "prompt": "¿Cuál es la corrección importante sobre duración y longitud de onda?",
+              "difficulty": "comprehension",
+              "options": [
+                "Duración es tiempo de permanencia; longitud de onda es distancia espacial entre ciclos equivalentes.",
+                "Duración y longitud de onda son siempre lo mismo.",
+                "Longitud de onda mide volumen percibido.",
+                "Duración solo se aplica a cables."
+              ],
+              "correctIndex": 0,
+              "explanation": "Esta corrección evita una confusión presente en muchos apuntes introductorios."
+            },
+            {
+              "prompt": "¿Qué representa una compresión en una onda sonora en aire?",
+              "difficulty": "comprehension",
+              "options": [
+                "Una región de mayor presión relativa.",
+                "Una zona sin materia ni energía.",
+                "Un cable balanceado invertido.",
+                "Una frecuencia fuera del rango audible."
+              ],
+              "correctIndex": 0,
+              "explanation": "En aire, las ondas sonoras tienen compresiones y rarefacciones."
+            },
+            {
+              "prompt": "Un analizador muestra eje X en Hz y eje Y en dB SPL. ¿Qué está cruzando?",
               "difficulty": "application",
               "options": [
-                "Duración es tiempo; longitud de onda es distancia.",
-                "Ambas significan volumen.",
-                "Longitud de onda es el tiempo de la canción.",
-                "Duración solo existe en cables."
+                "Frecuencia horizontal con nivel de presión sonora vertical.",
+                "Solo tiempo con color de luces.",
+                "Voltaje de phantom con impedancia.",
+                "Cantidad de público con precio de entrada."
               ],
               "correctIndex": 0,
-              "explanation": "La corrección separa magnitudes temporales y espaciales."
+              "explanation": "El Documento Madre trabaja gráficos de frecuencia y dB SPL para comprender respuesta y audición."
             },
             {
-              "prompt": "¿Qué uso práctico tiene estimar longitud de onda?",
+              "prompt": "¿Qué muestra mejor criterio técnico al ecualizar?",
               "difficulty": "criterion",
               "options": [
-                "Pensar tamaño de parlantes, absorción, obstáculos y comportamiento de graves/agudos.",
-                "Decidir el color de la consola.",
-                "Reemplazar cualquier medición auditiva.",
-                "Evitar usar micrófonos."
+                "Saber si se está corrigiendo frecuencia, nivel, timbre o un problema de sala antes de mover controles.",
+                "Mover todos los controles al azar hasta que guste.",
+                "Subir agudos siempre porque parecen más claros.",
+                "Confundir timbre con volumen y corregir solo master."
               ],
               "correctIndex": 0,
-              "explanation": "La relación frecuencia-longitud de onda tiene consecuencias prácticas en sonido."
-            },
-            {
-              "prompt": "¿Qué afirmación sobre Fourier es prudente para este nivel?",
-              "difficulty": "criterion",
-              "options": [
-                "Sirve como idea introductoria para entender sonidos complejos como combinación de componentes.",
-                "Debe usarse para operar cualquier consola desde la primera clase.",
-                "Demuestra que el timbre no existe.",
-                "Solo se aplica a iluminación."
-              ],
-              "correctIndex": 0,
-              "explanation": "En esta etapa se usa como concepto de apoyo, no como matemática avanzada obligatoria."
+              "explanation": "La ecualización exige distinguir qué propiedad del sonido se quiere modificar."
             }
           ]
         }
